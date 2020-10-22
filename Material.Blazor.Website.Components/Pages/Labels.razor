@@ -1,0 +1,80 @@
+﻿@page "/labels"
+
+
+<DemonstrationPage Title="Labels"
+                   DemoComponent="@this">
+    <Description>
+        <p>
+            Labels on components need to be dynamically settable after render, for instance to allow an app's language to be changed.
+            This requires a JSInterop call due to Material.Blazor returning false from ShouldRender(). Set the label to see it changed
+            in the relevant components.
+        </p>
+    </Description>
+
+    <Controls>
+        <p>
+            <MBTextField Label="Dynamic Label"
+                         @bind-Value="@DynamicLabel"
+                         TextInputStyle="MBTextInputStyle.Outlined" />
+        </p>
+    </Controls>
+
+    <PageContent>
+        <div class="mdc-layout-grid__cell--span-12-desktop">
+            <MBCard AutoStyled="true">
+                <Primary>
+                    <h2 class="mb-card__title mdc-typography mdc-typography--headline6">
+                        Components with dynamic labels
+                    </h2>
+
+                    <div class="mdc-layout-grid__inner">
+                        <div class="mdc-layout-grid__cell--span-4">
+                            <p>
+                                <MBTextField Label="@DynamicLabel"
+                                             @bind-Value="@TextField"
+                                             TextInputStyle="MBTextInputStyle.Outlined" />
+                            </p>
+                        </div>
+
+                        <div class="mdc-layout-grid__cell--span-4">
+                            <p>
+                                <MBNumericDoubleField Label="@DynamicLabel"
+                                                      @bind-Value="@NumericDoubleField"
+                                                      NumericFormat="N2"
+                                                      DecimalPlaces="2"
+                                                      TextInputStyle="MBTextInputStyle.Outlined" />
+                            </p>
+                        </div>
+
+                        <div class="mdc-layout-grid__cell--span-4">
+                            <p>
+                                <MBNumericIntField Label="@DynamicLabel"
+                                                   @bind-Value="@NumericIntField"
+                                                   NumericFormat="N0"
+                                                   TextInputStyle="MBTextInputStyle.Outlined" />
+                            </p>
+                        </div>
+
+                        <div class="mdc-layout-grid__cell--span-4">
+                            <p>
+                                <MBTextArea Label="@DynamicLabel"
+                                            @bind-Value="@TextArea"
+                                            Rows="2"
+                                            TextInputStyle="MBTextInputStyle.Outlined" />
+                            </p>
+                        </div>
+                    </div>
+                </Primary>
+            </MBCard>
+        </div>
+    </PageContent>
+</DemonstrationPage>
+
+
+@code {
+    string DynamicLabel { get; set; } = "Dynamic Label";
+    string TextField { get; set; }
+    string TextArea { get; set; }
+    double NumericDoubleField { get; set; }
+    int NumericIntField { get; set; }
+}

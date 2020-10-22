@@ -227,6 +227,6 @@ namespace Material.Blazor
 
 
         /// <inheritdoc/>
-        private protected override async Task InitializeMdcComponent() => await JsRuntime.InvokeVoidAsync("MaterialBlazor.MBList.init", ElementReference, (KeyboardInteractions && !AppliedDisabled), Ripple);
+        private protected override async Task InstantiateMdcComponent() => await JsRuntime.InvokeVoidAsync("MaterialBlazor.MBList.init", ElementReference, (KeyboardInteractions && !AppliedDisabled), Ripple);
     }
 }

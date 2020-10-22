@@ -40,7 +40,7 @@ namespace Material.Blazor
                 .AddIf("mdc-switch--disabled", () => AppliedDisabled)
                 .AddIf("mdc-switch--checked", () => ComponentValue);
 
-            SetComponentValue += OnValueSetCallback;
+            SetComponentValue += SetComponentValueCallback;
             OnDisabledSet += OnDisabledSetCallback;
         }
 
@@ -50,7 +50,7 @@ namespace Material.Blazor
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        protected void OnValueSetCallback(object sender, EventArgs e) => InvokeAsync(() => JsRuntime.InvokeVoidAsync("MaterialBlazor.MBSwitch.setChecked", ElementReference, Value));
+        protected void SetComponentValueCallback(object sender, EventArgs e) => InvokeAsync(() => JsRuntime.InvokeVoidAsync("MaterialBlazor.MBSwitch.setChecked", ElementReference, Value));
 
 
         /// <summary>
@@ -62,6 +62,6 @@ namespace Material.Blazor
 
 
         /// <inheritdoc/>
-        private protected override async Task InitializeMdcComponent() => await JsRuntime.InvokeVoidAsync("MaterialBlazor.MBSwitch.init", ElementReference, ComponentValue);
+        private protected override async Task InstantiateMdcComponent() => await JsRuntime.InvokeVoidAsync("MaterialBlazor.MBSwitch.init", ElementReference, ComponentValue);
     }
 }

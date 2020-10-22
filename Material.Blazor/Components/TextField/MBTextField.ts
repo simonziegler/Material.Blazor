@@ -9,6 +9,17 @@ export function setValue(elem, value) {
     elem._textField.value = value;
 }
 
+export function setLabel(elem, labelElem, label) {
+    elem._textField.foundation.adapter.removeClass("mdc-text-field--no-label");
+    labelElem.innerText = label;
+    elem.label_ = label;
+
+    if (elem._textField.foundation.adapter.hasOutline()) {
+        let width = elem._textField.foundation.adapter.getLabelWidth();
+        elem._textField.foundation.adapter.notchOutline(width);
+    }
+}
+
 export function setDisabled(elem, value) {
     elem._textField.disabled = value;
 }

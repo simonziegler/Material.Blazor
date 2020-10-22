@@ -62,6 +62,20 @@
             <MBCard AutoStyled="true">
                 <Primary>
                     <h2 class="mb-card__title mdc-typography mdc-typography--headline6">
+                        No Label
+                    </h2>
+
+                    <p><MBTextArea @bind-Value="@NoLabel" Rows="3" TextInputStyle="MBTextInputStyle.Outlined" /></p>
+                </Primary>
+            </MBCard>
+        </div>
+
+
+
+        <div class="mdc-layout-grid__cell--span-4">
+            <MBCard AutoStyled="true">
+                <Primary>
+                    <h2 class="mb-card__title mdc-typography mdc-typography--headline6">
                         Helper Text
                     </h2>
 
@@ -116,6 +130,20 @@
             _outlinedStyle = value;
 
             ToastService.ShowToast(heading: "Outlined Style", message: $"Value: '{_outlinedStyle}", level: MBToastLevel.Success, showIcon: false);
+        }
+    }
+
+
+
+    private string _noLabel = "No Label";
+    private string NoLabel
+    {
+        get => _noLabel;
+        set
+        {
+            _noLabel = value;
+
+            ToastService.ShowToast(heading: "No Label", message: $"Value: '{_noLabel}'", level: MBToastLevel.Success, showIcon: false);
         }
     }
 

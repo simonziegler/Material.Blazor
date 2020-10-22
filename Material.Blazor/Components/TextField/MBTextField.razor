@@ -1,5 +1,5 @@
 ﻿@namespace Material.Blazor
-@inherits InputComponentFoundation<string>
+@inherits InputComponentFoundationLabelled<string>
 
 
 <label @ref="@ElementReference"
@@ -44,7 +44,7 @@
             @if (ShowLabel)
             {
                 <span class="mdc-notched-outline__notch">
-                    <span class="mdc-floating-label @FloatingLabelClass" for="@CrossReferenceId" id="@labelId">@DisplayLabel</span>
+                    <span @ref="@LabelReference" class="mdc-floating-label @FloatingLabelClass" for="@CrossReferenceId" id="@labelId">@DisplayLabel</span>
                 </span>
             }
 

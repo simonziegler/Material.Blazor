@@ -30,6 +30,7 @@
                     <p><MBTextField Label="Default (Filled) Style" @bind-Value="@DefaultStyle" class="supplied-test-class" id="supplied-test-id" /></p>
                     <p><MBTextField Label="Explicit Filled Style" @bind-Value="@FilledStyle" TextInputStyle="MBTextInputStyle.Filled" /></p>
                     <p><MBTextField Label="Outlined Style" @bind-Value="@OutlinedStyle" TextInputStyle="MBTextInputStyle.Outlined" /></p>
+                    <p><MBTextField @bind-Value="@NoLabel" TextInputStyle="MBTextInputStyle.Outlined" /></p>
                 </Primary>
             </MBCard>
         </div>
@@ -260,6 +261,20 @@
             _outlinedStyle = value;
 
             ToastService.ShowToast(heading: "Outlined Style", message: $"Value: '{_outlinedStyle}'", level: MBToastLevel.Success, showIcon: false);
+        }
+    }
+
+
+
+    private string _noLabel = "No Label";
+    private string NoLabel
+    {
+        get => _noLabel;
+        set
+        {
+            _noLabel = value;
+
+            ToastService.ShowToast(heading: "No Label", message: $"Value: '{_noLabel}'", level: MBToastLevel.Success, showIcon: false);
         }
     }
 

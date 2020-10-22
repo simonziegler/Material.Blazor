@@ -84,7 +84,7 @@ namespace Material.Blazor
                 .AddIf("mdc-circular-progress--indeterminate", () => CircularProgressType == MBCircularProgressType.Indeterminate)
                 .AddIf("mdc-circular-progress--closed", () => CircularProgressType == MBCircularProgressType.Closed);
 
-            SetComponentValue += OnValueSetCallback;
+            SetComponentValue += SetComponentValueCallback;
         }
 
 
@@ -93,10 +93,10 @@ namespace Material.Blazor
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        protected void OnValueSetCallback(object sender, EventArgs e) => InvokeAsync(() => JsRuntime.InvokeVoidAsync("MaterialBlazor.MBCircularProgress.setProgress", ElementReference, Value));
+        protected void SetComponentValueCallback(object sender, EventArgs e) => InvokeAsync(() => JsRuntime.InvokeVoidAsync("MaterialBlazor.MBCircularProgress.setProgress", ElementReference, Value));
 
 
         /// <inheritdoc/>
-        private protected override async Task InitializeMdcComponent() => await JsRuntime.InvokeVoidAsync("MaterialBlazor.MBCircularProgress.init", ElementReference, Value);
+        private protected override async Task InstantiateMdcComponent() => await JsRuntime.InvokeVoidAsync("MaterialBlazor.MBCircularProgress.init", ElementReference, Value);
     }
 }

@@ -104,7 +104,7 @@ namespace Material.Blazor
                 .AddIf("mdc-select--no-label", () => string.IsNullOrWhiteSpace(Label))
                 .AddIf("mdc-select--disabled", () => AppliedDisabled);
 
-            SetComponentValue += OnValueSetCallback;
+            SetComponentValue += SetComponentValueCallback;
         }
 
 
@@ -113,7 +113,7 @@ namespace Material.Blazor
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        protected void OnValueSetCallback(object sender, EventArgs e)
+        protected void SetComponentValueCallback(object sender, EventArgs e)
         {
             Panel.SetParameters(true, Value);
             InvokeAsync(() => JsRuntime.InvokeVoidAsync("MaterialBlazor.MBDatePicker.listItemClick", Panel.ListItemReference, Utilities.DateToString(Value, DateFormat)).ConfigureAwait(false));
@@ -121,6 +121,6 @@ namespace Material.Blazor
 
 
         /// <inheritdoc/>
-        private protected override async Task InitializeMdcComponent() => await JsRuntime.InvokeVoidAsync("MaterialBlazor.MBDatePicker.init", ElementReference);
+        private protected override async Task InstantiateMdcComponent() => await JsRuntime.InvokeVoidAsync("MaterialBlazor.MBDatePicker.init", ElementReference);
     }
 }

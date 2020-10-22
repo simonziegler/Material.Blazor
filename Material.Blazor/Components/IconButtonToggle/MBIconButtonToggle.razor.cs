@@ -64,7 +64,7 @@ namespace Material.Blazor
                 .AddIf("mdc-card__action mdc-card__action--icon", () => (Card != null))
                 .AddIf("mdc-icon-button--on", () => Value);
             
-            SetComponentValue += OnValueSetCallback;
+            SetComponentValue += SetComponentValueCallback;
             OnDisabledSet += OnDisabledSetCallback;
         }            
 
@@ -83,7 +83,7 @@ namespace Material.Blazor
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        protected void OnValueSetCallback(object sender, EventArgs e) => InvokeAsync(() => JsRuntime.InvokeVoidAsync("MaterialBlazor.MBIconButtonToggle.setOn", ElementReference, Value));
+        protected void SetComponentValueCallback(object sender, EventArgs e) => InvokeAsync(() => JsRuntime.InvokeVoidAsync("MaterialBlazor.MBIconButtonToggle.setOn", ElementReference, Value));
 
 
         /// <summary>
@@ -95,6 +95,6 @@ namespace Material.Blazor
 
 
         /// <inheritdoc/>
-        private protected override async Task InitializeMdcComponent() => await JsRuntime.InvokeVoidAsync("MaterialBlazor.MBIconButtonToggle.init", ElementReference);
+        private protected override async Task InstantiateMdcComponent() => await JsRuntime.InvokeVoidAsync("MaterialBlazor.MBIconButtonToggle.init", ElementReference);
     }
 }

@@ -22,14 +22,25 @@ namespace Material.Blazor.Internal
         private bool _previousParsingAttemptFailed;
         private ValidationMessageStore _parsingValidationMessages;
         private Type _nullableUnderlyingType;
-        private bool _hasSetInitialParameters;
         protected bool _instantiate = false;
-        protected bool _hasInstantiated = false;
 
         [CascadingParameter] private EditContext CascadedEditContext { get; set; }
 
         [CascadingParameter] private IMBDialog Dialog { get; set; }
 
+
+
+        /// <summary>
+        /// Set to true once Material Components Web instantiation has been performed.
+        /// </summary>
+        private protected bool HasInstantiated { get; private set; }
+
+
+        /// <summary>
+        /// Set by <see cref="SetParametersAsync"/> once initial parameters have been set.
+        /// Facilitates one-time initialization of the component.
+        /// </summary>
+        private protected bool HasSetInitialParameters { get; private set; }
 
 
         /// <summary>
@@ -266,7 +277,7 @@ namespace Material.Blazor.Internal
         {
             parameters.SetParameterProperties(this);
 
-            if (!_hasSetInitialParameters)
+            if (!HasSetInitialParameters)
             {
                 // This is the first run
                 // Could put this logic in OnInit, but its nice to avoid forcing people who override OnInit to call base.OnInit()
@@ -278,7 +289,7 @@ namespace Material.Blazor.Internal
 
                 EditContext = CascadedEditContext;
                 _nullableUnderlyingType = Nullable.GetUnderlyingType(typeof(T));
-                _hasSetInitialParameters = true;
+                HasSetInitialParameters = true;
 #if Logging
                 Logger.LogDebug("SetParametersAsync setting ComponentValue value to '" + Value?.ToString() ?? "null" + "'");
 #endif
@@ -330,7 +341,7 @@ namespace Material.Blazor.Internal
                     Logger.LogDebug("OnParametersSet setting ComponentValue value to '" + Value?.ToString() ?? "null" + "'");
 #endif
                     _componentValue = Value;
-                    if (_hasInstantiated)
+                    if (HasInstantiated)
                     {
                         SetComponentValue?.Invoke(this, null);
                     }
@@ -376,8 +387,8 @@ namespace Material.Blazor.Internal
             if (_instantiate)
             {
                 _instantiate = false;
-                _hasInstantiated = true;
-                await InitializeMdcComponent();
+                HasInstantiated = true;
+                await InstantiateMdcComponent();
             }
         }
 

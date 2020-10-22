@@ -11,7 +11,7 @@ namespace Material.Blazor
     /// <summary>
     /// A Material Theme text field.
     /// </summary>
-    public partial class MBTextField : InputComponentFoundation<string>
+    public partial class MBTextField : InputComponentFoundationLabelled<string>
     {
 #nullable enable annotations
         /// <summary>
@@ -46,12 +46,6 @@ namespace Material.Blazor
         /// <para>Overrides <see cref="MBCascadingDefaults.TextAlignStyle"/></para>
         /// </summary>
         [Parameter] public MBTextAlignStyle? TextAlignStyle { get; set; }
-
-
-        /// <summary>
-        /// Field label.
-        /// </summary>
-        [Parameter] public string? Label { get; set; }
 
 
         /// <summary>
@@ -118,6 +112,7 @@ namespace Material.Blazor
         private MarkupString HelperTextMarkup => new MarkupString(HelperText);
         private ElementReference HelperTextReference { get; set; }
         private bool HasHelperText => !string.IsNullOrWhiteSpace(HelperText) || PerformsValidation;
+        private ElementReference LabelReference { get; set; }
         private string LabelSuffix { get; set; } = "";
         private bool PerformsValidation => EditContext != null && ValidationMessageFor != null;
 
@@ -174,7 +169,8 @@ namespace Material.Blazor
 
             FloatingLabelClass = string.IsNullOrEmpty(ComponentValue) ? "" : "mdc-floating-label--float-above";
 
-            SetComponentValue += OnValueSetCallback;
+            SetComponentValue += SetComponentValueCallback;
+            SetLabel += SetLabelCallback;
             OnDisabledSet += OnDisabledSetCallback;
 
             if (EditContext != null)
@@ -213,7 +209,15 @@ namespace Material.Blazor
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        protected void OnValueSetCallback(object sender, EventArgs e) => InvokeAsync(() => JsRuntime.InvokeVoidAsync("MaterialBlazor.MBTextField.setValue", ElementReference, Value));
+        protected void SetComponentValueCallback(object sender, EventArgs e) => InvokeAsync(() => JsRuntime.InvokeVoidAsync("MaterialBlazor.MBTextField.setValue", ElementReference, Value));
+
+
+        /// <summary>
+        /// Callback for value the value setter.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        protected void SetLabelCallback(object sender, EventArgs e) => InvokeAsync(() => JsRuntime.InvokeVoidAsync("MaterialBlazor.MBTextField.setLabel", ElementReference, LabelReference, Label));
 
 
         /// <summary>
@@ -225,7 +229,7 @@ namespace Material.Blazor
 
 
         /// <inheritdoc/>
-        private protected override async Task InitializeMdcComponent() => await JsRuntime.InvokeVoidAsync("MaterialBlazor.MBTextField.init", ElementReference, HelperTextReference, HelperText.Trim(), HelperTextPersistent, PerformsValidation);
+        private protected override async Task InstantiateMdcComponent() => await JsRuntime.InvokeVoidAsync("MaterialBlazor.MBTextField.init", ElementReference, HelperTextReference, HelperText.Trim(), HelperTextPersistent, PerformsValidation);
 
 
         /// <summary>

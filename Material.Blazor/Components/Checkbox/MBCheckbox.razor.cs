@@ -1,8 +1,6 @@
 ﻿using Material.Blazor.Internal;
-
 using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
-
 using System;
 using System.Threading.Tasks;
 
@@ -77,7 +75,7 @@ namespace Material.Blazor
                 .AddIf("mdc-checkbox--selected", () => Value)
                 .AddIf("mdc-checkbox--disabled", () => AppliedDisabled);
 
-            SetComponentValue += OnValueSetCallback;
+            SetComponentValue += SetComponentValueCallback;
             OnDisabledSet += OnDisabledSetCallback;
         }
 
@@ -87,7 +85,7 @@ namespace Material.Blazor
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        protected void OnValueSetCallback(object sender, EventArgs e) => InvokeAsync(() => JsRuntime.InvokeVoidAsync("MaterialBlazor.MBCheckbox.setChecked", ElementReference, Value));
+        protected void SetComponentValueCallback(object sender, EventArgs e) => InvokeAsync(() => JsRuntime.InvokeVoidAsync("MaterialBlazor.MBCheckbox.setChecked", ElementReference, Value));
 
 
         /// <summary>
@@ -99,6 +97,6 @@ namespace Material.Blazor
 
 
         /// <inheritdoc/>
-        private protected override async Task InitializeMdcComponent() => await JsRuntime.InvokeVoidAsync("MaterialBlazor.MBCheckbox.init", ElementReference, FormReference, ComponentValue, IsIndeterminate);
+        private protected override async Task InstantiateMdcComponent() => await JsRuntime.InvokeVoidAsync("MaterialBlazor.MBCheckbox.init", ElementReference, FormReference, ComponentValue, IsIndeterminate);
     }
 }

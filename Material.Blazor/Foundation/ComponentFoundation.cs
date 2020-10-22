@@ -105,7 +105,7 @@ namespace Material.Blazor.Internal
         /// <summary>
         /// Components should override this with a function to be called when Material.Blazor wants to run Material Theme initialization via JS Interop - always gets called from <see cref="OnAfterRenderAsync()"/>, which should not be overridden.
         /// </summary>
-        private protected virtual async Task InitializeMdcComponent() => await Task.CompletedTask;
+        private protected virtual async Task InstantiateMdcComponent() => await Task.CompletedTask;
 
 
         ~ComponentFoundation() => Dispose(false);
@@ -328,7 +328,7 @@ namespace Material.Blazor.Internal
         {
             if (firstRender)
             {
-                await InitializeMdcComponent();
+                await InstantiateMdcComponent();
                 
                 if (!string.IsNullOrWhiteSpace(Tooltip))
                 {

@@ -69,8 +69,8 @@ namespace Material.Blazor
 
 
         /// <inheritdoc/>
-        private protected async override Task InitializeMdcComponent() => await Task.CompletedTask;
+        private protected async override Task InstantiateMdcComponent() => await Task.CompletedTask;
 // Not needed until row selection is enabled
-//        private protected async override Task InitializeMdcComponent() => await JsRuntime.InvokeVoidAsync("MaterialBlazor.MBDataTable.init", ElementReference);
+//        private protected async override Task InstantiateMdcComponent() => await JsRuntime.InvokeVoidAsync("MaterialBlazor.MBDataTable.init", ElementReference);
     }
 }
