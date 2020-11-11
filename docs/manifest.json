@@ -328,6 +328,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "DuplicateUids"
+      ],
       "type": "Conceptual",
       "source_relative_path": "Material.Blazor/Components/NumericDoubleField/MBNumericDoubleField.md",
       "output": {
@@ -340,9 +343,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "Material.Blazor/Components/NumericIntField/MBNumericIntField.md",
       "output": {
