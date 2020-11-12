@@ -602,6 +602,49 @@ references:
   isSpec: "True"
   fullName: Material.Blazor.Internal.ComponentFoundation.LogMBDebug
   nameWithType: ComponentFoundation.LogMBDebug
+- uid: Material.Blazor.Internal.ComponentFoundation.LogMBDebugVerbose(EventId,System.Exception,System.String,System.Object[])
+  name: LogMBDebugVerbose(EventId, Exception, String, Object[])
+  href: api/Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_LogMBDebugVerbose_EventId_System_Exception_System_String_System_Object___
+  commentId: M:Material.Blazor.Internal.ComponentFoundation.LogMBDebugVerbose(EventId,System.Exception,System.String,System.Object[])
+  name.vb: LogMBDebugVerbose(EventId, Exception, String, Object())
+  fullName: Material.Blazor.Internal.ComponentFoundation.LogMBDebugVerbose(EventId, System.Exception, System.String, System.Object[])
+  fullName.vb: Material.Blazor.Internal.ComponentFoundation.LogMBDebugVerbose(EventId, System.Exception, System.String, System.Object())
+  nameWithType: ComponentFoundation.LogMBDebugVerbose(EventId, Exception, String, Object[])
+  nameWithType.vb: ComponentFoundation.LogMBDebugVerbose(EventId, Exception, String, Object())
+- uid: Material.Blazor.Internal.ComponentFoundation.LogMBDebugVerbose(EventId,System.String,System.Object[])
+  name: LogMBDebugVerbose(EventId, String, Object[])
+  href: api/Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_LogMBDebugVerbose_EventId_System_String_System_Object___
+  commentId: M:Material.Blazor.Internal.ComponentFoundation.LogMBDebugVerbose(EventId,System.String,System.Object[])
+  name.vb: LogMBDebugVerbose(EventId, String, Object())
+  fullName: Material.Blazor.Internal.ComponentFoundation.LogMBDebugVerbose(EventId, System.String, System.Object[])
+  fullName.vb: Material.Blazor.Internal.ComponentFoundation.LogMBDebugVerbose(EventId, System.String, System.Object())
+  nameWithType: ComponentFoundation.LogMBDebugVerbose(EventId, String, Object[])
+  nameWithType.vb: ComponentFoundation.LogMBDebugVerbose(EventId, String, Object())
+- uid: Material.Blazor.Internal.ComponentFoundation.LogMBDebugVerbose(System.Exception,System.String,System.Object[])
+  name: LogMBDebugVerbose(Exception, String, Object[])
+  href: api/Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_LogMBDebugVerbose_System_Exception_System_String_System_Object___
+  commentId: M:Material.Blazor.Internal.ComponentFoundation.LogMBDebugVerbose(System.Exception,System.String,System.Object[])
+  name.vb: LogMBDebugVerbose(Exception, String, Object())
+  fullName: Material.Blazor.Internal.ComponentFoundation.LogMBDebugVerbose(System.Exception, System.String, System.Object[])
+  fullName.vb: Material.Blazor.Internal.ComponentFoundation.LogMBDebugVerbose(System.Exception, System.String, System.Object())
+  nameWithType: ComponentFoundation.LogMBDebugVerbose(Exception, String, Object[])
+  nameWithType.vb: ComponentFoundation.LogMBDebugVerbose(Exception, String, Object())
+- uid: Material.Blazor.Internal.ComponentFoundation.LogMBDebugVerbose(System.String,System.Object[])
+  name: LogMBDebugVerbose(String, Object[])
+  href: api/Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_LogMBDebugVerbose_System_String_System_Object___
+  commentId: M:Material.Blazor.Internal.ComponentFoundation.LogMBDebugVerbose(System.String,System.Object[])
+  name.vb: LogMBDebugVerbose(String, Object())
+  fullName: Material.Blazor.Internal.ComponentFoundation.LogMBDebugVerbose(System.String, System.Object[])
+  fullName.vb: Material.Blazor.Internal.ComponentFoundation.LogMBDebugVerbose(System.String, System.Object())
+  nameWithType: ComponentFoundation.LogMBDebugVerbose(String, Object[])
+  nameWithType.vb: ComponentFoundation.LogMBDebugVerbose(String, Object())
+- uid: Material.Blazor.Internal.ComponentFoundation.LogMBDebugVerbose*
+  name: LogMBDebugVerbose
+  href: api/Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_LogMBDebugVerbose_
+  commentId: Overload:Material.Blazor.Internal.ComponentFoundation.LogMBDebugVerbose
+  isSpec: "True"
+  fullName: Material.Blazor.Internal.ComponentFoundation.LogMBDebugVerbose
+  nameWithType: ComponentFoundation.LogMBDebugVerbose
 - uid: Material.Blazor.Internal.ComponentFoundation.LogMBError(EventId,System.Exception,System.String,System.Object[])
   name: LogMBError(EventId, Exception, String, Object[])
   href: api/Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_LogMBError_EventId_System_Exception_System_String_System_Object___
