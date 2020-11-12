@@ -1,7 +1,7 @@
 ﻿self.assetsManifest = {
   "assets": [
     {
-      "hash": "sha256-0iSPmJl\/ARe3+wu9OjLw0sJ6dzvl8UHdqzr9lxdE0iQ=",
+      "hash": "sha256-RXD6NM5hqLRvESeyWOpkcxAarGC4sHwqH+V494yVq8k=",
       "url": "_framework\/package-lock.json"
     },
     {
@@ -71,6 +71,26 @@
     {
       "hash": "sha256-WeOKCkI7IdJHs2kCqsKgLfiWX4\/sNPbaRUspOLefkCY=",
       "url": "_content\/Material.Blazor.Website\/background.png"
+    },
+    {
+      "hash": "sha256-ooDKVcPMZFe8WNON+woA+B4qTqEzXa2IIVuXjazMLv0=",
+      "url": "_content\/Material.Blazor.Website\/css\/asymmetric-theme.min.css"
+    },
+    {
+      "hash": "sha256-i4C2ihPhZefBocLYbNe5g\/qA330+SRz8MJDwpBf8zdI=",
+      "url": "_content\/Material.Blazor.Website\/css\/dark-square-theme.min.css"
+    },
+    {
+      "hash": "sha256-fTN3CU93aXoreFRZtWS31BCnBiq5o7mOvpReEOMGxLM=",
+      "url": "_content\/Material.Blazor.Website\/css\/light-square-theme.min.css"
+    },
+    {
+      "hash": "sha256-p47g24\/oo6NlX+NDh5nwUIpgDnQlKzjAAylQJrfbHBk=",
+      "url": "_content\/Material.Blazor.Website\/css\/material-default-theme.min.css"
+    },
+    {
+      "hash": "sha256-2ktkvS+akDq0a67RzcfIv3ODWOZ4g\/Cm\/wbHr9JGRu8=",
+      "url": "_content\/Material.Blazor.Website\/css\/rounded-theme.min.css"
     },
     {
       "hash": "sha256-uy4mYulZhVVhXKU+6YXTgFrWMMFbNPmaF80ytkP9D8A=",
@@ -157,6 +177,34 @@
       "url": "_content\/Material.Blazor.Website\/videos\/coverr-someone-is-checking-emails-there_s-an-old-globe-on-the-table-0186.mp4"
     },
     {
+      "hash": "sha256-mZkx4C4f57wXG1h\/fPbYrDAJGuw5vNViWEcZlTGlIcU=",
+      "url": "_content\/Material.Blazor\/bundled.min.css"
+    },
+    {
+      "hash": "sha256-x6fCnDdgutyTEdZo5nxPzWqJLGy+251Jck6DkPGnSug=",
+      "url": "_content\/Material.Blazor\/bundled.min.js"
+    },
+    {
+      "hash": "sha256-Pb6Lr\/Dsu8I7RVEGOHFXQfKlTnlxcMFe0CEcH3WQ4Ec=",
+      "url": "_content\/Material.Blazor\/material-components-icons.css"
+    },
+    {
+      "hash": "sha256-hR4lmhZKLUaTl4+KroQTMnjsHzJCCZUVnX4+UtkiivA=",
+      "url": "_content\/Material.Blazor\/unbundled.css"
+    },
+    {
+      "hash": "sha256-4xrWxAE1EJTHs5feSUhF3Nc7TKWaEGMINvVBl3J\/S78=",
+      "url": "_content\/Material.Blazor\/unbundled.js"
+    },
+    {
+      "hash": "sha256-OxRmjf6RR3a3m1FTWjDOx7Jc5jqcA4I8dUBHoMqUzdg=",
+      "url": "_content\/Material.Blazor\/unbundled.min.css"
+    },
+    {
+      "hash": "sha256-7hU\/U6ZUg1b8SUL\/6j+qv\/gNmkiKrvR6D80G3ZGJh98=",
+      "url": "_content\/Material.Blazor\/unbundled.min.js"
+    },
+    {
       "hash": "sha256-9o1gmRT9v5CdEiyzetqF3nQ8r4zjiX7bcVrZ9f1o2mU=",
       "url": "_framework\/Microsoft.AspNetCore.Components.dll"
     },
@@ -197,7 +245,7 @@
       "url": "_framework\/Microsoft.Extensions.Logging.dll"
     },
     {
-      "hash": "sha256-OsmdQoFiNmpqW0WHVklQ4R5\/fLVeqFPmPBRQzZxxufQ=",
+      "hash": "sha256-xabK7AaW9G+jObi4C1O3INfsrSOWLHRRpBJkIHNdRfU=",
       "url": "_framework\/Microsoft.Extensions.Logging.Abstractions.dll"
     },
     {
@@ -221,15 +269,15 @@
       "url": "_framework\/System.IO.Pipelines.dll"
     },
     {
-      "hash": "sha256-PVI8zVbFmKv2IeGmoOfHkuQUogY2xhq17\/lJbv59Gns=",
+      "hash": "sha256-Bs1uqQKiUBQT0wf8vl+X43Zg8rrwqWqyyjFNR6g1UQ8=",
       "url": "_framework\/Material.Blazor.dll"
     },
     {
-      "hash": "sha256-ezojcSrxxghMOZexfbYeVaidqFW58+x39KJUgAl853E=",
+      "hash": "sha256-\/Db99oSEUvdiU4x4dhdNbJK5eW2el0HxVxhQIQqfXT0=",
       "url": "_framework\/Material.Blazor.Website.dll"
     },
     {
-      "hash": "sha256-jiqHu0mXi6oUHKNECwYIkFcv2tU8c1QQJ1oi1q3+GO0=",
+      "hash": "sha256-eDVufDMwWxbIltDjp1mIuhG5v0XxvphJU+amusKI4c4=",
       "url": "_framework\/Material.Blazor.Website.WebAssembly.dll"
     },
     {
@@ -329,7 +377,7 @@
       "url": "_framework\/System.Private.CoreLib.dll"
     },
     {
-      "hash": "sha256-PqyPNeHBeTnYipk2ffXdDBgBSgh3pcURKsm1Oq5WvDE=",
+      "hash": "sha256-Z9wR9+tJdARz9lfcgogB6ssyZbblZEs0XEF\/KtgcyYo=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -337,5 +385,5 @@
       "url": "_framework\/blazor.webassembly.js"
     }
   ],
-  "version": "RB0TwQMd"
+  "version": "BXRa\/DO7"
 };
