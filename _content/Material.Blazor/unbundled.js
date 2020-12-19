@@ -101,6 +101,14 @@
         init: () => MBFloatingActionButton_init,
         setExited: () => setExited
     });
+    var MBGrid_namespaceObject = {};
+    __webpack_require__.r(MBGrid_namespaceObject);
+    __webpack_require__.d(MBGrid_namespaceObject, {
+        getScrollBarWidth: () => getScrollBarWidth,
+        getTextWidth: () => getTextWidth,
+        syncScrollByID: () => syncScrollByID,
+        syncScrollByRef: () => syncScrollByRef
+    });
     var MBIconButton_namespaceObject = {};
     __webpack_require__.r(MBIconButton_namespaceObject);
     __webpack_require__.d(MBIconButton_namespaceObject, {
@@ -10487,6 +10495,43 @@ PERFORMANCE OF THIS SOFTWARE.
             }
         }
     }
+    function syncScrollByID(gridHeaderID, gridBodyID) {
+        var headerDiv = document.getElementById(gridHeaderID);
+        var bodyDiv = document.getElementById(gridBodyID);
+        if (headerDiv != null && bodyDiv != null) {
+            headerDiv.scrollLeft = bodyDiv.scrollLeft;
+        }
+    }
+    function syncScrollByRef(gridHeaderRef, gridBodyRef) {
+        gridHeaderRef.scrollLeft = gridBodyRef.scrollLeft;
+    }
+    function getScrollBarWidth(className) {
+        var firstDiv = document.createElement("div");
+        firstDiv.style.position = "absolute";
+        firstDiv.style.visibility = "hidden";
+        firstDiv.style.whiteSpace = "nowrap";
+        firstDiv.style.left = "-9999px";
+        firstDiv.className = className;
+        document.body.appendChild(firstDiv);
+        var secondDiv = document.createElement("div");
+        firstDiv.appendChild(secondDiv);
+        var width = firstDiv.offsetWidth - secondDiv.offsetWidth;
+        document.body.removeChild(firstDiv);
+        return width;
+    }
+    function getTextWidth(className, textToMeasure) {
+        var ele = document.createElement("div");
+        ele.style.position = "absolute";
+        ele.style.visibility = "hidden";
+        ele.style.whiteSpace = "nowrap";
+        ele.style.left = "-9999px";
+        ele.className = className;
+        ele.innerText = textToMeasure;
+        document.body.appendChild(ele);
+        var width = window.getComputedStyle(ele).width;
+        document.body.removeChild(ele);
+        return width;
+    }
     function MBIconButton_init(elem) {
         elem._ripple = MDCRipple.attachTo(elem);
         elem._ripple.unbounded = true;
@@ -14244,6 +14289,7 @@ PERFORMANCE OF THIS SOFTWARE.
         MBDialog: MBDialog_namespaceObject,
         MBDrawer: MBDrawer_namespaceObject,
         MBFloatingActionButton: MBFloatingActionButton_namespaceObject,
+        MBGrid: MBGrid_namespaceObject,
         MBIconButton: MBIconButton_namespaceObject,
         MBIconButtonToggle: MBIconButtonToggle_namespaceObject,
         MBLinearProgress: MBLinearProgress_namespaceObject,
