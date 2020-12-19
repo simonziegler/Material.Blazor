@@ -181,7 +181,7 @@
       "url": "_content\/Material.Blazor\/bundled.min.css"
     },
     {
-      "hash": "sha256-Ver41OGCWc1aOH06992DmT7JHCOhRfypEY+cSfdBdXA=",
+      "hash": "sha256-NpvApjdN5YmqURLDcf+V+rdJDdDfh6EMUv1MjqJ55wg=",
       "url": "_content\/Material.Blazor\/bundled.min.js"
     },
     {
@@ -193,7 +193,7 @@
       "url": "_content\/Material.Blazor\/unbundled.css"
     },
     {
-      "hash": "sha256-l+OyH7Ue8OcqBm0HvqftygPUNrwMKOPHy\/flvx8NmjU=",
+      "hash": "sha256-YFCrtB+qJb6xcypI+eb\/80PmixPaC1yA5nfG0h3\/m+s=",
       "url": "_content\/Material.Blazor\/unbundled.js"
     },
     {
@@ -201,7 +201,7 @@
       "url": "_content\/Material.Blazor\/unbundled.min.css"
     },
     {
-      "hash": "sha256-ndaOxWLdqvcbBWe8skR8ez6G7ukAmFmktaFet94bov8=",
+      "hash": "sha256-uwIeyyxIeuVZuheb7xyQfXSLkBxdZHpUeGuG+bVPXZQ=",
       "url": "_content\/Material.Blazor\/unbundled.min.js"
     },
     {
@@ -269,15 +269,15 @@
       "url": "_framework\/System.IO.Pipelines.dll"
     },
     {
-      "hash": "sha256-cgpX\/CJJjMRLC6b52WES3XKVG1RfImE+WUVIYTQ3GiU=",
+      "hash": "sha256-XzwVXEq8zOhSJAfdwzr0330xEezMhelUkv81Pnk3nd4=",
       "url": "_framework\/Material.Blazor.dll"
     },
     {
-      "hash": "sha256-MdwYw\/ej1O1NQ09eBYNK82iqd4B9UR5cU\/Ii4WyO5EE=",
+      "hash": "sha256-kkwwuaxuBVwDWuaseoV2PFyJz8AMcDzEOJtrTdAOpHI=",
       "url": "_framework\/Material.Blazor.Website.dll"
     },
     {
-      "hash": "sha256-PB0XayK+rA\/\/PlDZiblo2pHgWOJdiU+MYouTw9AkR2Y=",
+      "hash": "sha256-jpEKlLkkdrw2S02v7OrBuw4Wdm9Aq\/kcnNQwsXT8G\/U=",
       "url": "_framework\/Material.Blazor.Website.WebAssembly.dll"
     },
     {
@@ -381,7 +381,7 @@
       "url": "_framework\/System.Private.CoreLib.dll"
     },
     {
-      "hash": "sha256-xUivUMDb38q02DVma\/1j9iHGdLzOns\/jx79S43NUnBU=",
+      "hash": "sha256-eVJvgpCPkB5bin3XTaiPGP1magynB9LiaL3YNMaxRkE=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -389,5 +389,5 @@
       "url": "_framework\/blazor.webassembly.js"
     }
   ],
-  "version": "i1XrvDzU"
+  "version": "i+PgfK4X"
 };

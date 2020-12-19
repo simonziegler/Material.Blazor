@@ -3345,6 +3345,19 @@ references:
   isSpec: "True"
   fullName: Material.Blazor.MBDatePicker.MinDate
   nameWithType: MBDatePicker.MinDate
+- uid: Material.Blazor.MBDatePicker.OnDisabledSetCallback(System.Object,System.EventArgs)
+  name: OnDisabledSetCallback(Object, EventArgs)
+  href: api/Material.Blazor.MBDatePicker.html#Material_Blazor_MBDatePicker_OnDisabledSetCallback_System_Object_System_EventArgs_
+  commentId: M:Material.Blazor.MBDatePicker.OnDisabledSetCallback(System.Object,System.EventArgs)
+  fullName: Material.Blazor.MBDatePicker.OnDisabledSetCallback(System.Object, System.EventArgs)
+  nameWithType: MBDatePicker.OnDisabledSetCallback(Object, EventArgs)
+- uid: Material.Blazor.MBDatePicker.OnDisabledSetCallback*
+  name: OnDisabledSetCallback
+  href: api/Material.Blazor.MBDatePicker.html#Material_Blazor_MBDatePicker_OnDisabledSetCallback_
+  commentId: Overload:Material.Blazor.MBDatePicker.OnDisabledSetCallback
+  isSpec: "True"
+  fullName: Material.Blazor.MBDatePicker.OnDisabledSetCallback
+  nameWithType: MBDatePicker.OnDisabledSetCallback
 - uid: Material.Blazor.MBDatePicker.OnInitialized
   name: OnInitialized()
   href: api/Material.Blazor.MBDatePicker.html#Material_Blazor_MBDatePicker_OnInitialized
