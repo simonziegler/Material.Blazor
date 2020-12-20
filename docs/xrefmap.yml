@@ -196,6 +196,25 @@ references:
   commentId: N:Material.Blazor
   fullName: Material.Blazor
   nameWithType: Material.Blazor
+- uid: Material.Blazor.DialogChildComponentFoundation
+  name: DialogChildComponentFoundation
+  href: api/Material.Blazor.DialogChildComponentFoundation.html
+  commentId: T:Material.Blazor.DialogChildComponentFoundation
+  fullName: Material.Blazor.DialogChildComponentFoundation
+  nameWithType: DialogChildComponentFoundation
+- uid: Material.Blazor.DialogChildComponentFoundation.RequestInstantiation
+  name: RequestInstantiation()
+  href: api/Material.Blazor.DialogChildComponentFoundation.html#Material_Blazor_DialogChildComponentFoundation_RequestInstantiation
+  commentId: M:Material.Blazor.DialogChildComponentFoundation.RequestInstantiation
+  fullName: Material.Blazor.DialogChildComponentFoundation.RequestInstantiation()
+  nameWithType: DialogChildComponentFoundation.RequestInstantiation()
+- uid: Material.Blazor.DialogChildComponentFoundation.RequestInstantiation*
+  name: RequestInstantiation
+  href: api/Material.Blazor.DialogChildComponentFoundation.html#Material_Blazor_DialogChildComponentFoundation_RequestInstantiation_
+  commentId: Overload:Material.Blazor.DialogChildComponentFoundation.RequestInstantiation
+  isSpec: "True"
+  fullName: Material.Blazor.DialogChildComponentFoundation.RequestInstantiation
+  nameWithType: DialogChildComponentFoundation.RequestInstantiation
 - uid: Material.Blazor.IMBAnimatedNavigationManager
   name: IMBAnimatedNavigationManager
   href: api/Material.Blazor.IMBAnimatedNavigationManager.html
@@ -1127,6 +1146,23 @@ references:
   fullName.vb: Material.Blazor.Internal.InputComponentFoundation(Of T).OnParametersSetAsync
   nameWithType: InputComponentFoundation<T>.OnParametersSetAsync
   nameWithType.vb: InputComponentFoundation(Of T).OnParametersSetAsync
+- uid: Material.Blazor.Internal.InputComponentFoundation`1.RequestInstantiation
+  name: RequestInstantiation()
+  href: api/Material.Blazor.Internal.InputComponentFoundation-1.html#Material_Blazor_Internal_InputComponentFoundation_1_RequestInstantiation
+  commentId: M:Material.Blazor.Internal.InputComponentFoundation`1.RequestInstantiation
+  fullName: Material.Blazor.Internal.InputComponentFoundation<T>.RequestInstantiation()
+  fullName.vb: Material.Blazor.Internal.InputComponentFoundation(Of T).RequestInstantiation()
+  nameWithType: InputComponentFoundation<T>.RequestInstantiation()
+  nameWithType.vb: InputComponentFoundation(Of T).RequestInstantiation()
+- uid: Material.Blazor.Internal.InputComponentFoundation`1.RequestInstantiation*
+  name: RequestInstantiation
+  href: api/Material.Blazor.Internal.InputComponentFoundation-1.html#Material_Blazor_Internal_InputComponentFoundation_1_RequestInstantiation_
+  commentId: Overload:Material.Blazor.Internal.InputComponentFoundation`1.RequestInstantiation
+  isSpec: "True"
+  fullName: Material.Blazor.Internal.InputComponentFoundation<T>.RequestInstantiation
+  fullName.vb: Material.Blazor.Internal.InputComponentFoundation(Of T).RequestInstantiation
+  nameWithType: InputComponentFoundation<T>.RequestInstantiation
+  nameWithType.vb: InputComponentFoundation(Of T).RequestInstantiation
 - uid: Material.Blazor.Internal.InputComponentFoundation`1.SetComponentValue
   name: SetComponentValue
   href: api/Material.Blazor.Internal.InputComponentFoundation-1.html#Material_Blazor_Internal_InputComponentFoundation_1_SetComponentValue
