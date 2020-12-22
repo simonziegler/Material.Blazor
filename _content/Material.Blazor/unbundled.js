@@ -153,6 +153,14 @@
         setChecked: () => MBRadioButton_setChecked,
         setDisabled: () => MBRadioButton_setDisabled
     });
+    var MBSegmentedButtonMulti_namespaceObject = {};
+    __webpack_require__.r(MBSegmentedButtonMulti_namespaceObject);
+    __webpack_require__.d(MBSegmentedButtonMulti_namespaceObject, {
+        destroy: () => MBSegmentedButtonMulti_destroy,
+        init: () => MBSegmentedButtonMulti_init,
+        setAreSelected: () => setAreSelected,
+        setDisabled: () => MBSegmentedButtonMulti_setDisabled
+    });
     var MBSelect_namespaceObject = {};
     __webpack_require__.r(MBSelect_namespaceObject);
     __webpack_require__.d(MBSelect_namespaceObject, {
@@ -11065,6 +11073,629 @@ PERFORMANCE OF THIS SOFTWARE.
     function MBRadioButton_setChecked(elem, isChecked) {
         elem._radio.checked = isChecked;
     }
+    /**
+ * @license
+ * Copyright 2020 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */    var constants_selectors = {
+        SEGMENT: ".mdc-segmented-button__segment"
+    };
+    var constants_events = {
+        SELECTED: "selected",
+        CHANGE: "change"
+    };
+    var segmented_button_constants_cssClasses = {
+        SINGLE_SELECT: "mdc-segmented-button--single-select"
+    };
+    /**
+ * @license
+ * Copyright 2020 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */    var MDCSegmentedButtonFoundation = function(_super) {
+        __extends(MDCSegmentedButtonFoundation, _super);
+        function MDCSegmentedButtonFoundation(adapter) {
+            return _super.call(this, __assign(__assign({}, MDCSegmentedButtonFoundation.defaultAdapter), adapter)) || this;
+        }
+        Object.defineProperty(MDCSegmentedButtonFoundation, "defaultAdapter", {
+            get: function() {
+                return {
+                    hasClass: function() {
+                        return false;
+                    },
+                    getSegments: function() {
+                        return [];
+                    },
+                    selectSegment: function() {
+                        return undefined;
+                    },
+                    unselectSegment: function() {
+                        return undefined;
+                    },
+                    notifySelectedChange: function() {
+                        return undefined;
+                    }
+                };
+            },
+            enumerable: true,
+            configurable: true
+        });
+        MDCSegmentedButtonFoundation.prototype.selectSegment = function(indexOrSegmentId) {
+            this.adapter.selectSegment(indexOrSegmentId);
+        };
+        MDCSegmentedButtonFoundation.prototype.unselectSegment = function(indexOrSegmentId) {
+            this.adapter.unselectSegment(indexOrSegmentId);
+        };
+        MDCSegmentedButtonFoundation.prototype.getSelectedSegments = function() {
+            return this.adapter.getSegments().filter((function(segmentDetail) {
+                return segmentDetail.selected;
+            }));
+        };
+        MDCSegmentedButtonFoundation.prototype.isSegmentSelected = function(indexOrSegmentId) {
+            return this.adapter.getSegments().some((function(segmentDetail) {
+                return (segmentDetail.index === indexOrSegmentId || segmentDetail.segmentId === indexOrSegmentId) && segmentDetail.selected;
+            }));
+        };
+        MDCSegmentedButtonFoundation.prototype.isSingleSelect = function() {
+            return this.adapter.hasClass(segmented_button_constants_cssClasses.SINGLE_SELECT);
+        };
+        MDCSegmentedButtonFoundation.prototype.handleSelected = function(detail) {
+            if (this.isSingleSelect()) {
+                this.unselectPrevSelected(detail.index);
+            }
+            this.adapter.notifySelectedChange(detail);
+        };
+        MDCSegmentedButtonFoundation.prototype.unselectPrevSelected = function(index) {
+            var e_1, _a;
+            try {
+                for (var _b = __values(this.getSelectedSegments()), _c = _b.next(); !_c.done; _c = _b.next()) {
+                    var selectedSegment = _c.value;
+                    if (selectedSegment.index !== index) {
+                        this.unselectSegment(selectedSegment.index);
+                    }
+                }
+            } catch (e_1_1) {
+                e_1 = {
+                    error: e_1_1
+                };
+            } finally {
+                try {
+                    if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
+                } finally {
+                    if (e_1) throw e_1.error;
+                }
+            }
+        };
+        return MDCSegmentedButtonFoundation;
+    }(MDCFoundation);
+    /**
+ * @license
+ * Copyright 2020 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */    var booleans = {
+        TRUE: "true",
+        FALSE: "false"
+    };
+    var constants_attributes = {
+        ARIA_CHECKED: "aria-checked",
+        ARIA_PRESSED: "aria-pressed",
+        DATA_SEGMENT_ID: "data-segment-id"
+    };
+    var segment_constants_events = {
+        CLICK: "click",
+        SELECTED: "selected"
+    };
+    var segment_constants_cssClasses = {
+        SELECTED: "mdc-segmented-button__segment--selected"
+    };
+    /**
+ * @license
+ * Copyright 2020 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */    var emptyClientRect = {
+        bottom: 0,
+        height: 0,
+        left: 0,
+        right: 0,
+        top: 0,
+        width: 0
+    };
+    var MDCSegmentedButtonSegmentFoundation = function(_super) {
+        __extends(MDCSegmentedButtonSegmentFoundation, _super);
+        function MDCSegmentedButtonSegmentFoundation(adapter) {
+            return _super.call(this, __assign(__assign({}, MDCSegmentedButtonSegmentFoundation.defaultAdapter), adapter)) || this;
+        }
+        Object.defineProperty(MDCSegmentedButtonSegmentFoundation, "defaultAdapter", {
+            get: function() {
+                return {
+                    isSingleSelect: function() {
+                        return false;
+                    },
+                    getAttr: function() {
+                        return "";
+                    },
+                    setAttr: function() {
+                        return undefined;
+                    },
+                    addClass: function() {
+                        return undefined;
+                    },
+                    removeClass: function() {
+                        return undefined;
+                    },
+                    hasClass: function() {
+                        return false;
+                    },
+                    notifySelectedChange: function() {
+                        return undefined;
+                    },
+                    getRootBoundingClientRect: function() {
+                        return emptyClientRect;
+                    }
+                };
+            },
+            enumerable: true,
+            configurable: true
+        });
+        MDCSegmentedButtonSegmentFoundation.prototype.isSelected = function() {
+            return this.adapter.hasClass(segment_constants_cssClasses.SELECTED);
+        };
+        MDCSegmentedButtonSegmentFoundation.prototype.setSelected = function() {
+            this.adapter.addClass(segment_constants_cssClasses.SELECTED);
+            this.setAriaAttr(booleans.TRUE);
+        };
+        MDCSegmentedButtonSegmentFoundation.prototype.setUnselected = function() {
+            this.adapter.removeClass(segment_constants_cssClasses.SELECTED);
+            this.setAriaAttr(booleans.FALSE);
+        };
+        MDCSegmentedButtonSegmentFoundation.prototype.getSegmentId = function() {
+            var _a;
+            return (_a = this.adapter.getAttr(constants_attributes.DATA_SEGMENT_ID)) !== null && _a !== void 0 ? _a : undefined;
+        };
+        MDCSegmentedButtonSegmentFoundation.prototype.handleClick = function() {
+            if (this.adapter.isSingleSelect()) {
+                this.setSelected();
+            } else {
+                this.toggleSelection();
+            }
+            this.adapter.notifySelectedChange(this.isSelected());
+        };
+        MDCSegmentedButtonSegmentFoundation.prototype.getDimensions = function() {
+            return this.adapter.getRootBoundingClientRect();
+        };
+        MDCSegmentedButtonSegmentFoundation.prototype.toggleSelection = function() {
+            if (this.isSelected()) {
+                this.setUnselected();
+            } else {
+                this.setSelected();
+            }
+        };
+        MDCSegmentedButtonSegmentFoundation.prototype.setAriaAttr = function(value) {
+            if (this.adapter.isSingleSelect()) {
+                this.adapter.setAttr(constants_attributes.ARIA_CHECKED, value);
+            } else {
+                this.adapter.setAttr(constants_attributes.ARIA_PRESSED, value);
+            }
+        };
+        return MDCSegmentedButtonSegmentFoundation;
+    }(MDCFoundation);
+    /**
+ * @license
+ * Copyright 2020 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */    var MDCSegmentedButtonSegment = function(_super) {
+        __extends(MDCSegmentedButtonSegment, _super);
+        function MDCSegmentedButtonSegment() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        Object.defineProperty(MDCSegmentedButtonSegment.prototype, "ripple", {
+            get: function() {
+                return this.rippleComponent;
+            },
+            enumerable: true,
+            configurable: true
+        });
+        MDCSegmentedButtonSegment.attachTo = function(root) {
+            return new MDCSegmentedButtonSegment(root);
+        };
+        MDCSegmentedButtonSegment.prototype.initialize = function(rippleFactory) {
+            var _this = this;
+            if (rippleFactory === void 0) {
+                rippleFactory = function(el, foundation) {
+                    return new MDCRipple(el, foundation);
+                };
+            }
+            var rippleAdapter = __assign(__assign({}, MDCRipple.createAdapter(this)), {
+                computeBoundingRect: function() {
+                    return _this.foundation.getDimensions();
+                }
+            });
+            this.rippleComponent = rippleFactory(this.root, new MDCRippleFoundation(rippleAdapter));
+        };
+        MDCSegmentedButtonSegment.prototype.initialSyncWithDOM = function() {
+            var _this = this;
+            this.handleClick = function() {
+                _this.foundation.handleClick();
+            };
+            this.listen(segment_constants_events.CLICK, this.handleClick);
+        };
+        MDCSegmentedButtonSegment.prototype.destroy = function() {
+            this.ripple.destroy();
+            this.unlisten(segment_constants_events.CLICK, this.handleClick);
+            _super.prototype.destroy.call(this);
+        };
+        MDCSegmentedButtonSegment.prototype.getDefaultFoundation = function() {
+            var _this = this;
+            var adapter = {
+                isSingleSelect: function() {
+                    return _this.isSingleSelect;
+                },
+                getAttr: function(attrName) {
+                    return _this.root.getAttribute(attrName);
+                },
+                setAttr: function(attrName, value) {
+                    _this.root.setAttribute(attrName, value);
+                },
+                addClass: function(className) {
+                    _this.root.classList.add(className);
+                },
+                removeClass: function(className) {
+                    _this.root.classList.remove(className);
+                },
+                hasClass: function(className) {
+                    return _this.root.classList.contains(className);
+                },
+                notifySelectedChange: function(selected) {
+                    _this.emit(segment_constants_events.SELECTED, {
+                        index: _this.index,
+                        selected: selected,
+                        segmentId: _this.getSegmentId()
+                    }, true);
+                },
+                getRootBoundingClientRect: function() {
+                    return _this.root.getBoundingClientRect();
+                }
+            };
+            return new MDCSegmentedButtonSegmentFoundation(adapter);
+        };
+        MDCSegmentedButtonSegment.prototype.setIndex = function(index) {
+            this.index = index;
+        };
+        MDCSegmentedButtonSegment.prototype.setIsSingleSelect = function(isSingleSelect) {
+            this.isSingleSelect = isSingleSelect;
+        };
+        MDCSegmentedButtonSegment.prototype.isSelected = function() {
+            return this.foundation.isSelected();
+        };
+        MDCSegmentedButtonSegment.prototype.setSelected = function() {
+            this.foundation.setSelected();
+        };
+        MDCSegmentedButtonSegment.prototype.setUnselected = function() {
+            this.foundation.setUnselected();
+        };
+        MDCSegmentedButtonSegment.prototype.getSegmentId = function() {
+            return this.foundation.getSegmentId();
+        };
+        return MDCSegmentedButtonSegment;
+    }(MDCComponent);
+    /**
+ * @license
+ * Copyright 2020 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */    var MDCSegmentedButton = function(_super) {
+        __extends(MDCSegmentedButton, _super);
+        function MDCSegmentedButton() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        MDCSegmentedButton.attachTo = function(root) {
+            return new MDCSegmentedButton(root);
+        };
+        Object.defineProperty(MDCSegmentedButton.prototype, "segments", {
+            get: function() {
+                return this.segments_.slice();
+            },
+            enumerable: true,
+            configurable: true
+        });
+        MDCSegmentedButton.prototype.initialize = function(segmentFactory) {
+            if (segmentFactory === void 0) {
+                segmentFactory = function(el) {
+                    return new MDCSegmentedButtonSegment(el);
+                };
+            }
+            this.segmentFactory = segmentFactory;
+            this.segments_ = this.instantiateSegments(this.segmentFactory);
+        };
+        MDCSegmentedButton.prototype.instantiateSegments = function(segmentFactory) {
+            var segmentElements = [].slice.call(this.root.querySelectorAll(constants_selectors.SEGMENT));
+            return segmentElements.map((function(el) {
+                return segmentFactory(el);
+            }));
+        };
+        MDCSegmentedButton.prototype.initialSyncWithDOM = function() {
+            var _this = this;
+            this.handleSelected = function(event) {
+                _this.foundation.handleSelected(event.detail);
+            };
+            this.listen(constants_events.SELECTED, this.handleSelected);
+            var isSingleSelect = this.foundation.isSingleSelect();
+            this.segments_.forEach((function(segment, index) {
+                segment.setIndex(index);
+                segment.setIsSingleSelect(isSingleSelect);
+            }));
+            var selectedSegments = this.segments_.filter((function(segment) {
+                return segment.isSelected();
+            }));
+            if (isSingleSelect && selectedSegments.length == 0 && this.segments_.length > 0) {
+                throw new Error("No segment selected in singleSelect mdc-segmented-button");
+            } else if (isSingleSelect && selectedSegments.length > 1) {
+                throw new Error("Multiple segments selected in singleSelect mdc-segmented-button");
+            }
+        };
+        MDCSegmentedButton.prototype.destroy = function() {
+            this.segments_.forEach((function(segment) {
+                segment.destroy();
+            }));
+            this.unlisten(constants_events.SELECTED, this.handleSelected);
+            _super.prototype.destroy.call(this);
+        };
+        MDCSegmentedButton.prototype.getDefaultFoundation = function() {
+            var _this = this;
+            var adapter = {
+                hasClass: function(className) {
+                    return _this.root.classList.contains(className);
+                },
+                getSegments: function() {
+                    return _this.mappedSegments();
+                },
+                selectSegment: function(indexOrSegmentId) {
+                    var segmentDetail = _this.mappedSegments().find((function(_segmentDetail) {
+                        return _segmentDetail.index === indexOrSegmentId || _segmentDetail.segmentId === indexOrSegmentId;
+                    }));
+                    if (segmentDetail) {
+                        _this.segments_[segmentDetail.index].setSelected();
+                    }
+                },
+                unselectSegment: function(indexOrSegmentId) {
+                    var segmentDetail = _this.mappedSegments().find((function(_segmentDetail) {
+                        return _segmentDetail.index === indexOrSegmentId || _segmentDetail.segmentId === indexOrSegmentId;
+                    }));
+                    if (segmentDetail) {
+                        _this.segments_[segmentDetail.index].setUnselected();
+                    }
+                },
+                notifySelectedChange: function(detail) {
+                    _this.emit(constants_events.CHANGE, detail, true);
+                }
+            };
+            return new MDCSegmentedButtonFoundation(adapter);
+        };
+        MDCSegmentedButton.prototype.getSelectedSegments = function() {
+            return this.foundation.getSelectedSegments();
+        };
+        MDCSegmentedButton.prototype.selectSegment = function(indexOrSegmentId) {
+            this.foundation.selectSegment(indexOrSegmentId);
+        };
+        MDCSegmentedButton.prototype.unselectSegment = function(indexOrSegmentId) {
+            this.foundation.unselectSegment(indexOrSegmentId);
+        };
+        MDCSegmentedButton.prototype.isSegmentSelected = function(indexOrSegmentId) {
+            return this.foundation.isSegmentSelected(indexOrSegmentId);
+        };
+        MDCSegmentedButton.prototype.mappedSegments = function() {
+            return this.segments_.map((function(segment, index) {
+                return {
+                    index: index,
+                    selected: segment.isSelected(),
+                    segmentId: segment.getSegmentId()
+                };
+            }));
+        };
+        return MDCSegmentedButton;
+    }(MDCComponent);
+    /**
+ * @license
+ * Copyright 2020 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+    /**
+ * @license
+ * Copyright 2020 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+    /**
+ * @license
+ * Copyright 2020 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */    function MBSegmentedButtonMulti_init(elem, isSingleSelect, dotNetObject) {
+        elem._segmentedButton = MDCSegmentedButton.attachTo(elem);
+        elem._isSingleSelect = isSingleSelect;
+        return new Promise((function() {
+            elem._segmentedButton.foundation.handleSelected = function(index) {
+                if (elem._isSingleSelect) {
+                    dotNetObject.invokeMethodAsync("NotifySingleSelectedAsync", index.index);
+                    for (var i = 0; i < elem._segmentedButton.segments_.length; i++) {
+                        if (i == index) {
+                            elem._segmentedButton.segments_[i].setSelected();
+                        } else {
+                            elem._segmentedButton.segments_[i].setUnselected();
+                        }
+                    }
+                } else {
+                    dotNetObject.invokeMethodAsync("NotifyMultiSelectedAsync", elem._segmentedButton.segments_.map((function(x) {
+                        return x.isSelected();
+                    })));
+                }
+            };
+        }));
+    }
+    function MBSegmentedButtonMulti_destroy(elem) {
+        elem._segmentedButton.destroy();
+    }
+    function MBSegmentedButtonMulti_setDisabled(elem, value) {
+        elem._segmentedButton.disabled = value;
+    }
+    function setAreSelected(elem, areSelected) {
+        for (var i = 0; i < areSelected.length; i++) {
+            if (areSelected[i] == true) {
+                elem._segmentedButton.segments_[i].setSelected();
+            } else {
+                elem._segmentedButton.segments_[i].setUnselected();
+            }
+        }
+    }
     function MBSelect_init(elem, dotNetObject) {
         elem._select = MDCSelect.attachTo(elem);
         return new Promise((function() {
@@ -13248,7 +13879,7 @@ PERFORMANCE OF THIS SOFTWARE.
         MIN_HEIGHT: 24,
         MAX_WIDTH: 200
     };
-    var constants_events = {
+    var tooltip_constants_events = {
         HIDDEN: "MDCTooltip:hidden"
     };
     var XPosition;
@@ -13769,7 +14400,7 @@ PERFORMANCE OF THIS SOFTWARE.
                     document.body.removeEventListener(evt, handler);
                 },
                 notifyHidden: function() {
-                    _this.emit(constants_events.HIDDEN, {});
+                    _this.emit(tooltip_constants_events.HIDDEN, {});
                 }
             };
             return new MDCTooltipFoundation(adapter);
@@ -14300,6 +14931,7 @@ PERFORMANCE OF THIS SOFTWARE.
         MBList: MBList_namespaceObject,
         MBMenu: MBMenu_namespaceObject,
         MBRadioButton: MBRadioButton_namespaceObject,
+        MBSegmentedButtonMulti: MBSegmentedButtonMulti_namespaceObject,
         MBSelect: MBSelect_namespaceObject,
         MBSwitch: MBSwitch_namespaceObject,
         MBTabBar: MBTabBar_namespaceObject,

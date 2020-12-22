@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class MBRadioButtonGroup&lt;TItem&gt;
+    <title>Class SingleSelectComponentFoundation&lt;T, TListElement&gt;
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class MBRadioButtonGroup&lt;TItem&gt;
+    <meta name="title" content="Class SingleSelectComponentFoundation&lt;T, TListElement&gt;
    ">
     <meta name="generator" content="docfx 2.56.1.0">
     
@@ -79,12 +79,12 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Material.Blazor.MBRadioButtonGroup`1">
+            <article class="content wrap" id="_content" data-uid="Material.Blazor.Internal.SingleSelectComponentFoundation`2">
   
   
-  <h1 id="Material_Blazor_MBRadioButtonGroup_1" data-uid="Material.Blazor.MBRadioButtonGroup`1" class="text-break">Class MBRadioButtonGroup&lt;TItem&gt;
+  <h1 id="Material_Blazor_Internal_SingleSelectComponentFoundation_2" data-uid="Material.Blazor.Internal.SingleSelectComponentFoundation`2" class="text-break">Class SingleSelectComponentFoundation&lt;T, TListElement&gt;
   </h1>
-  <div class="markdown level0 summary"><p>A group of <a class="xref" href="Material.Blazor.MBRadioButton-1.html">MBRadioButton&lt;TItem&gt;</a>s displayed horizontally or vertically.</p>
+  <div class="markdown level0 summary"><p>A DRY inspired abstract class providing <a class="xref" href="Material.Blazor.MBSelect-1.html">MBSelect&lt;TItem&gt;</a> and <a class="xref" href="Material.Blazor.MBRadioButtonGroup-1.html">MBRadioButtonGroup&lt;TItem&gt;</a> with validation.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -92,9 +92,11 @@
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><a class="xref" href="Material.Blazor.Internal.ComponentFoundation.html">ComponentFoundation</a></div>
     <div class="level2"><a class="xref" href="Material.Blazor.DialogChildComponentFoundation.html">DialogChildComponentFoundation</a></div>
-    <div class="level3"><a class="xref" href="Material.Blazor.Internal.InputComponentFoundation-1.html">InputComponentFoundation</a>&lt;TItem&gt;</div>
-    <div class="level4"><a class="xref" href="Material.Blazor.Internal.SingleSelectComponentFoundation-2.html">SingleSelectComponentFoundation</a>&lt;TItem, <a class="xref" href="Material.Blazor.MBSelectElement-1.html">MBSelectElement</a>&lt;TItem&gt;&gt;</div>
-    <div class="level5"><span class="xref">MBRadioButtonGroup&lt;TItem&gt;</span></div>
+    <div class="level3"><a class="xref" href="Material.Blazor.Internal.InputComponentFoundation-1.html">InputComponentFoundation</a>&lt;T&gt;</div>
+    <div class="level4"><span class="xref">SingleSelectComponentFoundation&lt;T, TListElement&gt;</span></div>
+      <div class="level5"><a class="xref" href="Material.Blazor.MBRadioButtonGroup-1.html">MBRadioButtonGroup</a>&lt;TItem&gt;</div>
+      <div class="level5"><a class="xref" href="Material.Blazor.MBSegmentedButtonSingle-1.html">MBSegmentedButtonSingle&lt;TItem&gt;</a></div>
+      <div class="level5"><a class="xref" href="Material.Blazor.MBSelect-1.html">MBSelect</a>&lt;TItem&gt;</div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
@@ -103,70 +105,64 @@
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="Material.Blazor.Internal.SingleSelectComponentFoundation-2.html#Material_Blazor_Internal_SingleSelectComponentFoundation_2_GetKeysFunc">SingleSelectComponentFoundation&lt;TItem, MBSelectElement&lt;TItem&gt;&gt;.GetKeysFunc</a>
+      <a class="xref" href="Material.Blazor.Internal.InputComponentFoundation-1.html#Material_Blazor_Internal_InputComponentFoundation_1__instantiate">InputComponentFoundation&lt;T&gt;._instantiate</a>
     </div>
     <div>
-      <a class="xref" href="Material.Blazor.Internal.SingleSelectComponentFoundation-2.html#Material_Blazor_Internal_SingleSelectComponentFoundation_2_Items">SingleSelectComponentFoundation&lt;TItem, MBSelectElement&lt;TItem&gt;&gt;.Items</a>
+      <a class="xref" href="Material.Blazor.Internal.InputComponentFoundation-1.html#Material_Blazor_Internal_InputComponentFoundation_1_Value">InputComponentFoundation&lt;T&gt;.Value</a>
     </div>
     <div>
-      <a class="xref" href="Material.Blazor.Internal.SingleSelectComponentFoundation-2.html#Material_Blazor_Internal_SingleSelectComponentFoundation_2_ItemValidation">SingleSelectComponentFoundation&lt;TItem, MBSelectElement&lt;TItem&gt;&gt;.ItemValidation</a>
+      <a class="xref" href="Material.Blazor.Internal.InputComponentFoundation-1.html#Material_Blazor_Internal_InputComponentFoundation_1_SetComponentValue">InputComponentFoundation&lt;T&gt;.SetComponentValue</a>
     </div>
     <div>
-      <a class="xref" href="Material.Blazor.Internal.SingleSelectComponentFoundation-2.html#Material_Blazor_Internal_SingleSelectComponentFoundation_2_ValidateItemList_System_Collections_Generic_IEnumerable_Material_Blazor_MBSelectElement__0___Material_Blazor_MBItemValidation_">SingleSelectComponentFoundation&lt;TItem, MBSelectElement&lt;TItem&gt;&gt;.ValidateItemList(IEnumerable&lt;MBSelectElement&lt;TItem&gt;&gt;, MBItemValidation)</a>
+      <a class="xref" href="Material.Blazor.Internal.InputComponentFoundation-1.html#Material_Blazor_Internal_InputComponentFoundation_1_ValueChanged">InputComponentFoundation&lt;T&gt;.ValueChanged</a>
     </div>
     <div>
-      <a class="xref" href="Material.Blazor.Internal.InputComponentFoundation-1.html#Material_Blazor_Internal_InputComponentFoundation_1__instantiate">InputComponentFoundation&lt;TItem&gt;._instantiate</a>
+      <a class="xref" href="Material.Blazor.Internal.InputComponentFoundation-1.html#Material_Blazor_Internal_InputComponentFoundation_1_ValueExpression">InputComponentFoundation&lt;T&gt;.ValueExpression</a>
     </div>
     <div>
-      <a class="xref" href="Material.Blazor.Internal.InputComponentFoundation-1.html#Material_Blazor_Internal_InputComponentFoundation_1_Value">InputComponentFoundation&lt;TItem&gt;.Value</a>
+      <a class="xref" href="Material.Blazor.Internal.InputComponentFoundation-1.html#Material_Blazor_Internal_InputComponentFoundation_1_EditContext">InputComponentFoundation&lt;T&gt;.EditContext</a>
     </div>
     <div>
-      <a class="xref" href="Material.Blazor.Internal.InputComponentFoundation-1.html#Material_Blazor_Internal_InputComponentFoundation_1_SetComponentValue">InputComponentFoundation&lt;TItem&gt;.SetComponentValue</a>
+      <a class="xref" href="Material.Blazor.Internal.InputComponentFoundation-1.html#Material_Blazor_Internal_InputComponentFoundation_1_FieldIdentifier">InputComponentFoundation&lt;T&gt;.FieldIdentifier</a>
     </div>
     <div>
-      <a class="xref" href="Material.Blazor.Internal.InputComponentFoundation-1.html#Material_Blazor_Internal_InputComponentFoundation_1_ValueChanged">InputComponentFoundation&lt;TItem&gt;.ValueChanged</a>
+      <a class="xref" href="Material.Blazor.Internal.InputComponentFoundation-1.html#Material_Blazor_Internal_InputComponentFoundation_1_ComponentValueAsString">InputComponentFoundation&lt;T&gt;.ComponentValueAsString</a>
     </div>
     <div>
-      <a class="xref" href="Material.Blazor.Internal.InputComponentFoundation-1.html#Material_Blazor_Internal_InputComponentFoundation_1_ValueExpression">InputComponentFoundation&lt;TItem&gt;.ValueExpression</a>
+      <a class="xref" href="Material.Blazor.Internal.InputComponentFoundation-1.html#Material_Blazor_Internal_InputComponentFoundation_1_FormatValueToString__0_">InputComponentFoundation&lt;T&gt;.FormatValueToString(T)</a>
     </div>
     <div>
-      <a class="xref" href="Material.Blazor.Internal.InputComponentFoundation-1.html#Material_Blazor_Internal_InputComponentFoundation_1_EditContext">InputComponentFoundation&lt;TItem&gt;.EditContext</a>
+      <a class="xref" href="Material.Blazor.Internal.InputComponentFoundation-1.html#Material_Blazor_Internal_InputComponentFoundation_1_TryParseValueFromString_System_String__0__System_String__">InputComponentFoundation&lt;T&gt;.TryParseValueFromString(String, T, String)</a>
     </div>
     <div>
-      <a class="xref" href="Material.Blazor.Internal.InputComponentFoundation-1.html#Material_Blazor_Internal_InputComponentFoundation_1_FieldIdentifier">InputComponentFoundation&lt;TItem&gt;.FieldIdentifier</a>
+      <a class="xref" href="Material.Blazor.Internal.InputComponentFoundation-1.html#Material_Blazor_Internal_InputComponentFoundation_1_FieldClass">InputComponentFoundation&lt;T&gt;.FieldClass</a>
     </div>
     <div>
-      <a class="xref" href="Material.Blazor.Internal.InputComponentFoundation-1.html#Material_Blazor_Internal_InputComponentFoundation_1_ComponentValueAsString">InputComponentFoundation&lt;TItem&gt;.ComponentValueAsString</a>
+      <a class="xref" href="Material.Blazor.Internal.InputComponentFoundation-1.html#Material_Blazor_Internal_InputComponentFoundation_1_OnInitialized">InputComponentFoundation&lt;T&gt;.OnInitialized()</a>
     </div>
     <div>
-      <a class="xref" href="Material.Blazor.Internal.InputComponentFoundation-1.html#Material_Blazor_Internal_InputComponentFoundation_1_FormatValueToString__0_">InputComponentFoundation&lt;TItem&gt;.FormatValueToString(TItem)</a>
+      <a class="xref" href="Material.Blazor.Internal.InputComponentFoundation-1.html#Material_Blazor_Internal_InputComponentFoundation_1_OnInitializedAsync">InputComponentFoundation&lt;T&gt;.OnInitializedAsync()</a>
     </div>
     <div>
-      <a class="xref" href="Material.Blazor.Internal.InputComponentFoundation-1.html#Material_Blazor_Internal_InputComponentFoundation_1_TryParseValueFromString_System_String__0__System_String__">InputComponentFoundation&lt;TItem&gt;.TryParseValueFromString(String, TItem, String)</a>
+      <a class="xref" href="Material.Blazor.Internal.InputComponentFoundation-1.html#Material_Blazor_Internal_InputComponentFoundation_1_SetParametersAsync_ParameterView_">InputComponentFoundation&lt;T&gt;.SetParametersAsync(ParameterView)</a>
     </div>
     <div>
-      <a class="xref" href="Material.Blazor.Internal.InputComponentFoundation-1.html#Material_Blazor_Internal_InputComponentFoundation_1_FieldClass">InputComponentFoundation&lt;TItem&gt;.FieldClass</a>
+      <a class="xref" href="Material.Blazor.Internal.InputComponentFoundation-1.html#Material_Blazor_Internal_InputComponentFoundation_1_OnParametersSet">InputComponentFoundation&lt;T&gt;.OnParametersSet()</a>
     </div>
     <div>
-      <a class="xref" href="Material.Blazor.Internal.InputComponentFoundation-1.html#Material_Blazor_Internal_InputComponentFoundation_1_OnInitializedAsync">InputComponentFoundation&lt;TItem&gt;.OnInitializedAsync()</a>
+      <a class="xref" href="Material.Blazor.Internal.InputComponentFoundation-1.html#Material_Blazor_Internal_InputComponentFoundation_1_OnParametersSetAsync">InputComponentFoundation&lt;T&gt;.OnParametersSetAsync()</a>
     </div>
     <div>
-      <a class="xref" href="Material.Blazor.Internal.InputComponentFoundation-1.html#Material_Blazor_Internal_InputComponentFoundation_1_SetParametersAsync_ParameterView_">InputComponentFoundation&lt;TItem&gt;.SetParametersAsync(ParameterView)</a>
+      <a class="xref" href="Material.Blazor.Internal.InputComponentFoundation-1.html#Material_Blazor_Internal_InputComponentFoundation_1_RequestInstantiation">InputComponentFoundation&lt;T&gt;.RequestInstantiation()</a>
     </div>
     <div>
-      <a class="xref" href="Material.Blazor.Internal.InputComponentFoundation-1.html#Material_Blazor_Internal_InputComponentFoundation_1_OnParametersSetAsync">InputComponentFoundation&lt;TItem&gt;.OnParametersSetAsync()</a>
+      <a class="xref" href="Material.Blazor.Internal.InputComponentFoundation-1.html#Material_Blazor_Internal_InputComponentFoundation_1_ShouldRender">InputComponentFoundation&lt;T&gt;.ShouldRender()</a>
     </div>
     <div>
-      <a class="xref" href="Material.Blazor.Internal.InputComponentFoundation-1.html#Material_Blazor_Internal_InputComponentFoundation_1_RequestInstantiation">InputComponentFoundation&lt;TItem&gt;.RequestInstantiation()</a>
+      <a class="xref" href="Material.Blazor.Internal.InputComponentFoundation-1.html#Material_Blazor_Internal_InputComponentFoundation_1_OnAfterRender_System_Boolean_">InputComponentFoundation&lt;T&gt;.OnAfterRender(Boolean)</a>
     </div>
     <div>
-      <a class="xref" href="Material.Blazor.Internal.InputComponentFoundation-1.html#Material_Blazor_Internal_InputComponentFoundation_1_ShouldRender">InputComponentFoundation&lt;TItem&gt;.ShouldRender()</a>
-    </div>
-    <div>
-      <a class="xref" href="Material.Blazor.Internal.InputComponentFoundation-1.html#Material_Blazor_Internal_InputComponentFoundation_1_OnAfterRender_System_Boolean_">InputComponentFoundation&lt;TItem&gt;.OnAfterRender(Boolean)</a>
-    </div>
-    <div>
-      <a class="xref" href="Material.Blazor.Internal.InputComponentFoundation-1.html#Material_Blazor_Internal_InputComponentFoundation_1_OnAfterRenderAsync_System_Boolean_">InputComponentFoundation&lt;TItem&gt;.OnAfterRenderAsync(Boolean)</a>
+      <a class="xref" href="Material.Blazor.Internal.InputComponentFoundation-1.html#Material_Blazor_Internal_InputComponentFoundation_1_OnAfterRenderAsync_System_Boolean_">InputComponentFoundation&lt;T&gt;.OnAfterRenderAsync(Boolean)</a>
     </div>
     <div>
       <a class="xref" href="Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_CascadingDefaults">ComponentFoundation.CascadingDefaults</a>
@@ -271,11 +267,11 @@
       <a class="xref" href="Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_LogMBWarning_System_Exception_System_String_System_Object___">ComponentFoundation.LogMBWarning(Exception, String, Object[])</a>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Material.Blazor.html">Material.Blazor</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Material.Blazor.Internal.html">Material.Blazor.Internal</a></h6>
   <h6><strong>Assembly</strong>: Material.Blazor.dll</h6>
-  <h5 id="Material_Blazor_MBRadioButtonGroup_1_syntax">Syntax</h5>
+  <h5 id="Material_Blazor_Internal_SingleSelectComponentFoundation_2_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class MBRadioButtonGroup&lt;TItem&gt; : SingleSelectComponentFoundation&lt;TItem, MBSelectElement&lt;TItem&gt;&gt;, IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class SingleSelectComponentFoundation&lt;T, TListElement&gt; : InputComponentFoundation&lt;T&gt;, IDisposable where TListElement : MBSelectElement&lt;T&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -287,7 +283,11 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="parametername">TItem</span></td>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TListElement</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -296,19 +296,20 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/simonziegler/Material.Blazor/new/main/apiSpec/new?filename=Material_Blazor_MBRadioButtonGroup_1_Density.md&amp;value=---%0Auid%3A%20Material.Blazor.MBRadioButtonGroup%601.Density%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/simonziegler/Material.Blazor/new/main/apiSpec/new?filename=Material_Blazor_Internal_SingleSelectComponentFoundation_2_GetKeysFunc.md&amp;value=---%0Auid%3A%20Material.Blazor.Internal.SingleSelectComponentFoundation%602.GetKeysFunc%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/simonziegler/Material.Blazor/blob/main/Material.Blazor/Components/RadioButtonGroup/MBRadioButtonGroup.razor.cs/#L14">View Source</a>
+    <a href="https://github.com/simonziegler/Material.Blazor/blob/main/Material.Blazor/Foundation/SingleSelectComponentFoundation.cs/#L18">View Source</a>
   </span>
-  <a id="Material_Blazor_MBRadioButtonGroup_1_Density_" data-uid="Material.Blazor.MBRadioButtonGroup`1.Density*"></a>
-  <h4 id="Material_Blazor_MBRadioButtonGroup_1_Density" data-uid="Material.Blazor.MBRadioButtonGroup`1.Density">Density</h4>
-  <div class="markdown level1 summary"><p>The radio button's density.</p>
+  <a id="Material_Blazor_Internal_SingleSelectComponentFoundation_2_GetKeysFunc_" data-uid="Material.Blazor.Internal.SingleSelectComponentFoundation`2.GetKeysFunc*"></a>
+  <h4 id="Material_Blazor_Internal_SingleSelectComponentFoundation_2_GetKeysFunc" data-uid="Material.Blazor.Internal.SingleSelectComponentFoundation`2.GetKeysFunc">GetKeysFunc</h4>
+  <div class="markdown level1 summary"><p>A function delegate to return the parameters for <code>@key</code> attributes. If unused
+&quot;fake&quot; keys set to GUIDs will be used.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public MBDensity? Density { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Func&lt;T, object&gt; GetKeysFunc { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -320,26 +321,26 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="Material.Blazor.MBDensity.html">MBDensity</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/simonziegler/Material.Blazor/new/main/apiSpec/new?filename=Material_Blazor_MBRadioButtonGroup_1_EnableTouchWrapper.md&amp;value=---%0Auid%3A%20Material.Blazor.MBRadioButtonGroup%601.EnableTouchWrapper%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/simonziegler/Material.Blazor/new/main/apiSpec/new?filename=Material_Blazor_Internal_SingleSelectComponentFoundation_2_Items.md&amp;value=---%0Auid%3A%20Material.Blazor.Internal.SingleSelectComponentFoundation%602.Items%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/simonziegler/Material.Blazor/blob/main/Material.Blazor/Components/RadioButtonGroup/MBRadioButtonGroup.razor.cs/#L26">View Source</a>
+    <a href="https://github.com/simonziegler/Material.Blazor/blob/main/Material.Blazor/Foundation/SingleSelectComponentFoundation.cs/#L24">View Source</a>
   </span>
-  <a id="Material_Blazor_MBRadioButtonGroup_1_EnableTouchWrapper_" data-uid="Material.Blazor.MBRadioButtonGroup`1.EnableTouchWrapper*"></a>
-  <h4 id="Material_Blazor_MBRadioButtonGroup_1_EnableTouchWrapper" data-uid="Material.Blazor.MBRadioButtonGroup`1.EnableTouchWrapper">EnableTouchWrapper</h4>
-  <div class="markdown level1 summary"><p>Enables the Material Theme touch wrapper.</p>
+  <a id="Material_Blazor_Internal_SingleSelectComponentFoundation_2_Items_" data-uid="Material.Blazor.Internal.SingleSelectComponentFoundation`2.Items*"></a>
+  <h4 id="Material_Blazor_Internal_SingleSelectComponentFoundation_2_Items" data-uid="Material.Blazor.Internal.SingleSelectComponentFoundation`2.Items">Items</h4>
+  <div class="markdown level1 summary"><p>The item list to be represented as radio buttons</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool EnableTouchWrapper { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;TListElement&gt; Items { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -351,26 +352,29 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TListElement&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/simonziegler/Material.Blazor/new/main/apiSpec/new?filename=Material_Blazor_MBRadioButtonGroup_1_Vertical.md&amp;value=---%0Auid%3A%20Material.Blazor.MBRadioButtonGroup%601.Vertical%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/simonziegler/Material.Blazor/new/main/apiSpec/new?filename=Material_Blazor_Internal_SingleSelectComponentFoundation_2_ItemValidation.md&amp;value=---%0Auid%3A%20Material.Blazor.Internal.SingleSelectComponentFoundation%602.ItemValidation%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/simonziegler/Material.Blazor/blob/main/Material.Blazor/Components/RadioButtonGroup/MBRadioButtonGroup.razor.cs/#L20">View Source</a>
+    <a href="https://github.com/simonziegler/Material.Blazor/blob/main/Material.Blazor/Foundation/SingleSelectComponentFoundation.cs/#L33">View Source</a>
   </span>
-  <a id="Material_Blazor_MBRadioButtonGroup_1_Vertical_" data-uid="Material.Blazor.MBRadioButtonGroup`1.Vertical*"></a>
-  <h4 id="Material_Blazor_MBRadioButtonGroup_1_Vertical" data-uid="Material.Blazor.MBRadioButtonGroup`1.Vertical">Vertical</h4>
-  <div class="markdown level1 summary"><p>Stack the radio buttons vertically if True, otherwise default horizontal placement.</p>
+  <a id="Material_Blazor_Internal_SingleSelectComponentFoundation_2_ItemValidation_" data-uid="Material.Blazor.Internal.SingleSelectComponentFoundation`2.ItemValidation*"></a>
+  <h4 id="Material_Blazor_Internal_SingleSelectComponentFoundation_2_ItemValidation" data-uid="Material.Blazor.Internal.SingleSelectComponentFoundation`2.ItemValidation">ItemValidation</h4>
+  <div class="markdown level1 summary"><p>The form of validation to apply when Value is first set, deciding whether to accept
+a value outside the <a class="xref" href="Material.Blazor.Internal.SingleSelectComponentFoundation-2.html#Material_Blazor_Internal_SingleSelectComponentFoundation_2_Items">Items</a> list, replace it with the first list item or
+to throw an exception (the default).</p>
+<p>Overrides <a class="xref" href="Material.Blazor.MBCascadingDefaults.html#Material_Blazor_MBCascadingDefaults_ItemValidation">ItemValidation</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Vertical { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public MBItemValidation? ItemValidation { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -382,7 +386,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="Material.Blazor.MBItemValidation.html">MBItemValidation</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -391,38 +395,75 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/simonziegler/Material.Blazor/new/main/apiSpec/new?filename=Material_Blazor_MBRadioButtonGroup_1_OnInitialized.md&amp;value=---%0Auid%3A%20Material.Blazor.MBRadioButtonGroup%601.OnInitialized%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/simonziegler/Material.Blazor/new/main/apiSpec/new?filename=Material_Blazor_Internal_SingleSelectComponentFoundation_2_ValidateItemList_System_Collections_Generic_IEnumerable_Material_Blazor_MBSelectElement__0___Material_Blazor_MBItemValidation_.md&amp;value=---%0Auid%3A%20Material.Blazor.Internal.SingleSelectComponentFoundation%602.ValidateItemList(System.Collections.Generic.IEnumerable%7BMaterial.Blazor.MBSelectElement%7B%600%7D%7D%2CMaterial.Blazor.MBItemValidation)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/simonziegler/Material.Blazor/blob/main/Material.Blazor/Components/RadioButtonGroup/MBRadioButtonGroup.razor.cs/#L33">View Source</a>
+    <a href="https://github.com/simonziegler/Material.Blazor/blob/main/Material.Blazor/Foundation/SingleSelectComponentFoundation.cs/#L50">View Source</a>
   </span>
-  <a id="Material_Blazor_MBRadioButtonGroup_1_OnInitialized_" data-uid="Material.Blazor.MBRadioButtonGroup`1.OnInitialized*"></a>
-  <h4 id="Material_Blazor_MBRadioButtonGroup_1_OnInitialized" data-uid="Material.Blazor.MBRadioButtonGroup`1.OnInitialized">OnInitialized()</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="Material_Blazor_Internal_SingleSelectComponentFoundation_2_ValidateItemList_" data-uid="Material.Blazor.Internal.SingleSelectComponentFoundation`2.ValidateItemList*"></a>
+  <h4 id="Material_Blazor_Internal_SingleSelectComponentFoundation_2_ValidateItemList_System_Collections_Generic_IEnumerable_Material_Blazor_MBSelectElement__0___Material_Blazor_MBItemValidation_" data-uid="Material.Blazor.Internal.SingleSelectComponentFoundation`2.ValidateItemList(System.Collections.Generic.IEnumerable{Material.Blazor.MBSelectElement{`0}},Material.Blazor.MBItemValidation)">ValidateItemList(IEnumerable&lt;MBSelectElement&lt;T&gt;&gt;, MBItemValidation)</h4>
+  <div class="markdown level1 summary"><p>Validates the item list against the validation specification.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void OnInitialized()</code></pre>
+    <pre><code class="lang-csharp hljs">public T ValidateItemList(IEnumerable&lt;MBSelectElement&lt;T&gt;&gt; items, MBItemValidation appliedItemValidation)</code></pre>
   </div>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">Material.Blazor.Internal.InputComponentFoundation&lt;TItem&gt;.OnInitialized()</span></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/simonziegler/Material.Blazor/new/main/apiSpec/new?filename=Material_Blazor_MBRadioButtonGroup_1_OnParametersSet.md&amp;value=---%0Auid%3A%20Material.Blazor.MBRadioButtonGroup%601.OnParametersSet%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/simonziegler/Material.Blazor/blob/main/Material.Blazor/Components/RadioButtonGroup/MBRadioButtonGroup.razor.cs/#L48">View Source</a>
-  </span>
-  <a id="Material_Blazor_MBRadioButtonGroup_1_OnParametersSet_" data-uid="Material.Blazor.MBRadioButtonGroup`1.OnParametersSet*"></a>
-  <h4 id="Material_Blazor_MBRadioButtonGroup_1_OnParametersSet" data-uid="Material.Blazor.MBRadioButtonGroup`1.OnParametersSet">OnParametersSet()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void OnParametersSet()</code></pre>
-  </div>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">Material.Blazor.Internal.InputComponentFoundation&lt;TItem&gt;.OnParametersSet()</span></div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Material.Blazor.MBSelectElement-1.html">MBSelectElement</a>&lt;T&gt;&gt;</td>
+        <td><span class="parametername">items</span></td>
+        <td><p>The item list</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Material.Blazor.MBItemValidation.html">MBItemValidation</a></td>
+        <td><span class="parametername">appliedItemValidation</span></td>
+        <td><p>Specification of the required validation <a class="xref" href="Material.Blazor.MBItemValidation.html">MBItemValidation</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><p>The item in the list matching <span class="xref">Material.Blazor.Internal.InputComponentFoundation`1._cachedValue</span></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">System.IDisposable</a>
@@ -435,10 +476,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/simonziegler/Material.Blazor/new/main/apiSpec/new?filename=Material_Blazor_MBRadioButtonGroup_1.md&amp;value=---%0Auid%3A%20Material.Blazor.MBRadioButtonGroup%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/simonziegler/Material.Blazor/new/main/apiSpec/new?filename=Material_Blazor_Internal_SingleSelectComponentFoundation_2.md&amp;value=---%0Auid%3A%20Material.Blazor.Internal.SingleSelectComponentFoundation%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/simonziegler/Material.Blazor/blob/main/Material.Blazor/Components/RadioButtonGroup/MBRadioButtonGroup.razor.cs/#L9" class="contribution-link">View Source</a>
+                    <a href="https://github.com/simonziegler/Material.Blazor/blob/main/Material.Blazor/Foundation/SingleSelectComponentFoundation.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

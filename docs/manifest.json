@@ -413,11 +413,35 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "Material.Blazor/Components/SegmentedButtonMulti/MBSegmentedButtonMulti.md",
+      "output": {
+        ".html": {
+          "relative_path": "Material.Blazor/Components/SegmentedButtonMulti/MBSegmentedButtonMulti.html",
+          "hash": "3blZXX9954z765bJTUHr4A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Material.Blazor/Components/SegmentedButtonSingle/MBSegmentedButtonSingle.md",
+      "output": {
+        ".html": {
+          "relative_path": "Material.Blazor/Components/SegmentedButtonSingle/MBSegmentedButtonSingle.html",
+          "hash": "Gb1Vhmxp3EkHVnd36buBMw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "Material.Blazor/Components/Select/MBSelect.md",
       "output": {
         ".html": {
           "relative_path": "Material.Blazor/Components/Select/MBSelect.html",
-          "hash": "Lt60xy0/TMDgz9yPEXGfIw=="
+          "hash": "uLj521ts7eMMqT32ykrjbQ=="
         }
       },
       "is_incremental": false,
@@ -549,7 +573,7 @@
       "output": {
         ".html": {
           "relative_path": "Material.Blazor/Components/toc.html",
-          "hash": "eKvAmWsqDBKR9IN2xZhNng=="
+          "hash": "VLRiIxDa9dev0m+vmDesqw=="
         }
       },
       "is_incremental": false,
@@ -753,7 +777,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Material.Blazor.Internal.InputComponentFoundation-1.html",
-          "hash": "tDI89dS//22B3zbdxapeJQ=="
+          "hash": "3o3uj3OoPGaI6I7Sc+o9ng=="
         }
       },
       "is_incremental": false,
@@ -821,6 +845,30 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Material.Blazor.Internal.MultiSelectComponentFoundation-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Material.Blazor.Internal.MultiSelectComponentFoundation-2.html",
+          "hash": "IP/vx6X1VKl5VStqYYhKmQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Material.Blazor.Internal.SingleSelectComponentFoundation-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Material.Blazor.Internal.SingleSelectComponentFoundation-2.html",
+          "hash": "wqf6X6JXjC8LttZJXosLwA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Material.Blazor.Internal.StyleMapper.yml",
       "output": {
         ".html": {
@@ -833,23 +881,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Material.Blazor.Internal.ValidatingInputComponentFoundation-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Material.Blazor.Internal.ValidatingInputComponentFoundation-1.html",
-          "hash": "PF9Rk2X8PqjuZpWMQ15/cA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Material.Blazor.Internal.yml",
       "output": {
         ".html": {
           "relative_path": "api/Material.Blazor.Internal.html",
-          "hash": "O6ATaajUlfjrqRuMcrN86Q=="
+          "hash": "o2YyJTSddRzj0b0f8dCA/Q=="
         }
       },
       "is_incremental": false,
@@ -1193,6 +1229,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Material.Blazor.MBIconBearingSelectElement-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Material.Blazor.MBIconBearingSelectElement-1.html",
+          "hash": "ckLXHZuG77MKKAc2sEucaQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Material.Blazor.MBIconButton.yml",
       "output": {
         ".html": {
@@ -1330,18 +1378,6 @@
         ".html": {
           "relative_path": "api/Material.Blazor.MBListDivider.html",
           "hash": "/fxy+mJ49yAi1IUcC6yiqw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Material.Blazor.MBListElement-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Material.Blazor.MBListElement-1.html",
-          "hash": "TN7rZWvrnRDKmmafjvFr4g=="
         }
       },
       "is_incremental": false,
@@ -1497,7 +1533,31 @@
       "output": {
         ".html": {
           "relative_path": "api/Material.Blazor.MBRadioButtonGroup-1.html",
-          "hash": "i6bM7eG6st32M6mC4bZ1sA=="
+          "hash": "HL5pmkI5OBfE9E2ZtfBX+A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Material.Blazor.MBSegmentedButtonMulti-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Material.Blazor.MBSegmentedButtonMulti-1.html",
+          "hash": "IqbNKe9gFIhmjub0WAIpYw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Material.Blazor.MBSegmentedButtonSingle-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Material.Blazor.MBSegmentedButtonSingle-1.html",
+          "hash": "TrCLuj74YYwqMZHhLAf7dQ=="
         }
       },
       "is_incremental": false,
@@ -1509,7 +1569,19 @@
       "output": {
         ".html": {
           "relative_path": "api/Material.Blazor.MBSelect-1.html",
-          "hash": "n3QD7UZoB2F2fMd5Iytiug=="
+          "hash": "BhP/5SLidJlskwht1/EYAg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Material.Blazor.MBSelectElement-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Material.Blazor.MBSelectElement-1.html",
+          "hash": "f+OiKvfM730SAzht2wkAKQ=="
         }
       },
       "is_incremental": false,
@@ -1821,7 +1893,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Material.Blazor.html",
-          "hash": "kmtD4oHfS79Q098LCmluxw=="
+          "hash": "fyx0Tyl7iNppfn5APgcCEA=="
         }
       },
       "is_incremental": false,
@@ -1833,7 +1905,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "WggWY+pBhZQDG72kg7lXRw=="
+          "hash": "SzAdbhJvZqzUVYpfQHu2FA=="
         }
       },
       "is_incremental": false,
@@ -1989,7 +2061,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/ReleaseNotes.html",
-          "hash": "KhqqB2XTIkr//7LmdExliA=="
+          "hash": "9TDCpfUhsCYGnXq6D+J8Bw=="
         }
       },
       "is_incremental": false,
@@ -2217,13 +2289,13 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 71,
+          "total_file_count": 73,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 100,
+          "total_file_count": 104,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
