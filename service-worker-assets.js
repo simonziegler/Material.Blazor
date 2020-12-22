@@ -181,7 +181,7 @@
       "url": "_content\/Material.Blazor\/bundled.min.css"
     },
     {
-      "hash": "sha256-AmCwCt6F48mgFEGTPDUNyNWS97nSCmVOP15lDOYGhJI=",
+      "hash": "sha256-wLdyArEvssmbTXH5UDcqNOb3d2AJr3SEn\/i0gEYCLdw=",
       "url": "_content\/Material.Blazor\/bundled.min.js"
     },
     {
@@ -193,7 +193,7 @@
       "url": "_content\/Material.Blazor\/unbundled.css"
     },
     {
-      "hash": "sha256-aOd4+\/yG9iscsjcU8YlSeOUA7h5IEyjb9NLAgyK8c1s=",
+      "hash": "sha256-TwsQorL9QGa+LGny\/LLNwnsVlQSxBuOBy4bpIXS84Zk=",
       "url": "_content\/Material.Blazor\/unbundled.js"
     },
     {
@@ -201,7 +201,7 @@
       "url": "_content\/Material.Blazor\/unbundled.min.css"
     },
     {
-      "hash": "sha256-JMicKoDA82ynz4JQMCcqWr3+aJtb7rvUgYF2GRA34EI=",
+      "hash": "sha256-03jTlf7jrmWu9xvMSW2xIdIPsJrzArMHcknayI60ZGI=",
       "url": "_content\/Material.Blazor\/unbundled.min.js"
     },
     {
@@ -269,15 +269,15 @@
       "url": "_framework\/System.IO.Pipelines.dll"
     },
     {
-      "hash": "sha256-q\/LBbIvpExwdtWJr\/3I5PUBHtQLmQ9LJ8khPP1vzwlw=",
+      "hash": "sha256-QfiEQhGBklvWn4sWQBtwxut9QQCjkxwj45MIXuuDDc4=",
       "url": "_framework\/Material.Blazor.dll"
     },
     {
-      "hash": "sha256-HbtRAjJyMBM\/fQ6DGlyYc8hJ0K0Cj+ZeUHfKSAh1Npw=",
+      "hash": "sha256-WzdQzAgcPBBcPr7jt9qtcA3dE5By\/nq0YqQX5fGW2bc=",
       "url": "_framework\/Material.Blazor.Website.dll"
     },
     {
-      "hash": "sha256-DNy9+E4CadHoeUJqXK0+MFaKdv3oueNwqFa0d2Pm1u0=",
+      "hash": "sha256-E8NXnuZ1W8slrcO2Rb2n7N4rOVnZOik6gGBmDKij\/Wo=",
       "url": "_framework\/Material.Blazor.Website.WebAssembly.dll"
     },
     {
@@ -381,7 +381,7 @@
       "url": "_framework\/System.Private.CoreLib.dll"
     },
     {
-      "hash": "sha256-C0zqYhRHZTqmMjGFg7OLqA8DGhqF7Ytj4bded80Ll5A=",
+      "hash": "sha256-xDgswRjo6j9\/yvxU+IlUlX+D13VIatSstTzpzAevjcQ=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -389,5 +389,5 @@
       "url": "_framework\/blazor.webassembly.js"
     }
   ],
-  "version": "6R2jmS7v"
+  "version": "IwvTZptl"
 };

@@ -165,7 +165,7 @@ references:
   href: Material.Blazor/Components/RadioButtonGroup/MBRadioButtonGroup.html
 - uid: C.MBSegmentedButtonMulti
   name: MBSegmentedButtonMulti
-  href: Material.Blazor/Components/SegmentedButtonMulti/MBSegmentedButtonMulti.html
+  href: Material.Blazor/Components/ChipsSelectMulti/MBChipsSelectMulti.html
 - uid: C.MBSegmentedButtonSingle
   name: MBSegmentedButtonSingle
   href: Material.Blazor/Components/SegmentedButtonSingle/MBSegmentedButtonSingle.html
@@ -2975,6 +2975,118 @@ references:
   isSpec: "True"
   fullName: Material.Blazor.MBCheckbox.OnValueSetCallback
   nameWithType: MBCheckbox.OnValueSetCallback
+- uid: Material.Blazor.MBChipsSelectMulti`1
+  name: MBChipsSelectMulti<TItem>
+  href: api/Material.Blazor.MBChipsSelectMulti-1.html
+  commentId: T:Material.Blazor.MBChipsSelectMulti`1
+  name.vb: MBChipsSelectMulti(Of TItem)
+  fullName: Material.Blazor.MBChipsSelectMulti<TItem>
+  fullName.vb: Material.Blazor.MBChipsSelectMulti(Of TItem)
+  nameWithType: MBChipsSelectMulti<TItem>
+  nameWithType.vb: MBChipsSelectMulti(Of TItem)
+- uid: Material.Blazor.MBChipsSelectMulti`1.Dispose(System.Boolean)
+  name: Dispose(Boolean)
+  href: api/Material.Blazor.MBChipsSelectMulti-1.html#Material_Blazor_MBChipsSelectMulti_1_Dispose_System_Boolean_
+  commentId: M:Material.Blazor.MBChipsSelectMulti`1.Dispose(System.Boolean)
+  fullName: Material.Blazor.MBChipsSelectMulti<TItem>.Dispose(System.Boolean)
+  fullName.vb: Material.Blazor.MBChipsSelectMulti(Of TItem).Dispose(System.Boolean)
+  nameWithType: MBChipsSelectMulti<TItem>.Dispose(Boolean)
+  nameWithType.vb: MBChipsSelectMulti(Of TItem).Dispose(Boolean)
+- uid: Material.Blazor.MBChipsSelectMulti`1.Dispose*
+  name: Dispose
+  href: api/Material.Blazor.MBChipsSelectMulti-1.html#Material_Blazor_MBChipsSelectMulti_1_Dispose_
+  commentId: Overload:Material.Blazor.MBChipsSelectMulti`1.Dispose
+  isSpec: "True"
+  fullName: Material.Blazor.MBChipsSelectMulti<TItem>.Dispose
+  fullName.vb: Material.Blazor.MBChipsSelectMulti(Of TItem).Dispose
+  nameWithType: MBChipsSelectMulti<TItem>.Dispose
+  nameWithType.vb: MBChipsSelectMulti(Of TItem).Dispose
+- uid: Material.Blazor.MBChipsSelectMulti`1.NotifyMultiSelectedAsync(System.Boolean[])
+  name: NotifyMultiSelectedAsync(Boolean[])
+  href: api/Material.Blazor.MBChipsSelectMulti-1.html#Material_Blazor_MBChipsSelectMulti_1_NotifyMultiSelectedAsync_System_Boolean___
+  commentId: M:Material.Blazor.MBChipsSelectMulti`1.NotifyMultiSelectedAsync(System.Boolean[])
+  name.vb: NotifyMultiSelectedAsync(Boolean())
+  fullName: Material.Blazor.MBChipsSelectMulti<TItem>.NotifyMultiSelectedAsync(System.Boolean[])
+  fullName.vb: Material.Blazor.MBChipsSelectMulti(Of TItem).NotifyMultiSelectedAsync(System.Boolean())
+  nameWithType: MBChipsSelectMulti<TItem>.NotifyMultiSelectedAsync(Boolean[])
+  nameWithType.vb: MBChipsSelectMulti(Of TItem).NotifyMultiSelectedAsync(Boolean())
+- uid: Material.Blazor.MBChipsSelectMulti`1.NotifyMultiSelectedAsync*
+  name: NotifyMultiSelectedAsync
+  href: api/Material.Blazor.MBChipsSelectMulti-1.html#Material_Blazor_MBChipsSelectMulti_1_NotifyMultiSelectedAsync_
+  commentId: Overload:Material.Blazor.MBChipsSelectMulti`1.NotifyMultiSelectedAsync
+  isSpec: "True"
+  fullName: Material.Blazor.MBChipsSelectMulti<TItem>.NotifyMultiSelectedAsync
+  fullName.vb: Material.Blazor.MBChipsSelectMulti(Of TItem).NotifyMultiSelectedAsync
+  nameWithType: MBChipsSelectMulti<TItem>.NotifyMultiSelectedAsync
+  nameWithType.vb: MBChipsSelectMulti(Of TItem).NotifyMultiSelectedAsync
+- uid: Material.Blazor.MBChipsSelectMulti`1.NotifySingleSelectedAsync(System.Int32)
+  name: NotifySingleSelectedAsync(Int32)
+  href: api/Material.Blazor.MBChipsSelectMulti-1.html#Material_Blazor_MBChipsSelectMulti_1_NotifySingleSelectedAsync_System_Int32_
+  commentId: M:Material.Blazor.MBChipsSelectMulti`1.NotifySingleSelectedAsync(System.Int32)
+  fullName: Material.Blazor.MBChipsSelectMulti<TItem>.NotifySingleSelectedAsync(System.Int32)
+  fullName.vb: Material.Blazor.MBChipsSelectMulti(Of TItem).NotifySingleSelectedAsync(System.Int32)
+  nameWithType: MBChipsSelectMulti<TItem>.NotifySingleSelectedAsync(Int32)
+  nameWithType.vb: MBChipsSelectMulti(Of TItem).NotifySingleSelectedAsync(Int32)
+- uid: Material.Blazor.MBChipsSelectMulti`1.NotifySingleSelectedAsync*
+  name: NotifySingleSelectedAsync
+  href: api/Material.Blazor.MBChipsSelectMulti-1.html#Material_Blazor_MBChipsSelectMulti_1_NotifySingleSelectedAsync_
+  commentId: Overload:Material.Blazor.MBChipsSelectMulti`1.NotifySingleSelectedAsync
+  isSpec: "True"
+  fullName: Material.Blazor.MBChipsSelectMulti<TItem>.NotifySingleSelectedAsync
+  fullName.vb: Material.Blazor.MBChipsSelectMulti(Of TItem).NotifySingleSelectedAsync
+  nameWithType: MBChipsSelectMulti<TItem>.NotifySingleSelectedAsync
+  nameWithType.vb: MBChipsSelectMulti(Of TItem).NotifySingleSelectedAsync
+- uid: Material.Blazor.MBChipsSelectMulti`1.OnDisabledSetCallback(System.Object,System.EventArgs)
+  name: OnDisabledSetCallback(Object, EventArgs)
+  href: api/Material.Blazor.MBChipsSelectMulti-1.html#Material_Blazor_MBChipsSelectMulti_1_OnDisabledSetCallback_System_Object_System_EventArgs_
+  commentId: M:Material.Blazor.MBChipsSelectMulti`1.OnDisabledSetCallback(System.Object,System.EventArgs)
+  fullName: Material.Blazor.MBChipsSelectMulti<TItem>.OnDisabledSetCallback(System.Object, System.EventArgs)
+  fullName.vb: Material.Blazor.MBChipsSelectMulti(Of TItem).OnDisabledSetCallback(System.Object, System.EventArgs)
+  nameWithType: MBChipsSelectMulti<TItem>.OnDisabledSetCallback(Object, EventArgs)
+  nameWithType.vb: MBChipsSelectMulti(Of TItem).OnDisabledSetCallback(Object, EventArgs)
+- uid: Material.Blazor.MBChipsSelectMulti`1.OnDisabledSetCallback*
+  name: OnDisabledSetCallback
+  href: api/Material.Blazor.MBChipsSelectMulti-1.html#Material_Blazor_MBChipsSelectMulti_1_OnDisabledSetCallback_
+  commentId: Overload:Material.Blazor.MBChipsSelectMulti`1.OnDisabledSetCallback
+  isSpec: "True"
+  fullName: Material.Blazor.MBChipsSelectMulti<TItem>.OnDisabledSetCallback
+  fullName.vb: Material.Blazor.MBChipsSelectMulti(Of TItem).OnDisabledSetCallback
+  nameWithType: MBChipsSelectMulti<TItem>.OnDisabledSetCallback
+  nameWithType.vb: MBChipsSelectMulti(Of TItem).OnDisabledSetCallback
+- uid: Material.Blazor.MBChipsSelectMulti`1.OnInitialized
+  name: OnInitialized()
+  href: api/Material.Blazor.MBChipsSelectMulti-1.html#Material_Blazor_MBChipsSelectMulti_1_OnInitialized
+  commentId: M:Material.Blazor.MBChipsSelectMulti`1.OnInitialized
+  fullName: Material.Blazor.MBChipsSelectMulti<TItem>.OnInitialized()
+  fullName.vb: Material.Blazor.MBChipsSelectMulti(Of TItem).OnInitialized()
+  nameWithType: MBChipsSelectMulti<TItem>.OnInitialized()
+  nameWithType.vb: MBChipsSelectMulti(Of TItem).OnInitialized()
+- uid: Material.Blazor.MBChipsSelectMulti`1.OnInitialized*
+  name: OnInitialized
+  href: api/Material.Blazor.MBChipsSelectMulti-1.html#Material_Blazor_MBChipsSelectMulti_1_OnInitialized_
+  commentId: Overload:Material.Blazor.MBChipsSelectMulti`1.OnInitialized
+  isSpec: "True"
+  fullName: Material.Blazor.MBChipsSelectMulti<TItem>.OnInitialized
+  fullName.vb: Material.Blazor.MBChipsSelectMulti(Of TItem).OnInitialized
+  nameWithType: MBChipsSelectMulti<TItem>.OnInitialized
+  nameWithType.vb: MBChipsSelectMulti(Of TItem).OnInitialized
+- uid: Material.Blazor.MBChipsSelectMulti`1.OnValueSetCallback(System.Object,System.EventArgs)
+  name: OnValueSetCallback(Object, EventArgs)
+  href: api/Material.Blazor.MBChipsSelectMulti-1.html#Material_Blazor_MBChipsSelectMulti_1_OnValueSetCallback_System_Object_System_EventArgs_
+  commentId: M:Material.Blazor.MBChipsSelectMulti`1.OnValueSetCallback(System.Object,System.EventArgs)
+  fullName: Material.Blazor.MBChipsSelectMulti<TItem>.OnValueSetCallback(System.Object, System.EventArgs)
+  fullName.vb: Material.Blazor.MBChipsSelectMulti(Of TItem).OnValueSetCallback(System.Object, System.EventArgs)
+  nameWithType: MBChipsSelectMulti<TItem>.OnValueSetCallback(Object, EventArgs)
+  nameWithType.vb: MBChipsSelectMulti(Of TItem).OnValueSetCallback(Object, EventArgs)
+- uid: Material.Blazor.MBChipsSelectMulti`1.OnValueSetCallback*
+  name: OnValueSetCallback
+  href: api/Material.Blazor.MBChipsSelectMulti-1.html#Material_Blazor_MBChipsSelectMulti_1_OnValueSetCallback_
+  commentId: Overload:Material.Blazor.MBChipsSelectMulti`1.OnValueSetCallback
+  isSpec: "True"
+  fullName: Material.Blazor.MBChipsSelectMulti<TItem>.OnValueSetCallback
+  fullName.vb: Material.Blazor.MBChipsSelectMulti(Of TItem).OnValueSetCallback
+  nameWithType: MBChipsSelectMulti<TItem>.OnValueSetCallback
+  nameWithType.vb: MBChipsSelectMulti(Of TItem).OnValueSetCallback
 - uid: Material.Blazor.MBCircularProgress
   name: MBCircularProgress
   href: api/Material.Blazor.MBCircularProgress.html

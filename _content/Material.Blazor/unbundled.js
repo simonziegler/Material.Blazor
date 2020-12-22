@@ -50,6 +50,14 @@
         destroy: () => MBCard_destroy,
         init: () => MBCard_init
     });
+    var MBChipsSelectMulti_namespaceObject = {};
+    __webpack_require__.r(MBChipsSelectMulti_namespaceObject);
+    __webpack_require__.d(MBChipsSelectMulti_namespaceObject, {
+        destroy: () => MBChipsSelectMulti_destroy,
+        init: () => MBChipsSelectMulti_init,
+        setDisabled: () => MBChipsSelectMulti_setDisabled,
+        setSelected: () => setSelected
+    });
     var MBCheckbox_namespaceObject = {};
     __webpack_require__.r(MBCheckbox_namespaceObject);
     __webpack_require__.d(MBCheckbox_namespaceObject, {
@@ -158,8 +166,8 @@
     __webpack_require__.d(MBSegmentedButtonMulti_namespaceObject, {
         destroy: () => MBSegmentedButtonMulti_destroy,
         init: () => MBSegmentedButtonMulti_init,
-        setAreSelected: () => setAreSelected,
-        setDisabled: () => MBSegmentedButtonMulti_setDisabled
+        setDisabled: () => MBSegmentedButtonMulti_setDisabled,
+        setSelected: () => MBSegmentedButtonMulti_setSelected
     });
     var MBSelect_namespaceObject = {};
     __webpack_require__.r(MBSelect_namespaceObject);
@@ -5971,6 +5979,1524 @@ PERFORMANCE OF THIS SOFTWARE.
     }
     /**
  * @license
+ * Copyright 2020 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */    var AnnouncerPriority;
+    (function(AnnouncerPriority) {
+        AnnouncerPriority["POLITE"] = "polite";
+        AnnouncerPriority["ASSERTIVE"] = "assertive";
+    })(AnnouncerPriority || (AnnouncerPriority = {}));
+    var DATA_MDC_DOM_ANNOUNCE = "data-mdc-dom-announce";
+    function announce(message, priority) {
+        Announcer.getInstance().say(message, priority);
+    }
+    var Announcer = function() {
+        function Announcer() {
+            this.liveRegions = new Map;
+        }
+        Announcer.getInstance = function() {
+            if (!Announcer.instance) {
+                Announcer.instance = new Announcer;
+            }
+            return Announcer.instance;
+        };
+        Announcer.prototype.say = function(message, priority) {
+            if (priority === void 0) {
+                priority = AnnouncerPriority.POLITE;
+            }
+            var liveRegion = this.getLiveRegion(priority);
+            liveRegion.textContent = "";
+            setTimeout((function() {
+                liveRegion.textContent = message;
+                document.addEventListener("click", clearLiveRegion);
+            }), 1);
+            function clearLiveRegion() {
+                liveRegion.textContent = "";
+                document.removeEventListener("click", clearLiveRegion);
+            }
+        };
+        Announcer.prototype.getLiveRegion = function(priority) {
+            var existingLiveRegion = this.liveRegions.get(priority);
+            if (existingLiveRegion && document.body.contains(existingLiveRegion)) {
+                return existingLiveRegion;
+            }
+            var liveRegion = this.createLiveRegion(priority);
+            this.liveRegions.set(priority, liveRegion);
+            return liveRegion;
+        };
+        Announcer.prototype.createLiveRegion = function(priority) {
+            var el = document.createElement("div");
+            el.style.position = "absolute";
+            el.style.top = "-9999px";
+            el.style.left = "-9999px";
+            el.style.height = "1px";
+            el.style.overflow = "hidden";
+            el.setAttribute("aria-atomic", "true");
+            el.setAttribute("aria-live", priority);
+            el.setAttribute(DATA_MDC_DOM_ANNOUNCE, "true");
+            document.body.appendChild(el);
+            return el;
+        };
+        return Announcer;
+    }();
+    /**
+ * @license
+ * Copyright 2020 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */    var InteractionTrigger;
+    (function(InteractionTrigger) {
+        InteractionTrigger[InteractionTrigger["UNSPECIFIED"] = 0] = "UNSPECIFIED";
+        InteractionTrigger[InteractionTrigger["CLICK"] = 1] = "CLICK";
+        InteractionTrigger[InteractionTrigger["BACKSPACE_KEY"] = 2] = "BACKSPACE_KEY";
+        InteractionTrigger[InteractionTrigger["DELETE_KEY"] = 3] = "DELETE_KEY";
+        InteractionTrigger[InteractionTrigger["SPACEBAR_KEY"] = 4] = "SPACEBAR_KEY";
+        InteractionTrigger[InteractionTrigger["ENTER_KEY"] = 5] = "ENTER_KEY";
+    })(InteractionTrigger || (InteractionTrigger = {}));
+    var trailingaction_constants_strings = {
+        ARIA_HIDDEN: "aria-hidden",
+        INTERACTION_EVENT: "MDCChipTrailingAction:interaction",
+        NAVIGATION_EVENT: "MDCChipTrailingAction:navigation",
+        TAB_INDEX: "tabindex"
+    };
+    /**
+ * @license
+ * Copyright 2020 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */    var MDCChipTrailingActionFoundation = function(_super) {
+        __extends(MDCChipTrailingActionFoundation, _super);
+        function MDCChipTrailingActionFoundation(adapter) {
+            return _super.call(this, __assign(__assign({}, MDCChipTrailingActionFoundation.defaultAdapter), adapter)) || this;
+        }
+        Object.defineProperty(MDCChipTrailingActionFoundation, "strings", {
+            get: function() {
+                return trailingaction_constants_strings;
+            },
+            enumerable: true,
+            configurable: true
+        });
+        Object.defineProperty(MDCChipTrailingActionFoundation, "defaultAdapter", {
+            get: function() {
+                return {
+                    focus: function() {
+                        return undefined;
+                    },
+                    getAttribute: function() {
+                        return null;
+                    },
+                    setAttribute: function() {
+                        return undefined;
+                    },
+                    notifyInteraction: function() {
+                        return undefined;
+                    },
+                    notifyNavigation: function() {
+                        return undefined;
+                    }
+                };
+            },
+            enumerable: true,
+            configurable: true
+        });
+        MDCChipTrailingActionFoundation.prototype.handleClick = function(evt) {
+            evt.stopPropagation();
+            this.adapter.notifyInteraction(InteractionTrigger.CLICK);
+        };
+        MDCChipTrailingActionFoundation.prototype.handleKeydown = function(evt) {
+            evt.stopPropagation();
+            var key = normalizeKey(evt);
+            if (this.shouldNotifyInteractionFromKey_(key)) {
+                var trigger = this.getTriggerFromKey_(key);
+                this.adapter.notifyInteraction(trigger);
+                return;
+            }
+            if (isNavigationEvent(evt)) {
+                this.adapter.notifyNavigation(key);
+                return;
+            }
+        };
+        MDCChipTrailingActionFoundation.prototype.removeFocus = function() {
+            this.adapter.setAttribute(trailingaction_constants_strings.TAB_INDEX, "-1");
+        };
+        MDCChipTrailingActionFoundation.prototype.focus = function() {
+            this.adapter.setAttribute(trailingaction_constants_strings.TAB_INDEX, "0");
+            this.adapter.focus();
+        };
+        MDCChipTrailingActionFoundation.prototype.isNavigable = function() {
+            return this.adapter.getAttribute(trailingaction_constants_strings.ARIA_HIDDEN) !== "true";
+        };
+        MDCChipTrailingActionFoundation.prototype.shouldNotifyInteractionFromKey_ = function(key) {
+            var isFromActionKey = key === KEY.ENTER || key === KEY.SPACEBAR;
+            var isFromDeleteKey = key === KEY.BACKSPACE || key === KEY.DELETE;
+            return isFromActionKey || isFromDeleteKey;
+        };
+        MDCChipTrailingActionFoundation.prototype.getTriggerFromKey_ = function(key) {
+            if (key === KEY.SPACEBAR) {
+                return InteractionTrigger.SPACEBAR_KEY;
+            }
+            if (key === KEY.ENTER) {
+                return InteractionTrigger.ENTER_KEY;
+            }
+            if (key === KEY.DELETE) {
+                return InteractionTrigger.DELETE_KEY;
+            }
+            if (key === KEY.BACKSPACE) {
+                return InteractionTrigger.BACKSPACE_KEY;
+            }
+            return InteractionTrigger.UNSPECIFIED;
+        };
+        return MDCChipTrailingActionFoundation;
+    }(MDCFoundation);
+    const trailingaction_foundation = null && MDCChipTrailingActionFoundation;
+    /**
+ * @license
+ * Copyright 2020 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */    var MDCChipTrailingAction = function(_super) {
+        __extends(MDCChipTrailingAction, _super);
+        function MDCChipTrailingAction() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        Object.defineProperty(MDCChipTrailingAction.prototype, "ripple", {
+            get: function() {
+                return this.ripple_;
+            },
+            enumerable: true,
+            configurable: true
+        });
+        MDCChipTrailingAction.attachTo = function(root) {
+            return new MDCChipTrailingAction(root);
+        };
+        MDCChipTrailingAction.prototype.initialize = function(rippleFactory) {
+            if (rippleFactory === void 0) {
+                rippleFactory = function(el, foundation) {
+                    return new MDCRipple(el, foundation);
+                };
+            }
+            var rippleAdapter = MDCRipple.createAdapter(this);
+            this.ripple_ = rippleFactory(this.root, new MDCRippleFoundation(rippleAdapter));
+        };
+        MDCChipTrailingAction.prototype.initialSyncWithDOM = function() {
+            var _this = this;
+            this.handleClick_ = function(evt) {
+                _this.foundation.handleClick(evt);
+            };
+            this.handleKeydown_ = function(evt) {
+                _this.foundation.handleKeydown(evt);
+            };
+            this.listen("click", this.handleClick_);
+            this.listen("keydown", this.handleKeydown_);
+        };
+        MDCChipTrailingAction.prototype.destroy = function() {
+            this.ripple_.destroy();
+            this.unlisten("click", this.handleClick_);
+            this.unlisten("keydown", this.handleKeydown_);
+            _super.prototype.destroy.call(this);
+        };
+        MDCChipTrailingAction.prototype.getDefaultFoundation = function() {
+            var _this = this;
+            var adapter = {
+                focus: function() {
+                    _this.root.focus();
+                },
+                getAttribute: function(attr) {
+                    return _this.root.getAttribute(attr);
+                },
+                notifyInteraction: function(trigger) {
+                    return _this.emit(trailingaction_constants_strings.INTERACTION_EVENT, {
+                        trigger: trigger
+                    }, true);
+                },
+                notifyNavigation: function(key) {
+                    _this.emit(trailingaction_constants_strings.NAVIGATION_EVENT, {
+                        key: key
+                    }, true);
+                },
+                setAttribute: function(attr, value) {
+                    _this.root.setAttribute(attr, value);
+                }
+            };
+            return new MDCChipTrailingActionFoundation(adapter);
+        };
+        MDCChipTrailingAction.prototype.isNavigable = function() {
+            return this.foundation.isNavigable();
+        };
+        MDCChipTrailingAction.prototype.focus = function() {
+            this.foundation.focus();
+        };
+        MDCChipTrailingAction.prototype.removeFocus = function() {
+            this.foundation.removeFocus();
+        };
+        return MDCChipTrailingAction;
+    }(MDCComponent);
+    /**
+ * @license
+ * Copyright 2016 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */    var Direction;
+    (function(Direction) {
+        Direction["LEFT"] = "left";
+        Direction["RIGHT"] = "right";
+    })(Direction || (Direction = {}));
+    var EventSource;
+    (function(EventSource) {
+        EventSource["PRIMARY"] = "primary";
+        EventSource["TRAILING"] = "trailing";
+        EventSource["NONE"] = "none";
+    })(EventSource || (EventSource = {}));
+    var chip_constants_strings = {
+        ADDED_ANNOUNCEMENT_ATTRIBUTE: "data-mdc-chip-added-announcement",
+        ARIA_CHECKED: "aria-checked",
+        ARROW_DOWN_KEY: "ArrowDown",
+        ARROW_LEFT_KEY: "ArrowLeft",
+        ARROW_RIGHT_KEY: "ArrowRight",
+        ARROW_UP_KEY: "ArrowUp",
+        BACKSPACE_KEY: "Backspace",
+        CHECKMARK_SELECTOR: ".mdc-chip__checkmark",
+        DELETE_KEY: "Delete",
+        END_KEY: "End",
+        ENTER_KEY: "Enter",
+        ENTRY_ANIMATION_NAME: "mdc-chip-entry",
+        HOME_KEY: "Home",
+        IE_ARROW_DOWN_KEY: "Down",
+        IE_ARROW_LEFT_KEY: "Left",
+        IE_ARROW_RIGHT_KEY: "Right",
+        IE_ARROW_UP_KEY: "Up",
+        IE_DELETE_KEY: "Del",
+        INTERACTION_EVENT: "MDCChip:interaction",
+        LEADING_ICON_SELECTOR: ".mdc-chip__icon--leading",
+        NAVIGATION_EVENT: "MDCChip:navigation",
+        PRIMARY_ACTION_SELECTOR: ".mdc-chip__primary-action",
+        REMOVED_ANNOUNCEMENT_ATTRIBUTE: "data-mdc-chip-removed-announcement",
+        REMOVAL_EVENT: "MDCChip:removal",
+        SELECTION_EVENT: "MDCChip:selection",
+        SPACEBAR_KEY: " ",
+        TAB_INDEX: "tabindex",
+        TRAILING_ACTION_SELECTOR: ".mdc-chip-trailing-action",
+        TRAILING_ICON_INTERACTION_EVENT: "MDCChip:trailingIconInteraction",
+        TRAILING_ICON_SELECTOR: ".mdc-chip__icon--trailing"
+    };
+    var chip_constants_cssClasses = {
+        CHECKMARK: "mdc-chip__checkmark",
+        CHIP_EXIT: "mdc-chip--exit",
+        DELETABLE: "mdc-chip--deletable",
+        EDITABLE: "mdc-chip--editable",
+        EDITING: "mdc-chip--editing",
+        HIDDEN_LEADING_ICON: "mdc-chip__icon--leading-hidden",
+        LEADING_ICON: "mdc-chip__icon--leading",
+        PRIMARY_ACTION: "mdc-chip__primary-action",
+        PRIMARY_ACTION_FOCUSED: "mdc-chip--primary-action-focused",
+        SELECTED: "mdc-chip--selected",
+        TEXT: "mdc-chip__text",
+        TRAILING_ACTION: "mdc-chip__trailing-action",
+        TRAILING_ICON: "mdc-chip__icon--trailing"
+    };
+    var constants_navigationKeys = new Set;
+    constants_navigationKeys.add(chip_constants_strings.ARROW_LEFT_KEY);
+    constants_navigationKeys.add(chip_constants_strings.ARROW_RIGHT_KEY);
+    constants_navigationKeys.add(chip_constants_strings.ARROW_DOWN_KEY);
+    constants_navigationKeys.add(chip_constants_strings.ARROW_UP_KEY);
+    constants_navigationKeys.add(chip_constants_strings.END_KEY);
+    constants_navigationKeys.add(chip_constants_strings.HOME_KEY);
+    constants_navigationKeys.add(chip_constants_strings.IE_ARROW_LEFT_KEY);
+    constants_navigationKeys.add(chip_constants_strings.IE_ARROW_RIGHT_KEY);
+    constants_navigationKeys.add(chip_constants_strings.IE_ARROW_DOWN_KEY);
+    constants_navigationKeys.add(chip_constants_strings.IE_ARROW_UP_KEY);
+    var jumpChipKeys = new Set;
+    jumpChipKeys.add(chip_constants_strings.ARROW_UP_KEY);
+    jumpChipKeys.add(chip_constants_strings.ARROW_DOWN_KEY);
+    jumpChipKeys.add(chip_constants_strings.HOME_KEY);
+    jumpChipKeys.add(chip_constants_strings.END_KEY);
+    jumpChipKeys.add(chip_constants_strings.IE_ARROW_UP_KEY);
+    jumpChipKeys.add(chip_constants_strings.IE_ARROW_DOWN_KEY);
+    /**
+ * @license
+ * Copyright 2016 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */    var emptyClientRect = {
+        bottom: 0,
+        height: 0,
+        left: 0,
+        right: 0,
+        top: 0,
+        width: 0
+    };
+    var FocusBehavior;
+    (function(FocusBehavior) {
+        FocusBehavior[FocusBehavior["SHOULD_FOCUS"] = 0] = "SHOULD_FOCUS";
+        FocusBehavior[FocusBehavior["SHOULD_NOT_FOCUS"] = 1] = "SHOULD_NOT_FOCUS";
+    })(FocusBehavior || (FocusBehavior = {}));
+    var MDCChipFoundation = function(_super) {
+        __extends(MDCChipFoundation, _super);
+        function MDCChipFoundation(adapter) {
+            var _this = _super.call(this, __assign(__assign({}, MDCChipFoundation.defaultAdapter), adapter)) || this;
+            _this.shouldRemoveOnTrailingIconClick_ = true;
+            _this.shouldFocusPrimaryActionOnClick_ = true;
+            return _this;
+        }
+        Object.defineProperty(MDCChipFoundation, "strings", {
+            get: function() {
+                return chip_constants_strings;
+            },
+            enumerable: true,
+            configurable: true
+        });
+        Object.defineProperty(MDCChipFoundation, "cssClasses", {
+            get: function() {
+                return chip_constants_cssClasses;
+            },
+            enumerable: true,
+            configurable: true
+        });
+        Object.defineProperty(MDCChipFoundation, "defaultAdapter", {
+            get: function() {
+                return {
+                    addClass: function() {
+                        return undefined;
+                    },
+                    addClassToLeadingIcon: function() {
+                        return undefined;
+                    },
+                    eventTargetHasClass: function() {
+                        return false;
+                    },
+                    focusPrimaryAction: function() {
+                        return undefined;
+                    },
+                    focusTrailingAction: function() {
+                        return undefined;
+                    },
+                    getAttribute: function() {
+                        return null;
+                    },
+                    getCheckmarkBoundingClientRect: function() {
+                        return emptyClientRect;
+                    },
+                    getComputedStyleValue: function() {
+                        return "";
+                    },
+                    getRootBoundingClientRect: function() {
+                        return emptyClientRect;
+                    },
+                    hasClass: function() {
+                        return false;
+                    },
+                    hasLeadingIcon: function() {
+                        return false;
+                    },
+                    isRTL: function() {
+                        return false;
+                    },
+                    isTrailingActionNavigable: function() {
+                        return false;
+                    },
+                    notifyEditFinish: function() {
+                        return undefined;
+                    },
+                    notifyEditStart: function() {
+                        return undefined;
+                    },
+                    notifyInteraction: function() {
+                        return undefined;
+                    },
+                    notifyNavigation: function() {
+                        return undefined;
+                    },
+                    notifyRemoval: function() {
+                        return undefined;
+                    },
+                    notifySelection: function() {
+                        return undefined;
+                    },
+                    notifyTrailingIconInteraction: function() {
+                        return undefined;
+                    },
+                    removeClass: function() {
+                        return undefined;
+                    },
+                    removeClassFromLeadingIcon: function() {
+                        return undefined;
+                    },
+                    removeTrailingActionFocus: function() {
+                        return undefined;
+                    },
+                    setPrimaryActionAttr: function() {
+                        return undefined;
+                    },
+                    setStyleProperty: function() {
+                        return undefined;
+                    }
+                };
+            },
+            enumerable: true,
+            configurable: true
+        });
+        MDCChipFoundation.prototype.isSelected = function() {
+            return this.adapter.hasClass(chip_constants_cssClasses.SELECTED);
+        };
+        MDCChipFoundation.prototype.isEditable = function() {
+            return this.adapter.hasClass(chip_constants_cssClasses.EDITABLE);
+        };
+        MDCChipFoundation.prototype.isEditing = function() {
+            return this.adapter.hasClass(chip_constants_cssClasses.EDITING);
+        };
+        MDCChipFoundation.prototype.setSelected = function(selected) {
+            this.setSelected_(selected);
+            this.notifySelection_(selected);
+        };
+        MDCChipFoundation.prototype.setSelectedFromChipSet = function(selected, shouldNotifyClients) {
+            this.setSelected_(selected);
+            if (shouldNotifyClients) {
+                this.notifyIgnoredSelection_(selected);
+            }
+        };
+        MDCChipFoundation.prototype.getShouldRemoveOnTrailingIconClick = function() {
+            return this.shouldRemoveOnTrailingIconClick_;
+        };
+        MDCChipFoundation.prototype.setShouldRemoveOnTrailingIconClick = function(shouldRemove) {
+            this.shouldRemoveOnTrailingIconClick_ = shouldRemove;
+        };
+        MDCChipFoundation.prototype.setShouldFocusPrimaryActionOnClick = function(shouldFocus) {
+            this.shouldFocusPrimaryActionOnClick_ = shouldFocus;
+        };
+        MDCChipFoundation.prototype.getDimensions = function() {
+            var _this = this;
+            var getRootRect = function() {
+                return _this.adapter.getRootBoundingClientRect();
+            };
+            var getCheckmarkRect = function() {
+                return _this.adapter.getCheckmarkBoundingClientRect();
+            };
+            if (!this.adapter.hasLeadingIcon()) {
+                var checkmarkRect = getCheckmarkRect();
+                if (checkmarkRect) {
+                    var rootRect = getRootRect();
+                    return {
+                        bottom: rootRect.bottom,
+                        height: rootRect.height,
+                        left: rootRect.left,
+                        right: rootRect.right,
+                        top: rootRect.top,
+                        width: rootRect.width + checkmarkRect.height
+                    };
+                }
+            }
+            return getRootRect();
+        };
+        MDCChipFoundation.prototype.beginExit = function() {
+            this.adapter.addClass(chip_constants_cssClasses.CHIP_EXIT);
+        };
+        MDCChipFoundation.prototype.handleClick = function() {
+            this.adapter.notifyInteraction();
+            this.setPrimaryActionFocusable_(this.getFocusBehavior_());
+        };
+        MDCChipFoundation.prototype.handleDoubleClick = function() {
+            if (this.isEditable()) {
+                this.startEditing();
+            }
+        };
+        MDCChipFoundation.prototype.handleTransitionEnd = function(evt) {
+            var _this = this;
+            var shouldHandle = this.adapter.eventTargetHasClass(evt.target, chip_constants_cssClasses.CHIP_EXIT);
+            var widthIsAnimating = evt.propertyName === "width";
+            var opacityIsAnimating = evt.propertyName === "opacity";
+            if (shouldHandle && opacityIsAnimating) {
+                var chipWidth_1 = this.adapter.getComputedStyleValue("width");
+                requestAnimationFrame((function() {
+                    _this.adapter.setStyleProperty("width", chipWidth_1);
+                    _this.adapter.setStyleProperty("padding", "0");
+                    _this.adapter.setStyleProperty("margin", "0");
+                    requestAnimationFrame((function() {
+                        _this.adapter.setStyleProperty("width", "0");
+                    }));
+                }));
+                return;
+            }
+            if (shouldHandle && widthIsAnimating) {
+                this.removeFocus();
+                var removedAnnouncement = this.adapter.getAttribute(chip_constants_strings.REMOVED_ANNOUNCEMENT_ATTRIBUTE);
+                this.adapter.notifyRemoval(removedAnnouncement);
+            }
+            if (!opacityIsAnimating) {
+                return;
+            }
+            var shouldHideLeadingIcon = this.adapter.eventTargetHasClass(evt.target, chip_constants_cssClasses.LEADING_ICON) && this.adapter.hasClass(chip_constants_cssClasses.SELECTED);
+            var shouldShowLeadingIcon = this.adapter.eventTargetHasClass(evt.target, chip_constants_cssClasses.CHECKMARK) && !this.adapter.hasClass(chip_constants_cssClasses.SELECTED);
+            if (shouldHideLeadingIcon) {
+                this.adapter.addClassToLeadingIcon(chip_constants_cssClasses.HIDDEN_LEADING_ICON);
+                return;
+            }
+            if (shouldShowLeadingIcon) {
+                this.adapter.removeClassFromLeadingIcon(chip_constants_cssClasses.HIDDEN_LEADING_ICON);
+                return;
+            }
+        };
+        MDCChipFoundation.prototype.handleFocusIn = function(evt) {
+            if (!this.eventFromPrimaryAction_(evt)) {
+                return;
+            }
+            this.adapter.addClass(chip_constants_cssClasses.PRIMARY_ACTION_FOCUSED);
+        };
+        MDCChipFoundation.prototype.handleFocusOut = function(evt) {
+            if (!this.eventFromPrimaryAction_(evt)) {
+                return;
+            }
+            if (this.isEditing()) {
+                this.finishEditing();
+            }
+            this.adapter.removeClass(chip_constants_cssClasses.PRIMARY_ACTION_FOCUSED);
+        };
+        MDCChipFoundation.prototype.handleTrailingActionInteraction = function() {
+            this.adapter.notifyTrailingIconInteraction();
+            this.removeChip_();
+        };
+        MDCChipFoundation.prototype.handleKeydown = function(evt) {
+            if (this.isEditing()) {
+                if (this.shouldFinishEditing(evt)) {
+                    evt.preventDefault();
+                    this.finishEditing();
+                }
+                return;
+            }
+            if (this.isEditable()) {
+                if (this.shouldStartEditing(evt)) {
+                    evt.preventDefault();
+                    this.startEditing();
+                }
+            }
+            if (this.shouldNotifyInteraction_(evt)) {
+                this.adapter.notifyInteraction();
+                this.setPrimaryActionFocusable_(this.getFocusBehavior_());
+                return;
+            }
+            if (this.isDeleteAction_(evt)) {
+                evt.preventDefault();
+                this.removeChip_();
+                return;
+            }
+            if (!constants_navigationKeys.has(evt.key)) {
+                return;
+            }
+            evt.preventDefault();
+            this.focusNextAction_(evt.key, EventSource.PRIMARY);
+        };
+        MDCChipFoundation.prototype.handleTrailingActionNavigation = function(evt) {
+            return this.focusNextAction_(evt.detail.key, EventSource.TRAILING);
+        };
+        MDCChipFoundation.prototype.removeFocus = function() {
+            this.adapter.setPrimaryActionAttr(chip_constants_strings.TAB_INDEX, "-1");
+            this.adapter.removeTrailingActionFocus();
+        };
+        MDCChipFoundation.prototype.focusPrimaryAction = function() {
+            this.setPrimaryActionFocusable_(FocusBehavior.SHOULD_FOCUS);
+        };
+        MDCChipFoundation.prototype.focusTrailingAction = function() {
+            var trailingActionIsNavigable = this.adapter.isTrailingActionNavigable();
+            if (trailingActionIsNavigable) {
+                this.adapter.setPrimaryActionAttr(chip_constants_strings.TAB_INDEX, "-1");
+                this.adapter.focusTrailingAction();
+                return;
+            }
+            this.focusPrimaryAction();
+        };
+        MDCChipFoundation.prototype.setPrimaryActionFocusable_ = function(focusBehavior) {
+            this.adapter.setPrimaryActionAttr(chip_constants_strings.TAB_INDEX, "0");
+            if (focusBehavior === FocusBehavior.SHOULD_FOCUS) {
+                this.adapter.focusPrimaryAction();
+            }
+            this.adapter.removeTrailingActionFocus();
+        };
+        MDCChipFoundation.prototype.getFocusBehavior_ = function() {
+            if (this.shouldFocusPrimaryActionOnClick_) {
+                return FocusBehavior.SHOULD_FOCUS;
+            }
+            return FocusBehavior.SHOULD_NOT_FOCUS;
+        };
+        MDCChipFoundation.prototype.focusNextAction_ = function(key, source) {
+            var isTrailingActionNavigable = this.adapter.isTrailingActionNavigable();
+            var dir = this.getDirection_(key);
+            if (jumpChipKeys.has(key) || !isTrailingActionNavigable) {
+                return this.adapter.notifyNavigation(key, source);
+            }
+            if (source === EventSource.PRIMARY && dir === Direction.RIGHT) {
+                return this.focusTrailingAction();
+            }
+            if (source === EventSource.TRAILING && dir === Direction.LEFT) {
+                return this.focusPrimaryAction();
+            }
+            this.adapter.notifyNavigation(key, EventSource.NONE);
+        };
+        MDCChipFoundation.prototype.getDirection_ = function(key) {
+            var isRTL = this.adapter.isRTL();
+            var isLeftKey = key === chip_constants_strings.ARROW_LEFT_KEY || key === chip_constants_strings.IE_ARROW_LEFT_KEY;
+            var isRightKey = key === chip_constants_strings.ARROW_RIGHT_KEY || key === chip_constants_strings.IE_ARROW_RIGHT_KEY;
+            if (!isRTL && isLeftKey || isRTL && isRightKey) {
+                return Direction.LEFT;
+            }
+            return Direction.RIGHT;
+        };
+        MDCChipFoundation.prototype.removeChip_ = function() {
+            if (this.shouldRemoveOnTrailingIconClick_) {
+                this.beginExit();
+            }
+        };
+        MDCChipFoundation.prototype.shouldStartEditing = function(evt) {
+            return this.eventFromPrimaryAction_(evt) && evt.key === chip_constants_strings.ENTER_KEY;
+        };
+        MDCChipFoundation.prototype.shouldFinishEditing = function(evt) {
+            return evt.key === chip_constants_strings.ENTER_KEY;
+        };
+        MDCChipFoundation.prototype.shouldNotifyInteraction_ = function(evt) {
+            return evt.key === chip_constants_strings.ENTER_KEY || evt.key === chip_constants_strings.SPACEBAR_KEY;
+        };
+        MDCChipFoundation.prototype.isDeleteAction_ = function(evt) {
+            var isDeletable = this.adapter.hasClass(chip_constants_cssClasses.DELETABLE);
+            return isDeletable && (evt.key === chip_constants_strings.BACKSPACE_KEY || evt.key === chip_constants_strings.DELETE_KEY || evt.key === chip_constants_strings.IE_DELETE_KEY);
+        };
+        MDCChipFoundation.prototype.setSelected_ = function(selected) {
+            if (selected) {
+                this.adapter.addClass(chip_constants_cssClasses.SELECTED);
+                this.adapter.setPrimaryActionAttr(chip_constants_strings.ARIA_CHECKED, "true");
+            } else {
+                this.adapter.removeClass(chip_constants_cssClasses.SELECTED);
+                this.adapter.setPrimaryActionAttr(chip_constants_strings.ARIA_CHECKED, "false");
+            }
+        };
+        MDCChipFoundation.prototype.notifySelection_ = function(selected) {
+            this.adapter.notifySelection(selected, false);
+        };
+        MDCChipFoundation.prototype.notifyIgnoredSelection_ = function(selected) {
+            this.adapter.notifySelection(selected, true);
+        };
+        MDCChipFoundation.prototype.eventFromPrimaryAction_ = function(evt) {
+            return this.adapter.eventTargetHasClass(evt.target, chip_constants_cssClasses.PRIMARY_ACTION);
+        };
+        MDCChipFoundation.prototype.startEditing = function() {
+            this.adapter.addClass(chip_constants_cssClasses.EDITING);
+            this.adapter.notifyEditStart();
+        };
+        MDCChipFoundation.prototype.finishEditing = function() {
+            this.adapter.removeClass(chip_constants_cssClasses.EDITING);
+            this.adapter.notifyEditFinish();
+        };
+        return MDCChipFoundation;
+    }(MDCFoundation);
+    const chip_foundation = null && MDCChipFoundation;
+    /**
+ * @license
+ * Copyright 2016 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */    var MDCChip = function(_super) {
+        __extends(MDCChip, _super);
+        function MDCChip() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        Object.defineProperty(MDCChip.prototype, "selected", {
+            get: function() {
+                return this.foundation.isSelected();
+            },
+            set: function(selected) {
+                this.foundation.setSelected(selected);
+            },
+            enumerable: true,
+            configurable: true
+        });
+        Object.defineProperty(MDCChip.prototype, "shouldRemoveOnTrailingIconClick", {
+            get: function() {
+                return this.foundation.getShouldRemoveOnTrailingIconClick();
+            },
+            set: function(shouldRemove) {
+                this.foundation.setShouldRemoveOnTrailingIconClick(shouldRemove);
+            },
+            enumerable: true,
+            configurable: true
+        });
+        Object.defineProperty(MDCChip.prototype, "setShouldFocusPrimaryActionOnClick", {
+            set: function(shouldFocus) {
+                this.foundation.setShouldFocusPrimaryActionOnClick(shouldFocus);
+            },
+            enumerable: true,
+            configurable: true
+        });
+        Object.defineProperty(MDCChip.prototype, "ripple", {
+            get: function() {
+                return this.ripple_;
+            },
+            enumerable: true,
+            configurable: true
+        });
+        Object.defineProperty(MDCChip.prototype, "id", {
+            get: function() {
+                return this.root.id;
+            },
+            enumerable: true,
+            configurable: true
+        });
+        MDCChip.attachTo = function(root) {
+            return new MDCChip(root);
+        };
+        MDCChip.prototype.initialize = function(rippleFactory, trailingActionFactory) {
+            var _this = this;
+            if (rippleFactory === void 0) {
+                rippleFactory = function(el, foundation) {
+                    return new MDCRipple(el, foundation);
+                };
+            }
+            if (trailingActionFactory === void 0) {
+                trailingActionFactory = function(el) {
+                    return new MDCChipTrailingAction(el);
+                };
+            }
+            this.leadingIcon_ = this.root.querySelector(chip_constants_strings.LEADING_ICON_SELECTOR);
+            this.checkmark_ = this.root.querySelector(chip_constants_strings.CHECKMARK_SELECTOR);
+            this.primaryAction_ = this.root.querySelector(chip_constants_strings.PRIMARY_ACTION_SELECTOR);
+            var trailingActionEl = this.root.querySelector(chip_constants_strings.TRAILING_ACTION_SELECTOR);
+            if (trailingActionEl) {
+                this.trailingAction_ = trailingActionFactory(trailingActionEl);
+            }
+            var rippleAdapter = __assign(__assign({}, MDCRipple.createAdapter(this)), {
+                computeBoundingRect: function() {
+                    return _this.foundation.getDimensions();
+                }
+            });
+            this.ripple_ = rippleFactory(this.root, new MDCRippleFoundation(rippleAdapter));
+        };
+        MDCChip.prototype.initialSyncWithDOM = function() {
+            var _this = this;
+            this.handleTrailingActionInteraction_ = function() {
+                _this.foundation.handleTrailingActionInteraction();
+            };
+            this.handleTrailingActionNavigation_ = function(evt) {
+                _this.foundation.handleTrailingActionNavigation(evt);
+            };
+            this.handleClick_ = function() {
+                _this.foundation.handleClick();
+            };
+            this.handleKeydown_ = function(evt) {
+                _this.foundation.handleKeydown(evt);
+            };
+            this.handleTransitionEnd_ = function(evt) {
+                _this.foundation.handleTransitionEnd(evt);
+            };
+            this.handleFocusIn_ = function(evt) {
+                _this.foundation.handleFocusIn(evt);
+            };
+            this.handleFocusOut_ = function(evt) {
+                _this.foundation.handleFocusOut(evt);
+            };
+            this.listen("transitionend", this.handleTransitionEnd_);
+            this.listen("click", this.handleClick_);
+            this.listen("keydown", this.handleKeydown_);
+            this.listen("focusin", this.handleFocusIn_);
+            this.listen("focusout", this.handleFocusOut_);
+            if (this.trailingAction_) {
+                this.listen(trailingaction_constants_strings.INTERACTION_EVENT, this.handleTrailingActionInteraction_);
+                this.listen(trailingaction_constants_strings.NAVIGATION_EVENT, this.handleTrailingActionNavigation_);
+            }
+        };
+        MDCChip.prototype.destroy = function() {
+            this.ripple_.destroy();
+            this.unlisten("transitionend", this.handleTransitionEnd_);
+            this.unlisten("keydown", this.handleKeydown_);
+            this.unlisten("click", this.handleClick_);
+            this.unlisten("focusin", this.handleFocusIn_);
+            this.unlisten("focusout", this.handleFocusOut_);
+            if (this.trailingAction_) {
+                this.unlisten(trailingaction_constants_strings.INTERACTION_EVENT, this.handleTrailingActionInteraction_);
+                this.unlisten(trailingaction_constants_strings.NAVIGATION_EVENT, this.handleTrailingActionNavigation_);
+            }
+            _super.prototype.destroy.call(this);
+        };
+        MDCChip.prototype.beginExit = function() {
+            this.foundation.beginExit();
+        };
+        MDCChip.prototype.getDefaultFoundation = function() {
+            var _this = this;
+            var adapter = {
+                addClass: function(className) {
+                    return _this.root.classList.add(className);
+                },
+                addClassToLeadingIcon: function(className) {
+                    if (_this.leadingIcon_) {
+                        _this.leadingIcon_.classList.add(className);
+                    }
+                },
+                eventTargetHasClass: function(target, className) {
+                    return target ? target.classList.contains(className) : false;
+                },
+                focusPrimaryAction: function() {
+                    if (_this.primaryAction_) {
+                        _this.primaryAction_.focus();
+                    }
+                },
+                focusTrailingAction: function() {
+                    if (_this.trailingAction_) {
+                        _this.trailingAction_.focus();
+                    }
+                },
+                getAttribute: function(attr) {
+                    return _this.root.getAttribute(attr);
+                },
+                getCheckmarkBoundingClientRect: function() {
+                    return _this.checkmark_ ? _this.checkmark_.getBoundingClientRect() : null;
+                },
+                getComputedStyleValue: function(propertyName) {
+                    return window.getComputedStyle(_this.root).getPropertyValue(propertyName);
+                },
+                getRootBoundingClientRect: function() {
+                    return _this.root.getBoundingClientRect();
+                },
+                hasClass: function(className) {
+                    return _this.root.classList.contains(className);
+                },
+                hasLeadingIcon: function() {
+                    return !!_this.leadingIcon_;
+                },
+                isRTL: function() {
+                    return window.getComputedStyle(_this.root).getPropertyValue("direction") === "rtl";
+                },
+                isTrailingActionNavigable: function() {
+                    if (_this.trailingAction_) {
+                        return _this.trailingAction_.isNavigable();
+                    }
+                    return false;
+                },
+                notifyInteraction: function() {
+                    return _this.emit(chip_constants_strings.INTERACTION_EVENT, {
+                        chipId: _this.id
+                    }, true);
+                },
+                notifyNavigation: function(key, source) {
+                    return _this.emit(chip_constants_strings.NAVIGATION_EVENT, {
+                        chipId: _this.id,
+                        key: key,
+                        source: source
+                    }, true);
+                },
+                notifyRemoval: function(removedAnnouncement) {
+                    _this.emit(chip_constants_strings.REMOVAL_EVENT, {
+                        chipId: _this.id,
+                        removedAnnouncement: removedAnnouncement
+                    }, true);
+                },
+                notifySelection: function(selected, shouldIgnore) {
+                    return _this.emit(chip_constants_strings.SELECTION_EVENT, {
+                        chipId: _this.id,
+                        selected: selected,
+                        shouldIgnore: shouldIgnore
+                    }, true);
+                },
+                notifyTrailingIconInteraction: function() {
+                    return _this.emit(chip_constants_strings.TRAILING_ICON_INTERACTION_EVENT, {
+                        chipId: _this.id
+                    }, true);
+                },
+                notifyEditStart: function() {},
+                notifyEditFinish: function() {},
+                removeClass: function(className) {
+                    return _this.root.classList.remove(className);
+                },
+                removeClassFromLeadingIcon: function(className) {
+                    if (_this.leadingIcon_) {
+                        _this.leadingIcon_.classList.remove(className);
+                    }
+                },
+                removeTrailingActionFocus: function() {
+                    if (_this.trailingAction_) {
+                        _this.trailingAction_.removeFocus();
+                    }
+                },
+                setPrimaryActionAttr: function(attr, value) {
+                    if (_this.primaryAction_) {
+                        _this.primaryAction_.setAttribute(attr, value);
+                    }
+                },
+                setStyleProperty: function(propertyName, value) {
+                    return _this.root.style.setProperty(propertyName, value);
+                }
+            };
+            return new MDCChipFoundation(adapter);
+        };
+        MDCChip.prototype.setSelectedFromChipSet = function(selected, shouldNotifyClients) {
+            this.foundation.setSelectedFromChipSet(selected, shouldNotifyClients);
+        };
+        MDCChip.prototype.focusPrimaryAction = function() {
+            this.foundation.focusPrimaryAction();
+        };
+        MDCChip.prototype.focusTrailingAction = function() {
+            this.foundation.focusTrailingAction();
+        };
+        MDCChip.prototype.removeFocus = function() {
+            this.foundation.removeFocus();
+        };
+        MDCChip.prototype.remove = function() {
+            var parent = this.root.parentNode;
+            if (parent !== null) {
+                parent.removeChild(this.root);
+            }
+        };
+        return MDCChip;
+    }(MDCComponent);
+    /**
+ * @license
+ * Copyright 2016 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */    var chip_set_constants_strings = {
+        CHIP_SELECTOR: ".mdc-chip"
+    };
+    var chip_set_constants_cssClasses = {
+        CHOICE: "mdc-chip-set--choice",
+        FILTER: "mdc-chip-set--filter"
+    };
+    /**
+ * @license
+ * Copyright 2017 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */    var MDCChipSetFoundation = function(_super) {
+        __extends(MDCChipSetFoundation, _super);
+        function MDCChipSetFoundation(adapter) {
+            var _this = _super.call(this, __assign(__assign({}, MDCChipSetFoundation.defaultAdapter), adapter)) || this;
+            _this.selectedChipIds_ = [];
+            return _this;
+        }
+        Object.defineProperty(MDCChipSetFoundation, "strings", {
+            get: function() {
+                return chip_set_constants_strings;
+            },
+            enumerable: true,
+            configurable: true
+        });
+        Object.defineProperty(MDCChipSetFoundation, "cssClasses", {
+            get: function() {
+                return chip_set_constants_cssClasses;
+            },
+            enumerable: true,
+            configurable: true
+        });
+        Object.defineProperty(MDCChipSetFoundation, "defaultAdapter", {
+            get: function() {
+                return {
+                    announceMessage: function() {
+                        return undefined;
+                    },
+                    focusChipPrimaryActionAtIndex: function() {
+                        return undefined;
+                    },
+                    focusChipTrailingActionAtIndex: function() {
+                        return undefined;
+                    },
+                    getChipListCount: function() {
+                        return -1;
+                    },
+                    getIndexOfChipById: function() {
+                        return -1;
+                    },
+                    hasClass: function() {
+                        return false;
+                    },
+                    isRTL: function() {
+                        return false;
+                    },
+                    removeChipAtIndex: function() {
+                        return undefined;
+                    },
+                    removeFocusFromChipAtIndex: function() {
+                        return undefined;
+                    },
+                    selectChipAtIndex: function() {
+                        return undefined;
+                    }
+                };
+            },
+            enumerable: true,
+            configurable: true
+        });
+        MDCChipSetFoundation.prototype.getSelectedChipIds = function() {
+            return this.selectedChipIds_.slice();
+        };
+        MDCChipSetFoundation.prototype.select = function(chipId) {
+            this.select_(chipId, false);
+        };
+        MDCChipSetFoundation.prototype.handleChipInteraction = function(_a) {
+            var chipId = _a.chipId;
+            var index = this.adapter.getIndexOfChipById(chipId);
+            this.removeFocusFromChipsExcept_(index);
+            if (this.adapter.hasClass(chip_set_constants_cssClasses.CHOICE) || this.adapter.hasClass(chip_set_constants_cssClasses.FILTER)) {
+                this.toggleSelect_(chipId);
+            }
+        };
+        MDCChipSetFoundation.prototype.handleChipSelection = function(_a) {
+            var chipId = _a.chipId, selected = _a.selected, shouldIgnore = _a.shouldIgnore;
+            if (shouldIgnore) {
+                return;
+            }
+            var chipIsSelected = this.selectedChipIds_.indexOf(chipId) >= 0;
+            if (selected && !chipIsSelected) {
+                this.select(chipId);
+            } else if (!selected && chipIsSelected) {
+                this.deselect_(chipId);
+            }
+        };
+        MDCChipSetFoundation.prototype.handleChipRemoval = function(_a) {
+            var chipId = _a.chipId, removedAnnouncement = _a.removedAnnouncement;
+            if (removedAnnouncement) {
+                this.adapter.announceMessage(removedAnnouncement);
+            }
+            var index = this.adapter.getIndexOfChipById(chipId);
+            this.deselectAndNotifyClients_(chipId);
+            this.adapter.removeChipAtIndex(index);
+            var maxIndex = this.adapter.getChipListCount() - 1;
+            if (maxIndex < 0) {
+                return;
+            }
+            var nextIndex = Math.min(index, maxIndex);
+            this.removeFocusFromChipsExcept_(nextIndex);
+            this.adapter.focusChipTrailingActionAtIndex(nextIndex);
+        };
+        MDCChipSetFoundation.prototype.handleChipNavigation = function(_a) {
+            var chipId = _a.chipId, key = _a.key, source = _a.source;
+            var maxIndex = this.adapter.getChipListCount() - 1;
+            var index = this.adapter.getIndexOfChipById(chipId);
+            if (index === -1 || !constants_navigationKeys.has(key)) {
+                return;
+            }
+            var isRTL = this.adapter.isRTL();
+            var isLeftKey = key === chip_constants_strings.ARROW_LEFT_KEY || key === chip_constants_strings.IE_ARROW_LEFT_KEY;
+            var isRightKey = key === chip_constants_strings.ARROW_RIGHT_KEY || key === chip_constants_strings.IE_ARROW_RIGHT_KEY;
+            var isDownKey = key === chip_constants_strings.ARROW_DOWN_KEY || key === chip_constants_strings.IE_ARROW_DOWN_KEY;
+            var shouldIncrement = !isRTL && isRightKey || isRTL && isLeftKey || isDownKey;
+            var isHome = key === chip_constants_strings.HOME_KEY;
+            var isEnd = key === chip_constants_strings.END_KEY;
+            if (shouldIncrement) {
+                index++;
+            } else if (isHome) {
+                index = 0;
+            } else if (isEnd) {
+                index = maxIndex;
+            } else {
+                index--;
+            }
+            if (index < 0 || index > maxIndex) {
+                return;
+            }
+            this.removeFocusFromChipsExcept_(index);
+            this.focusChipAction_(index, key, source);
+        };
+        MDCChipSetFoundation.prototype.focusChipAction_ = function(index, key, source) {
+            var shouldJumpChips = jumpChipKeys.has(key);
+            if (shouldJumpChips && source === EventSource.PRIMARY) {
+                return this.adapter.focusChipPrimaryActionAtIndex(index);
+            }
+            if (shouldJumpChips && source === EventSource.TRAILING) {
+                return this.adapter.focusChipTrailingActionAtIndex(index);
+            }
+            var dir = this.getDirection_(key);
+            if (dir === Direction.LEFT) {
+                return this.adapter.focusChipTrailingActionAtIndex(index);
+            }
+            if (dir === Direction.RIGHT) {
+                return this.adapter.focusChipPrimaryActionAtIndex(index);
+            }
+        };
+        MDCChipSetFoundation.prototype.getDirection_ = function(key) {
+            var isRTL = this.adapter.isRTL();
+            var isLeftKey = key === chip_constants_strings.ARROW_LEFT_KEY || key === chip_constants_strings.IE_ARROW_LEFT_KEY;
+            var isRightKey = key === chip_constants_strings.ARROW_RIGHT_KEY || key === chip_constants_strings.IE_ARROW_RIGHT_KEY;
+            if (!isRTL && isLeftKey || isRTL && isRightKey) {
+                return Direction.LEFT;
+            }
+            return Direction.RIGHT;
+        };
+        MDCChipSetFoundation.prototype.deselect_ = function(chipId, shouldNotifyClients) {
+            if (shouldNotifyClients === void 0) {
+                shouldNotifyClients = false;
+            }
+            var index = this.selectedChipIds_.indexOf(chipId);
+            if (index >= 0) {
+                this.selectedChipIds_.splice(index, 1);
+                var chipIndex = this.adapter.getIndexOfChipById(chipId);
+                this.adapter.selectChipAtIndex(chipIndex, false, shouldNotifyClients);
+            }
+        };
+        MDCChipSetFoundation.prototype.deselectAndNotifyClients_ = function(chipId) {
+            this.deselect_(chipId, true);
+        };
+        MDCChipSetFoundation.prototype.toggleSelect_ = function(chipId) {
+            if (this.selectedChipIds_.indexOf(chipId) >= 0) {
+                this.deselectAndNotifyClients_(chipId);
+            } else {
+                this.selectAndNotifyClients_(chipId);
+            }
+        };
+        MDCChipSetFoundation.prototype.removeFocusFromChipsExcept_ = function(index) {
+            var chipCount = this.adapter.getChipListCount();
+            for (var i = 0; i < chipCount; i++) {
+                if (i !== index) {
+                    this.adapter.removeFocusFromChipAtIndex(i);
+                }
+            }
+        };
+        MDCChipSetFoundation.prototype.selectAndNotifyClients_ = function(chipId) {
+            this.select_(chipId, true);
+        };
+        MDCChipSetFoundation.prototype.select_ = function(chipId, shouldNotifyClients) {
+            if (this.selectedChipIds_.indexOf(chipId) >= 0) {
+                return;
+            }
+            if (this.adapter.hasClass(chip_set_constants_cssClasses.CHOICE) && this.selectedChipIds_.length > 0) {
+                var previouslySelectedChip = this.selectedChipIds_[0];
+                var previouslySelectedIndex = this.adapter.getIndexOfChipById(previouslySelectedChip);
+                this.selectedChipIds_ = [];
+                this.adapter.selectChipAtIndex(previouslySelectedIndex, false, shouldNotifyClients);
+            }
+            this.selectedChipIds_.push(chipId);
+            var index = this.adapter.getIndexOfChipById(chipId);
+            this.adapter.selectChipAtIndex(index, true, shouldNotifyClients);
+        };
+        return MDCChipSetFoundation;
+    }(MDCFoundation);
+    const chip_set_foundation = null && MDCChipSetFoundation;
+    /**
+ * @license
+ * Copyright 2016 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */    var _a = MDCChipFoundation.strings, INTERACTION_EVENT = _a.INTERACTION_EVENT, SELECTION_EVENT = _a.SELECTION_EVENT, REMOVAL_EVENT = _a.REMOVAL_EVENT, NAVIGATION_EVENT = _a.NAVIGATION_EVENT;
+    var CHIP_SELECTOR = MDCChipSetFoundation.strings.CHIP_SELECTOR;
+    var idCounter = 0;
+    var MDCChipSet = function(_super) {
+        __extends(MDCChipSet, _super);
+        function MDCChipSet() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        MDCChipSet.attachTo = function(root) {
+            return new MDCChipSet(root);
+        };
+        Object.defineProperty(MDCChipSet.prototype, "chips", {
+            get: function() {
+                return this.chips_.slice();
+            },
+            enumerable: true,
+            configurable: true
+        });
+        Object.defineProperty(MDCChipSet.prototype, "selectedChipIds", {
+            get: function() {
+                return this.foundation.getSelectedChipIds();
+            },
+            enumerable: true,
+            configurable: true
+        });
+        MDCChipSet.prototype.initialize = function(chipFactory) {
+            if (chipFactory === void 0) {
+                chipFactory = function(el) {
+                    return new MDCChip(el);
+                };
+            }
+            this.chipFactory_ = chipFactory;
+            this.chips_ = this.instantiateChips_(this.chipFactory_);
+        };
+        MDCChipSet.prototype.initialSyncWithDOM = function() {
+            var _this = this;
+            this.chips_.forEach((function(chip) {
+                if (chip.id && chip.selected) {
+                    _this.foundation.select(chip.id);
+                }
+            }));
+            this.handleChipInteraction_ = function(evt) {
+                return _this.foundation.handleChipInteraction(evt.detail);
+            };
+            this.handleChipSelection_ = function(evt) {
+                return _this.foundation.handleChipSelection(evt.detail);
+            };
+            this.handleChipRemoval_ = function(evt) {
+                return _this.foundation.handleChipRemoval(evt.detail);
+            };
+            this.handleChipNavigation_ = function(evt) {
+                return _this.foundation.handleChipNavigation(evt.detail);
+            };
+            this.listen(INTERACTION_EVENT, this.handleChipInteraction_);
+            this.listen(SELECTION_EVENT, this.handleChipSelection_);
+            this.listen(REMOVAL_EVENT, this.handleChipRemoval_);
+            this.listen(NAVIGATION_EVENT, this.handleChipNavigation_);
+        };
+        MDCChipSet.prototype.destroy = function() {
+            this.chips_.forEach((function(chip) {
+                chip.destroy();
+            }));
+            this.unlisten(INTERACTION_EVENT, this.handleChipInteraction_);
+            this.unlisten(SELECTION_EVENT, this.handleChipSelection_);
+            this.unlisten(REMOVAL_EVENT, this.handleChipRemoval_);
+            this.unlisten(NAVIGATION_EVENT, this.handleChipNavigation_);
+            _super.prototype.destroy.call(this);
+        };
+        MDCChipSet.prototype.addChip = function(chipEl) {
+            chipEl.id = chipEl.id || "mdc-chip-" + ++idCounter;
+            this.chips_.push(this.chipFactory_(chipEl));
+        };
+        MDCChipSet.prototype.getDefaultFoundation = function() {
+            var _this = this;
+            var adapter = {
+                announceMessage: function(message) {
+                    announce(message);
+                },
+                focusChipPrimaryActionAtIndex: function(index) {
+                    _this.chips_[index].focusPrimaryAction();
+                },
+                focusChipTrailingActionAtIndex: function(index) {
+                    _this.chips_[index].focusTrailingAction();
+                },
+                getChipListCount: function() {
+                    return _this.chips_.length;
+                },
+                getIndexOfChipById: function(chipId) {
+                    return _this.findChipIndex_(chipId);
+                },
+                hasClass: function(className) {
+                    return _this.root.classList.contains(className);
+                },
+                isRTL: function() {
+                    return window.getComputedStyle(_this.root).getPropertyValue("direction") === "rtl";
+                },
+                removeChipAtIndex: function(index) {
+                    if (index >= 0 && index < _this.chips_.length) {
+                        _this.chips_[index].destroy();
+                        _this.chips_[index].remove();
+                        _this.chips_.splice(index, 1);
+                    }
+                },
+                removeFocusFromChipAtIndex: function(index) {
+                    _this.chips_[index].removeFocus();
+                },
+                selectChipAtIndex: function(index, selected, shouldNotifyClients) {
+                    if (index >= 0 && index < _this.chips_.length) {
+                        _this.chips_[index].setSelectedFromChipSet(selected, shouldNotifyClients);
+                    }
+                }
+            };
+            return new MDCChipSetFoundation(adapter);
+        };
+        MDCChipSet.prototype.instantiateChips_ = function(chipFactory) {
+            var chipElements = [].slice.call(this.root.querySelectorAll(CHIP_SELECTOR));
+            return chipElements.map((function(el) {
+                el.id = el.id || "mdc-chip-" + ++idCounter;
+                return chipFactory(el);
+            }));
+        };
+        MDCChipSet.prototype.findChipIndex_ = function(chipId) {
+            for (var i = 0; i < this.chips_.length; i++) {
+                if (this.chips_[i].id === chipId) {
+                    return i;
+                }
+            }
+            return -1;
+        };
+        return MDCChipSet;
+    }(MDCComponent);
+    function MBChipsSelectMulti_init(elem, isSingleSelect, dotNetObject) {
+        elem._chipSet = MDCChipSet.attachTo(elem);
+        elem._isSingleSelect = isSingleSelect;
+        return new Promise((function() {
+            elem._chipSet.foundation.handleChipSelection = function(index) {
+                var x = index;
+                var y = dotNetObject;
+                if (elem._isSingleSelect) {
+                    dotNetObject.invokeMethodAsync("NotifySingleSelectedAsync", index.index);
+                    for (var i = 0; i < elem._chipSet.chips_.length; i++) {
+                        if (i == index) {
+                            elem._chipSet.chips_[i].setSelected();
+                        } else {
+                            elem._chipSet.chips_[i].setUnselected();
+                        }
+                    }
+                } else {
+                    dotNetObject.invokeMethodAsync("NotifyMultiSelectedAsync", elem._chipSet.chips_.map((function(x) {
+                        return x.foundation.isSelected();
+                    })));
+                }
+            };
+        }));
+    }
+    function MBChipsSelectMulti_destroy(elem) {
+        elem._chipSet.destroy();
+    }
+    function MBChipsSelectMulti_setDisabled(elem, value) {
+        elem._chipSet.disabled = value;
+    }
+    function setSelected(elem, selectedFlags) {
+        for (var i = 0; i < selectedFlags.length; i++) {
+            elem._chipSet.foundation.adapter.selectChipAtIndex(i, selectedFlags[i], false);
+        }
+    }
+    /**
+ * @license
  * Copyright 2016 Google Inc.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -11259,7 +12785,7 @@ PERFORMANCE OF THIS SOFTWARE.
  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
- */    var emptyClientRect = {
+ */    var foundation_emptyClientRect = {
         bottom: 0,
         height: 0,
         left: 0,
@@ -11297,7 +12823,7 @@ PERFORMANCE OF THIS SOFTWARE.
                         return undefined;
                     },
                     getRootBoundingClientRect: function() {
-                        return emptyClientRect;
+                        return foundation_emptyClientRect;
                     }
                 };
             },
@@ -11687,9 +13213,9 @@ PERFORMANCE OF THIS SOFTWARE.
     function MBSegmentedButtonMulti_setDisabled(elem, value) {
         elem._segmentedButton.disabled = value;
     }
-    function setAreSelected(elem, areSelected) {
-        for (var i = 0; i < areSelected.length; i++) {
-            if (areSelected[i] == true) {
+    function MBSegmentedButtonMulti_setSelected(elem, selectedFlags) {
+        for (var i = 0; i < selectedFlags.length; i++) {
+            if (selectedFlags[i] == true) {
                 elem._segmentedButton.segments_[i].setSelected();
             } else {
                 elem._segmentedButton.segments_[i].setUnselected();
@@ -14917,6 +16443,7 @@ PERFORMANCE OF THIS SOFTWARE.
         MBAutoCompleteTextField: MBAutocompleteTextField_namespaceObject,
         MBButton: MBButton_namespaceObject,
         MBCard: MBCard_namespaceObject,
+        MBChipsSelectMulti: MBChipsSelectMulti_namespaceObject,
         MBCheckbox: MBCheckbox_namespaceObject,
         MBCircularProgress: MBCircularProgress_namespaceObject,
         MBDataTable: MBDataTable_namespaceObject,
