@@ -3502,6 +3502,19 @@ references:
   isSpec: "True"
   fullName: Material.Blazor.MBDatePicker.MaxDate
   nameWithType: MBDatePicker.MaxDate
+- uid: Material.Blazor.MBDatePicker.MenuSurfacePositioning
+  name: MenuSurfacePositioning
+  href: api/Material.Blazor.MBDatePicker.html#Material_Blazor_MBDatePicker_MenuSurfacePositioning
+  commentId: P:Material.Blazor.MBDatePicker.MenuSurfacePositioning
+  fullName: Material.Blazor.MBDatePicker.MenuSurfacePositioning
+  nameWithType: MBDatePicker.MenuSurfacePositioning
+- uid: Material.Blazor.MBDatePicker.MenuSurfacePositioning*
+  name: MenuSurfacePositioning
+  href: api/Material.Blazor.MBDatePicker.html#Material_Blazor_MBDatePicker_MenuSurfacePositioning_
+  commentId: Overload:Material.Blazor.MBDatePicker.MenuSurfacePositioning
+  isSpec: "True"
+  fullName: Material.Blazor.MBDatePicker.MenuSurfacePositioning
+  nameWithType: MBDatePicker.MenuSurfacePositioning
 - uid: Material.Blazor.MBDatePicker.MinDate
   name: MinDate
   href: api/Material.Blazor.MBDatePicker.html#Material_Blazor_MBDatePicker_MinDate
@@ -6032,6 +6045,19 @@ references:
   isSpec: "True"
   fullName: Material.Blazor.MBMenu.Dispose
   nameWithType: MBMenu.Dispose
+- uid: Material.Blazor.MBMenu.MenuSurfacePositioning
+  name: MenuSurfacePositioning
+  href: api/Material.Blazor.MBMenu.html#Material_Blazor_MBMenu_MenuSurfacePositioning
+  commentId: P:Material.Blazor.MBMenu.MenuSurfacePositioning
+  fullName: Material.Blazor.MBMenu.MenuSurfacePositioning
+  nameWithType: MBMenu.MenuSurfacePositioning
+- uid: Material.Blazor.MBMenu.MenuSurfacePositioning*
+  name: MenuSurfacePositioning
+  href: api/Material.Blazor.MBMenu.html#Material_Blazor_MBMenu_MenuSurfacePositioning_
+  commentId: Overload:Material.Blazor.MBMenu.MenuSurfacePositioning
+  isSpec: "True"
+  fullName: Material.Blazor.MBMenu.MenuSurfacePositioning
+  nameWithType: MBMenu.MenuSurfacePositioning
 - uid: Material.Blazor.MBMenu.NotifyClosedAsync
   name: NotifyClosedAsync()
   href: api/Material.Blazor.MBMenu.html#Material_Blazor_MBMenu_NotifyClosedAsync
@@ -6090,6 +6116,30 @@ references:
   isSpec: "True"
   fullName: Material.Blazor.MBMenuSelectionGroup.ChildContent
   nameWithType: MBMenuSelectionGroup.ChildContent
+- uid: Material.Blazor.MBMenuSurfacePositioning
+  name: MBMenuSurfacePositioning
+  href: api/Material.Blazor.MBMenuSurfacePositioning.html
+  commentId: T:Material.Blazor.MBMenuSurfacePositioning
+  fullName: Material.Blazor.MBMenuSurfacePositioning
+  nameWithType: MBMenuSurfacePositioning
+- uid: Material.Blazor.MBMenuSurfacePositioning.Fixed
+  name: Fixed
+  href: api/Material.Blazor.MBMenuSurfacePositioning.html#Material_Blazor_MBMenuSurfacePositioning_Fixed
+  commentId: F:Material.Blazor.MBMenuSurfacePositioning.Fixed
+  fullName: Material.Blazor.MBMenuSurfacePositioning.Fixed
+  nameWithType: MBMenuSurfacePositioning.Fixed
+- uid: Material.Blazor.MBMenuSurfacePositioning.FullWidth
+  name: FullWidth
+  href: api/Material.Blazor.MBMenuSurfacePositioning.html#Material_Blazor_MBMenuSurfacePositioning_FullWidth
+  commentId: F:Material.Blazor.MBMenuSurfacePositioning.FullWidth
+  fullName: Material.Blazor.MBMenuSurfacePositioning.FullWidth
+  nameWithType: MBMenuSurfacePositioning.FullWidth
+- uid: Material.Blazor.MBMenuSurfacePositioning.Regular
+  name: Regular
+  href: api/Material.Blazor.MBMenuSurfacePositioning.html#Material_Blazor_MBMenuSurfacePositioning_Regular
+  commentId: F:Material.Blazor.MBMenuSurfacePositioning.Regular
+  fullName: Material.Blazor.MBMenuSurfacePositioning.Regular
+  nameWithType: MBMenuSurfacePositioning.Regular
 - uid: Material.Blazor.MBNumericDecimalField
   name: MBNumericDecimalField
   href: api/Material.Blazor.MBNumericDecimalField.html
@@ -7722,6 +7772,23 @@ references:
   fullName.vb: Material.Blazor.MBSelect(Of TItem).LeadingIcon
   nameWithType: MBSelect<TItem>.LeadingIcon
   nameWithType.vb: MBSelect(Of TItem).LeadingIcon
+- uid: Material.Blazor.MBSelect`1.MenuSurfacePositioning
+  name: MenuSurfacePositioning
+  href: api/Material.Blazor.MBSelect-1.html#Material_Blazor_MBSelect_1_MenuSurfacePositioning
+  commentId: P:Material.Blazor.MBSelect`1.MenuSurfacePositioning
+  fullName: Material.Blazor.MBSelect<TItem>.MenuSurfacePositioning
+  fullName.vb: Material.Blazor.MBSelect(Of TItem).MenuSurfacePositioning
+  nameWithType: MBSelect<TItem>.MenuSurfacePositioning
+  nameWithType.vb: MBSelect(Of TItem).MenuSurfacePositioning
+- uid: Material.Blazor.MBSelect`1.MenuSurfacePositioning*
+  name: MenuSurfacePositioning
+  href: api/Material.Blazor.MBSelect-1.html#Material_Blazor_MBSelect_1_MenuSurfacePositioning_
+  commentId: Overload:Material.Blazor.MBSelect`1.MenuSurfacePositioning
+  isSpec: "True"
+  fullName: Material.Blazor.MBSelect<TItem>.MenuSurfacePositioning
+  fullName.vb: Material.Blazor.MBSelect(Of TItem).MenuSurfacePositioning
+  nameWithType: MBSelect<TItem>.MenuSurfacePositioning
+  nameWithType.vb: MBSelect(Of TItem).MenuSurfacePositioning
 - uid: Material.Blazor.MBSelect`1.NotifySelectedAsync(System.Int32)
   name: NotifySelectedAsync(Int32)
   href: api/Material.Blazor.MBSelect-1.html#Material_Blazor_MBSelect_1_NotifySelectedAsync_System_Int32_
