@@ -37,6 +37,9 @@ references:
 - uid: A.License
   name: License
   href: LICENSE.html
+- uid: A.MenuOverflow
+  name: MenuOverflow
+  href: articles/MenuOverflow.html
 - uid: A.PlusComponents
   name: PlusComponents
   href: articles/PlusComponents.html
