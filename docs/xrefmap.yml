@@ -5536,6 +5536,30 @@ references:
   commentId: F:Material.Blazor.MBIconMITheme.TwoTone
   fullName: Material.Blazor.MBIconMITheme.TwoTone
   nameWithType: MBIconMITheme.TwoTone
+- uid: Material.Blazor.MBInputEventType
+  name: MBInputEventType
+  href: api/Material.Blazor.MBInputEventType.html
+  commentId: T:Material.Blazor.MBInputEventType
+  fullName: Material.Blazor.MBInputEventType
+  nameWithType: MBInputEventType
+- uid: Material.Blazor.MBInputEventType.OnChange
+  name: OnChange
+  href: api/Material.Blazor.MBInputEventType.html#Material_Blazor_MBInputEventType_OnChange
+  commentId: F:Material.Blazor.MBInputEventType.OnChange
+  fullName: Material.Blazor.MBInputEventType.OnChange
+  nameWithType: MBInputEventType.OnChange
+- uid: Material.Blazor.MBInputEventType.OnInputDebounced
+  name: OnInputDebounced
+  href: api/Material.Blazor.MBInputEventType.html#Material_Blazor_MBInputEventType_OnInputDebounced
+  commentId: F:Material.Blazor.MBInputEventType.OnInputDebounced
+  fullName: Material.Blazor.MBInputEventType.OnInputDebounced
+  nameWithType: MBInputEventType.OnInputDebounced
+- uid: Material.Blazor.MBInputEventType.OnInputThrottled
+  name: OnInputThrottled
+  href: api/Material.Blazor.MBInputEventType.html#Material_Blazor_MBInputEventType_OnInputThrottled
+  commentId: F:Material.Blazor.MBInputEventType.OnInputThrottled
+  fullName: Material.Blazor.MBInputEventType.OnInputThrottled
+  nameWithType: MBInputEventType.OnInputThrottled
 - uid: Material.Blazor.MBItemValidation
   name: MBItemValidation
   href: api/Material.Blazor.MBItemValidation.html
@@ -8362,19 +8386,19 @@ references:
   isSpec: "True"
   fullName: Material.Blazor.MBSlider.AriaLabel
   nameWithType: MBSlider.AriaLabel
-- uid: Material.Blazor.MBSlider.ContinuousInputDebounceDelay
-  name: ContinuousInputDebounceDelay
-  href: api/Material.Blazor.MBSlider.html#Material_Blazor_MBSlider_ContinuousInputDebounceDelay
-  commentId: P:Material.Blazor.MBSlider.ContinuousInputDebounceDelay
-  fullName: Material.Blazor.MBSlider.ContinuousInputDebounceDelay
-  nameWithType: MBSlider.ContinuousInputDebounceDelay
-- uid: Material.Blazor.MBSlider.ContinuousInputDebounceDelay*
-  name: ContinuousInputDebounceDelay
-  href: api/Material.Blazor.MBSlider.html#Material_Blazor_MBSlider_ContinuousInputDebounceDelay_
-  commentId: Overload:Material.Blazor.MBSlider.ContinuousInputDebounceDelay
+- uid: Material.Blazor.MBSlider.ContinuousInputDelay
+  name: ContinuousInputDelay
+  href: api/Material.Blazor.MBSlider.html#Material_Blazor_MBSlider_ContinuousInputDelay
+  commentId: P:Material.Blazor.MBSlider.ContinuousInputDelay
+  fullName: Material.Blazor.MBSlider.ContinuousInputDelay
+  nameWithType: MBSlider.ContinuousInputDelay
+- uid: Material.Blazor.MBSlider.ContinuousInputDelay*
+  name: ContinuousInputDelay
+  href: api/Material.Blazor.MBSlider.html#Material_Blazor_MBSlider_ContinuousInputDelay_
+  commentId: Overload:Material.Blazor.MBSlider.ContinuousInputDelay
   isSpec: "True"
-  fullName: Material.Blazor.MBSlider.ContinuousInputDebounceDelay
-  nameWithType: MBSlider.ContinuousInputDebounceDelay
+  fullName: Material.Blazor.MBSlider.ContinuousInputDelay
+  nameWithType: MBSlider.ContinuousInputDelay
 - uid: Material.Blazor.MBSlider.DecimalPlaces
   name: DecimalPlaces
   href: api/Material.Blazor.MBSlider.html#Material_Blazor_MBSlider_DecimalPlaces
@@ -8518,30 +8542,6 @@ references:
   isSpec: "True"
   fullName: Material.Blazor.MBSlider.ValueMin
   nameWithType: MBSlider.ValueMin
-- uid: Material.Blazor.MBSliderEventType
-  name: MBSliderEventType
-  href: api/Material.Blazor.MBSliderEventType.html
-  commentId: T:Material.Blazor.MBSliderEventType
-  fullName: Material.Blazor.MBSliderEventType
-  nameWithType: MBSliderEventType
-- uid: Material.Blazor.MBSliderEventType.ContinuousDebounced
-  name: ContinuousDebounced
-  href: api/Material.Blazor.MBSliderEventType.html#Material_Blazor_MBSliderEventType_ContinuousDebounced
-  commentId: F:Material.Blazor.MBSliderEventType.ContinuousDebounced
-  fullName: Material.Blazor.MBSliderEventType.ContinuousDebounced
-  nameWithType: MBSliderEventType.ContinuousDebounced
-- uid: Material.Blazor.MBSliderEventType.ContinuousThrottled
-  name: ContinuousThrottled
-  href: api/Material.Blazor.MBSliderEventType.html#Material_Blazor_MBSliderEventType_ContinuousThrottled
-  commentId: F:Material.Blazor.MBSliderEventType.ContinuousThrottled
-  fullName: Material.Blazor.MBSliderEventType.ContinuousThrottled
-  nameWithType: MBSliderEventType.ContinuousThrottled
-- uid: Material.Blazor.MBSliderEventType.ThumbUp
-  name: ThumbUp
-  href: api/Material.Blazor.MBSliderEventType.html#Material_Blazor_MBSliderEventType_ThumbUp
-  commentId: F:Material.Blazor.MBSliderEventType.ThumbUp
-  fullName: Material.Blazor.MBSliderEventType.ThumbUp
-  nameWithType: MBSliderEventType.ThumbUp
 - uid: Material.Blazor.MBSliderType
   name: MBSliderType
   href: api/Material.Blazor.MBSliderType.html

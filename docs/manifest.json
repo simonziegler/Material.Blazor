@@ -1385,11 +1385,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Material.Blazor.MBInputEventType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Material.Blazor.MBInputEventType.html",
+          "hash": "7YxlbMS8FfgjMQKfLtIDzQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Material.Blazor.MBItemValidation.yml",
       "output": {
         ".html": {
           "relative_path": "api/Material.Blazor.MBItemValidation.html",
-          "hash": "v1s+ExuK5QFg9y3lZKtecQ=="
+          "hash": "BhLlcm3vojSJCJvvmpkxoA=="
         }
       },
       "is_incremental": false,
@@ -1413,7 +1425,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Material.Blazor.MBLinearProgressType.html",
-          "hash": "fgsHQlZbFuit9agH6hoypA=="
+          "hash": "10B4vbMQCF4lEwnQ4negwA=="
         }
       },
       "is_incremental": false,
@@ -1461,7 +1473,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Material.Blazor.MBListStyle.html",
-          "hash": "4Pyd/pA5IfzSL/8eMR9OuQ=="
+          "hash": "iVe1kbzl5eJ8ap/6DbvEgQ=="
         }
       },
       "is_incremental": false,
@@ -1473,7 +1485,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Material.Blazor.MBListType.html",
-          "hash": "tvXbthNfMmgwM5dh63QNAw=="
+          "hash": "JJkhr38lYDdrD37WNWsZQQ=="
         }
       },
       "is_incremental": false,
@@ -1509,7 +1521,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Material.Blazor.MBMenuSurfacePositioning.html",
-          "hash": "352A19zGfRyV+CCR6O6OoA=="
+          "hash": "p4L2W/gwi36GqgZ50jcEYw=="
         }
       },
       "is_incremental": false,
@@ -1545,7 +1557,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Material.Blazor.MBNumericInputMagnitude.html",
-          "hash": "TBPa/Bs65sE+mHlEDaFRqA=="
+          "hash": "VDywYew8ySB0983CqSbhlw=="
         }
       },
       "is_incremental": false,
@@ -1665,7 +1677,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Material.Blazor.MBSelectInputStyle.html",
-          "hash": "XyG9HSpqQoDnEpDvJnfgrw=="
+          "hash": "Kihh10vYS6EiN1/CDGaa8g=="
         }
       },
       "is_incremental": false,
@@ -1689,7 +1701,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Material.Blazor.MBShieldType.html",
-          "hash": "uiNdmcLmr6iDScxQtkacrg=="
+          "hash": "oXJJMpREF1OdTo5s+1IstQ=="
         }
       },
       "is_incremental": false,
@@ -1701,19 +1713,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Material.Blazor.MBSlider.html",
-          "hash": "5HbaFWsrKor1WR1EJWDdKg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Material.Blazor.MBSliderEventType.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Material.Blazor.MBSliderEventType.html",
-          "hash": "KMsZ1bhhfADv6fBVzuGTug=="
+          "hash": "4nTIXxnQDoYPLEVpQPB19w=="
         }
       },
       "is_incremental": false,
@@ -2001,7 +2001,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Material.Blazor.html",
-          "hash": "QgR+vGltfdZ/XLaVhSOY8A=="
+          "hash": "Bl6nhQ2+MXjrQVIb35ho2A=="
         }
       },
       "is_incremental": false,
@@ -2013,7 +2013,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "ckSKM7eQ9cidPrL9dGpPWA=="
+          "hash": "uCfQh0ztBq9q+TQNfKhKmQ=="
         }
       },
       "is_incremental": false,
