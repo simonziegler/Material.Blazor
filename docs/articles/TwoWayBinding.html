@@ -155,10 +155,10 @@ parameter.</p>
 <p>Each component inheriting from <code>InputComponent</code> implements this mechanism separately calling the JavaScript provided
 by MCW for that component:</p>
 <ul>
-<li>Overrides <code>SetComponentValue</code> from <code>InputComponent</code> to call the relevant MCW code via JSInterop;</li>
+<li>Overrides <code>OnParametersSet</code> from <code>InputComponent</code> to call the relevant MCW code via JSInterop;</li>
 <li>Registers a JSInterop callback with MCW for notification of value changes;</li>
 <li>Overrides <code>OnDisabledSet</code> from <code>ComponentFoundation</code> for to either call MCW via JSInterop to set the disabled state or to do so directly via Blazor binding as relevant; and</li>
-<li><em>Does not</em> bind Value to any elements in the razor markup.</li>
+<li><em>Does not</em> bind Value to any elements in the razor markup except for <code>MBTextField</code> which binds directly to the <code>'&lt;input&gt;</code> block.</li>
 </ul>
 <p>Without this careful mechanism Blazor and MCW can enter an infinite positive feedback loop of values bouncing from current to previous value.</p>
 <h2 id="debouncing">Debouncing</h2>
