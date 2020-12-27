@@ -1041,7 +1041,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Material.Blazor.MBChipsSelectMulti-1.html",
-          "hash": "AFr9YGmRbP+o30GksWeznw=="
+          "hash": "JP1Kn/rTg9zSMZSVZMFLvw=="
         }
       },
       "is_incremental": false,
@@ -1053,7 +1053,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Material.Blazor.MBChipsSelectSingle-1.html",
-          "hash": "sIjUcl0d8HrjXO+yGkE77Q=="
+          "hash": "9zosvIfZMMdDwvFaSiY5qQ=="
         }
       },
       "is_incremental": false,
@@ -1821,7 +1821,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Material.Blazor.MBTextInputStyle.html",
-          "hash": "P3jMYH89t1L6FFCUZXXiXw=="
+          "hash": "KkG1PEdkQoK5JV58Yy4RSg=="
         }
       },
       "is_incremental": false,
@@ -1845,7 +1845,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Material.Blazor.MBToastCloseMethod.html",
-          "hash": "tELuNh8ka9DERBrQE6wOng=="
+          "hash": "ubFtj694oIdAwUYB+eEygQ=="
         }
       },
       "is_incremental": false,
@@ -1857,7 +1857,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Material.Blazor.MBToastLevel.html",
-          "hash": "oxpJzONbGPOM/aioeKOSHA=="
+          "hash": "twg3G1RK82CJsJQfvzPQRQ=="
         }
       },
       "is_incremental": false,
@@ -1869,7 +1869,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Material.Blazor.MBToastPosition.html",
-          "hash": "mdA8w6DpX/5lla28kGsfjw=="
+          "hash": "LMjzExle9dFvYTlgoCh2Rw=="
         }
       },
       "is_incremental": false,
@@ -1917,7 +1917,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Material.Blazor.MBTooltipType.html",
-          "hash": "MKc7MVXjRXgnasW6Zmh12w=="
+          "hash": "K+iwm6nYaTYeHDvLH9DV9A=="
         }
       },
       "is_incremental": false,
@@ -1941,7 +1941,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Material.Blazor.MBTopAppBarType.html",
-          "hash": "jOvi5D+XhzPYfHD6xk8Ehw=="
+          "hash": "mURk6XLU7y1VH51EjxYdqQ=="
         }
       },
       "is_incremental": false,
