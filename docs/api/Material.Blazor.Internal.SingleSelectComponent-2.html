@@ -408,7 +408,7 @@ to throw an exception (the default).</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public T ValidateItemList(IEnumerable&lt;MBSelectElement&lt;T&gt;&gt; items, MBItemValidation appliedItemValidation)</code></pre>
+    <pre><code class="lang-csharp hljs">public (bool hasValue, T value) ValidateItemList(IEnumerable&lt;MBSelectElement&lt;T&gt;&gt; items, MBItemValidation appliedItemValidation)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -444,8 +444,8 @@ to throw an exception (the default).</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">T</span></td>
-        <td><p>The item in the list matching <span class="xref">Material.Blazor.Internal.InputComponent`1._cachedValue</span></p>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.valuetuple-2">ValueTuple</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>, T&gt;</td>
+        <td><p>The an indicator of whether an item was found and the item in the list matching <span class="xref">Material.Blazor.Internal.InputComponent`1._cachedValue</span> or default if not found.</p>
 </td>
       </tr>
     </tbody>

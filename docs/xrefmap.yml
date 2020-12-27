@@ -7646,23 +7646,6 @@ references:
   fullName.vb: Material.Blazor.MBRadioButtonGroup(Of TItem).Density
   nameWithType: MBRadioButtonGroup<TItem>.Density
   nameWithType.vb: MBRadioButtonGroup(Of TItem).Density
-- uid: Material.Blazor.MBRadioButtonGroup`1.EnableTouchWrapper
-  name: EnableTouchWrapper
-  href: api/Material.Blazor.MBRadioButtonGroup-1.html#Material_Blazor_MBRadioButtonGroup_1_EnableTouchWrapper
-  commentId: P:Material.Blazor.MBRadioButtonGroup`1.EnableTouchWrapper
-  fullName: Material.Blazor.MBRadioButtonGroup<TItem>.EnableTouchWrapper
-  fullName.vb: Material.Blazor.MBRadioButtonGroup(Of TItem).EnableTouchWrapper
-  nameWithType: MBRadioButtonGroup<TItem>.EnableTouchWrapper
-  nameWithType.vb: MBRadioButtonGroup(Of TItem).EnableTouchWrapper
-- uid: Material.Blazor.MBRadioButtonGroup`1.EnableTouchWrapper*
-  name: EnableTouchWrapper
-  href: api/Material.Blazor.MBRadioButtonGroup-1.html#Material_Blazor_MBRadioButtonGroup_1_EnableTouchWrapper_
-  commentId: Overload:Material.Blazor.MBRadioButtonGroup`1.EnableTouchWrapper
-  isSpec: "True"
-  fullName: Material.Blazor.MBRadioButtonGroup<TItem>.EnableTouchWrapper
-  fullName.vb: Material.Blazor.MBRadioButtonGroup(Of TItem).EnableTouchWrapper
-  nameWithType: MBRadioButtonGroup<TItem>.EnableTouchWrapper
-  nameWithType.vb: MBRadioButtonGroup(Of TItem).EnableTouchWrapper
 - uid: Material.Blazor.MBRadioButtonGroup`1.OnInitialized
   name: OnInitialized()
   href: api/Material.Blazor.MBRadioButtonGroup-1.html#Material_Blazor_MBRadioButtonGroup_1_OnInitialized
