@@ -5441,6 +5441,11 @@
             setDisabled: () => setDisabled,
             setValue: () => setValue
         });
+        var MBBladeSet_namespaceObject = {};
+        __webpack_require__.r(MBBladeSet_namespaceObject);
+        __webpack_require__.d(MBBladeSet_namespaceObject, {
+            getBladeContentsWidth: () => getBladeContentsWidth
+        });
         var MBButton_namespaceObject = {};
         __webpack_require__.r(MBButton_namespaceObject);
         __webpack_require__.d(MBButton_namespaceObject, {
@@ -11375,6 +11380,9 @@ PERFORMANCE OF THIS SOFTWARE.
         }
         function setDisabled(textElem, disabled) {
             textElem._textField.disabled = disabled;
+        }
+        function getBladeContentsWidth(elem) {
+            return elem.getBoundingClientRect().width;
         }
         function MBButton_init(elem) {
             elem._ripple = MDCRipple.attachTo(elem);
@@ -22923,6 +22931,7 @@ PERFORMANCE OF THIS SOFTWARE.
         }
         window.MaterialBlazor = {
             MBAutoCompleteTextField: MBAutocompleteTextField_namespaceObject,
+            MBBladeSet: MBBladeSet_namespaceObject,
             MBButton: MBButton_namespaceObject,
             MBCard: MBCard_namespaceObject,
             MBChipsSelectMulti: MBChipsSelectMulti_namespaceObject,

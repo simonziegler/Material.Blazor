@@ -2217,6 +2217,90 @@ references:
   isSpec: "True"
   fullName: Material.Blazor.MBAutocompleteTextField.ValidationMessageFor
   nameWithType: MBAutocompleteTextField.ValidationMessageFor
+- uid: Material.Blazor.MBBladeSet
+  name: MBBladeSet
+  href: api/Material.Blazor.MBBladeSet.html
+  commentId: T:Material.Blazor.MBBladeSet
+  fullName: Material.Blazor.MBBladeSet
+  nameWithType: MBBladeSet
+- uid: Material.Blazor.MBBladeSet.AddBladeAsync(System.String,System.String)
+  name: AddBladeAsync(String, String)
+  href: api/Material.Blazor.MBBladeSet.html#Material_Blazor_MBBladeSet_AddBladeAsync_System_String_System_String_
+  commentId: M:Material.Blazor.MBBladeSet.AddBladeAsync(System.String,System.String)
+  fullName: Material.Blazor.MBBladeSet.AddBladeAsync(System.String, System.String)
+  nameWithType: MBBladeSet.AddBladeAsync(String, String)
+- uid: Material.Blazor.MBBladeSet.AddBladeAsync*
+  name: AddBladeAsync
+  href: api/Material.Blazor.MBBladeSet.html#Material_Blazor_MBBladeSet_AddBladeAsync_
+  commentId: Overload:Material.Blazor.MBBladeSet.AddBladeAsync
+  isSpec: "True"
+  fullName: Material.Blazor.MBBladeSet.AddBladeAsync
+  nameWithType: MBBladeSet.AddBladeAsync
+- uid: Material.Blazor.MBBladeSet.BladeContent
+  name: BladeContent
+  href: api/Material.Blazor.MBBladeSet.html#Material_Blazor_MBBladeSet_BladeContent
+  commentId: P:Material.Blazor.MBBladeSet.BladeContent
+  fullName: Material.Blazor.MBBladeSet.BladeContent
+  nameWithType: MBBladeSet.BladeContent
+- uid: Material.Blazor.MBBladeSet.BladeContent*
+  name: BladeContent
+  href: api/Material.Blazor.MBBladeSet.html#Material_Blazor_MBBladeSet_BladeContent_
+  commentId: Overload:Material.Blazor.MBBladeSet.BladeContent
+  isSpec: "True"
+  fullName: Material.Blazor.MBBladeSet.BladeContent
+  nameWithType: MBBladeSet.BladeContent
+- uid: Material.Blazor.MBBladeSet.BladeReferences
+  name: BladeReferences
+  href: api/Material.Blazor.MBBladeSet.html#Material_Blazor_MBBladeSet_BladeReferences
+  commentId: P:Material.Blazor.MBBladeSet.BladeReferences
+  fullName: Material.Blazor.MBBladeSet.BladeReferences
+  nameWithType: MBBladeSet.BladeReferences
+- uid: Material.Blazor.MBBladeSet.BladeReferences*
+  name: BladeReferences
+  href: api/Material.Blazor.MBBladeSet.html#Material_Blazor_MBBladeSet_BladeReferences_
+  commentId: Overload:Material.Blazor.MBBladeSet.BladeReferences
+  isSpec: "True"
+  fullName: Material.Blazor.MBBladeSet.BladeReferences
+  nameWithType: MBBladeSet.BladeReferences
+- uid: Material.Blazor.MBBladeSet.OnAfterRenderAsync(System.Boolean)
+  name: OnAfterRenderAsync(Boolean)
+  href: api/Material.Blazor.MBBladeSet.html#Material_Blazor_MBBladeSet_OnAfterRenderAsync_System_Boolean_
+  commentId: M:Material.Blazor.MBBladeSet.OnAfterRenderAsync(System.Boolean)
+  fullName: Material.Blazor.MBBladeSet.OnAfterRenderAsync(System.Boolean)
+  nameWithType: MBBladeSet.OnAfterRenderAsync(Boolean)
+- uid: Material.Blazor.MBBladeSet.OnAfterRenderAsync*
+  name: OnAfterRenderAsync
+  href: api/Material.Blazor.MBBladeSet.html#Material_Blazor_MBBladeSet_OnAfterRenderAsync_
+  commentId: Overload:Material.Blazor.MBBladeSet.OnAfterRenderAsync
+  isSpec: "True"
+  fullName: Material.Blazor.MBBladeSet.OnAfterRenderAsync
+  nameWithType: MBBladeSet.OnAfterRenderAsync
+- uid: Material.Blazor.MBBladeSet.PageContent
+  name: PageContent
+  href: api/Material.Blazor.MBBladeSet.html#Material_Blazor_MBBladeSet_PageContent
+  commentId: P:Material.Blazor.MBBladeSet.PageContent
+  fullName: Material.Blazor.MBBladeSet.PageContent
+  nameWithType: MBBladeSet.PageContent
+- uid: Material.Blazor.MBBladeSet.PageContent*
+  name: PageContent
+  href: api/Material.Blazor.MBBladeSet.html#Material_Blazor_MBBladeSet_PageContent_
+  commentId: Overload:Material.Blazor.MBBladeSet.PageContent
+  isSpec: "True"
+  fullName: Material.Blazor.MBBladeSet.PageContent
+  nameWithType: MBBladeSet.PageContent
+- uid: Material.Blazor.MBBladeSet.RemoveBladeAsync(System.String)
+  name: RemoveBladeAsync(String)
+  href: api/Material.Blazor.MBBladeSet.html#Material_Blazor_MBBladeSet_RemoveBladeAsync_System_String_
+  commentId: M:Material.Blazor.MBBladeSet.RemoveBladeAsync(System.String)
+  fullName: Material.Blazor.MBBladeSet.RemoveBladeAsync(System.String)
+  nameWithType: MBBladeSet.RemoveBladeAsync(String)
+- uid: Material.Blazor.MBBladeSet.RemoveBladeAsync*
+  name: RemoveBladeAsync
+  href: api/Material.Blazor.MBBladeSet.html#Material_Blazor_MBBladeSet_RemoveBladeAsync_
+  commentId: Overload:Material.Blazor.MBBladeSet.RemoveBladeAsync
+  isSpec: "True"
+  fullName: Material.Blazor.MBBladeSet.RemoveBladeAsync
+  nameWithType: MBBladeSet.RemoveBladeAsync
 - uid: Material.Blazor.MBButton
   name: MBButton
   href: api/Material.Blazor.MBButton.html
