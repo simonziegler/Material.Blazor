@@ -5444,7 +5444,8 @@
         var MBBladeSet_namespaceObject = {};
         __webpack_require__.r(MBBladeSet_namespaceObject);
         __webpack_require__.d(MBBladeSet_namespaceObject, {
-            getBladeContentsWidth: () => getBladeContentsWidth
+            closeBlade: () => closeBlade,
+            openBlade: () => openBlade
         });
         var MBButton_namespaceObject = {};
         __webpack_require__.r(MBButton_namespaceObject);
@@ -11381,8 +11382,29 @@ PERFORMANCE OF THIS SOFTWARE.
         function setDisabled(textElem, disabled) {
             textElem._textField.disabled = disabled;
         }
-        function getBladeContentsWidth(elem) {
-            return elem.getBoundingClientRect().width;
+        function openBlade(bladeSetElem, mainContentElem, scrollHelperElem, bladeElem, bladeContentElem) {
+            var bladeContentWidth = bladeContentElem.getBoundingClientRect().width;
+            var mainContentWidth = getComputedStyle(mainContentElem).width;
+            var mainContentMinWidth = getComputedStyle(mainContentElem).minWidth;
+            var availableShrinkage = bladeContentWidth;
+            if (mainContentMinWidth.substring(mainContentMinWidth.length - 2, mainContentMinWidth.length) == "px") {
+                availableShrinkage = Math.min(bladeContentWidth, parseInt(mainContentWidth) - parseInt(mainContentWidth));
+            }
+            if (availableShrinkage < bladeContentWidth) {
+                scrollHelperElem.style.transition = "";
+                scrollHelperElem.style.width = bladeContentWidth + "px";
+                bladeSetElem.scrollBy({
+                    top: 0,
+                    left: 5e3,
+                    behavior: "auto"
+                });
+                scrollHelperElem.style.transition = "width 200ms";
+                scrollHelperElem.style.width = "0px";
+            }
+            bladeElem.style.width = bladeContentWidth + "px";
+        }
+        function closeBlade(bladeElem) {
+            bladeElem.style.width = "0px";
         }
         function MBButton_init(elem) {
             elem._ripple = MDCRipple.attachTo(elem);
