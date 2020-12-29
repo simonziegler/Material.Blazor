@@ -177,7 +177,7 @@
       "url": "_content\/Material.Blazor.Website\/videos\/coverr-someone-is-checking-emails-there_s-an-old-globe-on-the-table-0186.mp4"
     },
     {
-      "hash": "sha256-Pa0NXlcUBZZ+suWOUdpnCaH0EIsoeq8DdXu91FMp0fE=",
+      "hash": "sha256-RMBXavaDnKZsVopffdSXf6fi5ZGc3Tsedt5xa0HLk3k=",
       "url": "_content\/Material.Blazor\/bundled.min.css"
     },
     {
@@ -189,7 +189,7 @@
       "url": "_content\/Material.Blazor\/material-components-icons.css"
     },
     {
-      "hash": "sha256-t31BzLNpETC6DaXibC06IlVZH1etzFPPknR8BJlEhA0=",
+      "hash": "sha256-nCt99UMEPSOBnSz3BmXyRsoWlq9Njbd5TEvjhLJ1Wqc=",
       "url": "_content\/Material.Blazor\/unbundled.css"
     },
     {
@@ -197,7 +197,7 @@
       "url": "_content\/Material.Blazor\/unbundled.js"
     },
     {
-      "hash": "sha256-jVLRkRmzOhaaxfq5JyZ1CH5ortkbZpsFP9fM4tyHYIA=",
+      "hash": "sha256-GO5g8s2rRpf\/VlMdANoIolJQCBHmGaOTyavKXKaVuGA=",
       "url": "_content\/Material.Blazor\/unbundled.min.css"
     },
     {
@@ -269,15 +269,15 @@
       "url": "_framework\/System.IO.Pipelines.dll"
     },
     {
-      "hash": "sha256-djHSaTdjDKnlq5w3\/zJsQYpbhiw+qC4wGYpEBZADKn8=",
+      "hash": "sha256-N9OrWcbflbqN37fOE9F0yNiGZhWcCWAz+xtZiMC5vQs=",
       "url": "_framework\/Material.Blazor.dll"
     },
     {
-      "hash": "sha256-cVl8bcMM\/6leCKGN3TwT2akGsa4gYq94tU\/FWrqXU4k=",
+      "hash": "sha256-IdN4Y+lA9WCfY7y2v0lLC3GScT40YOgvSr8m20BvLf8=",
       "url": "_framework\/Material.Blazor.Website.dll"
     },
     {
-      "hash": "sha256-KPPxtitnJAOrRrtW965GlyJ4yVVYjL2\/yQYsPuJUfdI=",
+      "hash": "sha256-pgXRk+ceh+dcVnwN02MeaCdCG3UMcMUQUeSLG+b5LPU=",
       "url": "_framework\/Material.Blazor.Website.WebAssembly.dll"
     },
     {
@@ -381,7 +381,7 @@
       "url": "_framework\/System.Private.CoreLib.dll"
     },
     {
-      "hash": "sha256-45J1Rg09KhbaOBKAnX+DF9CBrcwhVA+fm3GSQoKa\/ZE=",
+      "hash": "sha256-uqzsfl7\/jdkVuLal32HyPEUwo3CMFBDnU8dGR6BAO3M=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -389,5 +389,5 @@
       "url": "_framework\/blazor.webassembly.js"
     }
   ],
-  "version": "uWH9XT\/l"
+  "version": "lUo8zLXa"
 };
