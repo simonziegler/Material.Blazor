@@ -181,7 +181,7 @@
       "url": "_content\/Material.Blazor\/bundled.min.css"
     },
     {
-      "hash": "sha256-ij\/BB9JRHUVlV5oeQ5S7bWIjQnIb6yDBv87aiC2Vh0M=",
+      "hash": "sha256-ogX5WXrPif5y6W6ZSPimT5ZFPlF9WKVWvfV1jzF7+tg=",
       "url": "_content\/Material.Blazor\/bundled.min.js"
     },
     {
@@ -193,7 +193,7 @@
       "url": "_content\/Material.Blazor\/unbundled.css"
     },
     {
-      "hash": "sha256-3bnyDZSrB36QqjU5mmsR3D9zcmyjAo9DStRMflBC38Y=",
+      "hash": "sha256-y1xJP5Wp0WXUam1g2SZgpe188SwzM4BneLsf4OcSOVY=",
       "url": "_content\/Material.Blazor\/unbundled.js"
     },
     {
@@ -201,7 +201,7 @@
       "url": "_content\/Material.Blazor\/unbundled.min.css"
     },
     {
-      "hash": "sha256-D6V44ielH+WkVeT1wVIP39pZzjPxzMSM0EpqgqA4JFE=",
+      "hash": "sha256-6z0yqbAs2exvSPH8BHTpZfsANrkhvDSgH2rJY6Ja\/lg=",
       "url": "_content\/Material.Blazor\/unbundled.min.js"
     },
     {
@@ -269,15 +269,15 @@
       "url": "_framework\/System.IO.Pipelines.dll"
     },
     {
-      "hash": "sha256-KDcisbP2W7aZZUIktP37NHtQ9NucFAptVYm\/BPHMqd8=",
+      "hash": "sha256-GWO83e7KOpdxDuADY8N\/xALBYjlPHftqwKAyEqOV0nI=",
       "url": "_framework\/Material.Blazor.dll"
     },
     {
-      "hash": "sha256-SzPZVbU2YpE2s9Ue3ShvLi\/dJrELUoGYiPCrXV6zP\/g=",
+      "hash": "sha256-iT0M7On3eSLDikHZz0rbRDas\/Du1D13tnH5wPQM7nxM=",
       "url": "_framework\/Material.Blazor.Website.dll"
     },
     {
-      "hash": "sha256-REoc2IF1Hxbipyrh5gfy3nfPnhwDY\/IqLVDXOpeTGcw=",
+      "hash": "sha256-tob9CHZjQRMn12PUTVuNXtfku2kUsJiVggCIfeX0Z8w=",
       "url": "_framework\/Material.Blazor.Website.WebAssembly.dll"
     },
     {
@@ -381,7 +381,7 @@
       "url": "_framework\/System.Private.CoreLib.dll"
     },
     {
-      "hash": "sha256-BwKbYj4oIYdyQDzlvF5y8DKI2C6awBGgv5NrcxqhgfE=",
+      "hash": "sha256-N3BlrfdhOmm1VXl0k\/RpPfY3nPFDQwd4BNIYKXNvOik=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -389,5 +389,5 @@
       "url": "_framework\/blazor.webassembly.js"
     }
   ],
-  "version": "FnM64pMg"
+  "version": "vme0dI40"
 };

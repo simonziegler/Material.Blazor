@@ -11388,7 +11388,7 @@ PERFORMANCE OF THIS SOFTWARE.
             var mainContentMinWidth = getComputedStyle(mainContentElem).minWidth;
             var availableShrinkage = bladeContentWidth;
             if (mainContentMinWidth.substring(mainContentMinWidth.length - 2, mainContentMinWidth.length) == "px") {
-                availableShrinkage = Math.min(bladeContentWidth, parseInt(mainContentWidth) - parseInt(mainContentWidth));
+                availableShrinkage = Math.min(bladeContentWidth, parseInt(mainContentWidth) - parseInt(mainContentMinWidth));
             }
             if (availableShrinkage < bladeContentWidth) {
                 scrollHelperElem.style.transition = "";
