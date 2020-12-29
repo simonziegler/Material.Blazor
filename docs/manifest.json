@@ -65,6 +65,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "Material.Blazor/Components/BladeSet/MBBladeSet.md",
+      "output": {
+        ".html": {
+          "relative_path": "Material.Blazor/Components/BladeSet/MBBladeSet.html",
+          "hash": "BwXktyRrHMNTJOEz1rGfVA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "Material.Blazor/Components/Button/MBButton.md",
       "output": {
         ".html": {
@@ -609,7 +621,7 @@
       "output": {
         ".html": {
           "relative_path": "Material.Blazor/Components/toc.html",
-          "hash": "o4PbRYbB92HGwOcI/m4bGw=="
+          "hash": "yH3+HNdC2mElnHJglHIsQA=="
         }
       },
       "is_incremental": false,
@@ -969,7 +981,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Material.Blazor.MBBladeSet.html",
-          "hash": "Gu7vvX8zDT0n4NZYewCrgg=="
+          "hash": "zWgiLJzK7taHd+jyOxty5Q=="
         }
       },
       "is_incremental": false,
@@ -2013,7 +2025,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Material.Blazor.html",
-          "hash": "Uhwwink0z2/qhMJImUjo7Q=="
+          "hash": "4cQuv1irlu+RSVwp4TxQdQ=="
         }
       },
       "is_incremental": false,
@@ -2061,7 +2073,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/CoreComponents.html",
-          "hash": "UrkZXydq7dlvTcQJx6NPZA=="
+          "hash": "od0r6fdQCK2jAvwpx5UqKQ=="
         }
       },
       "is_incremental": false,
@@ -2169,7 +2181,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/PlusComponents.html",
-          "hash": "iGFGJyclmNfYYJTeRvh3Xw=="
+          "hash": "imujkmzsnkwscg2djr/UfQ=="
         }
       },
       "is_incremental": false,
@@ -2193,7 +2205,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/ReleaseNotes.html",
-          "hash": "5R8+Syc7EesPIRC/zTW4Ag=="
+          "hash": "ijehbPduPSiCo6qfqN4hlw=="
         }
       },
       "is_incremental": false,
@@ -2421,7 +2433,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 77,
+          "total_file_count": 78,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
