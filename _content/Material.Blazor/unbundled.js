@@ -11909,53 +11909,48 @@ PERFORMANCE OF THIS SOFTWARE.
         var regenerator_default = __webpack_require__.n(regenerator);
         var asyncToGenerator = __webpack_require__(926);
         var asyncToGenerator_default = __webpack_require__.n(asyncToGenerator);
+        var fps = 60;
+        var waitDelay = 1e3 / fps;
         function sleep(ms) {
             return new Promise((function(resolve) {
                 return setTimeout(resolve, ms);
             }));
         }
-        function openBlade(_x, _x2, _x3, _x4, _x5, _x6) {
+        function openBlade(_x, _x2, _x3) {
             return _openBlade.apply(this, arguments);
         }
         function _openBlade() {
-            _openBlade = asyncToGenerator_default()(regenerator_default().mark((function _callee(bladeSetElem, mainContentElem, scrollHelperElem, bladeElem, bladeContentElem, transitionMs) {
-                var transition, bladeSetWidth, bladeContentWidth, mainContentWidth, mainContentMinWidth, availableShrinkage, scrollHelperWidth, i;
+            _openBlade = asyncToGenerator_default()(regenerator_default().mark((function _callee(bladeElem, bladeContentElem, transitionMs) {
+                var transition, bladeContentWidth, intervals, i;
                 return regenerator_default().wrap((function _callee$(_context) {
                     while (1) {
                         switch (_context.prev = _context.next) {
                           case 0:
                             transition = "width " + transitionMs + "ms";
-                            bladeSetWidth = bladeSetElem.getBoundingClientRect().width;
                             bladeContentWidth = bladeContentElem.getBoundingClientRect().width;
-                            mainContentWidth = getComputedStyle(mainContentElem).width;
-                            mainContentMinWidth = getComputedStyle(mainContentElem).minWidth;
-                            availableShrinkage = bladeContentWidth;
                             bladeElem.style.transition = transition;
-                            if (mainContentMinWidth.substring(mainContentMinWidth.length - 2, mainContentMinWidth.length) == "px") {
-                                availableShrinkage = Math.min(bladeContentWidth, parseInt(mainContentWidth) - parseInt(mainContentMinWidth));
-                            }
-                            if (false) {}
                             bladeElem.style.width = bladeContentWidth + "px";
                             bladeElem.scrollIntoView();
+                            intervals = Math.ceil(transitionMs / waitDelay) + 1;
                             i = 0;
 
-                          case 12:
-                            if (!(i < transitionMs)) {
-                                _context.next = 19;
+                          case 7:
+                            if (!(i < intervals)) {
+                                _context.next = 14;
                                 break;
                             }
-                            _context.next = 15;
-                            return sleep(1);
+                            _context.next = 10;
+                            return sleep(waitDelay);
 
-                          case 15:
+                          case 10:
                             bladeElem.scrollIntoView();
 
-                          case 16:
+                          case 11:
                             i++;
-                            _context.next = 12;
+                            _context.next = 7;
                             break;
 
-                          case 19:
+                          case 14:
                           case "end":
                             return _context.stop();
                         }
