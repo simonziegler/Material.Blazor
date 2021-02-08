@@ -173,6 +173,8 @@ gracefully before Material.Blazor removes the markup.</p>
 application of the &quot;mdc-fab--exited&quot; animated class and the choice of leading or trailing icons for
 the extended variant.</p>
 </section>
+      <h4><a class="xref" href="Material.Blazor.MBGrid_DataHelper-1.html">MBGrid_DataHelper&lt;TRowData&gt;</a></h4>
+      <section></section>
       <h4><a class="xref" href="Material.Blazor.MBGrid-1.html">MBGrid&lt;TRowData&gt;</a></h4>
       <section><p>A Material Theme grid capable of displaying icons, colored text, and text.</p>
 <p>N.B.: At this time the grid is in preview. Expect the API to change.</p>
@@ -275,6 +277,14 @@ with slight sideways motion and fade, or &quot;sliding&quot;. Only renders the c
       <section><p>An <a class="xref" href="Material.Blazor.MBTabBar-1.html">MBTabBar&lt;TItem&gt;</a> with a <a class="xref" href="Material.Blazor.MBSlidingContent-1.html">MBSlidingContent&lt;TItem&gt;</a> immediately
 beneath showing tabbed content.</p>
 </section>
+      <h4><a class="xref" href="Material.Blazor.MBSnackbarServiceConfiguration.html">MBSnackbarServiceConfiguration</a></h4>
+      <section><p>Configuration for <a class="xref" href="Material.Blazor.IMBSnackbarService.html">IMBSnackbarService</a>.</p>
+</section>
+      <h4><a class="xref" href="Material.Blazor.MBSnackbarSettings.html">MBSnackbarSettings</a></h4>
+      <section><p>Settings for an individual snackbar notification determining all aspects controlling
+it's markup and behaviour. All parameters are optional with defaults defined in
+the <a class="xref" href="Material.Blazor.MBSnackbarServiceConfiguration.html">MBSnackbarServiceConfiguration</a> that you define when creating the snackbar service.</p>
+</section>
       <h4><a class="xref" href="Material.Blazor.MBSwitch.html">MBSwitch</a></h4>
       <section><p>This is a general purpose Material Theme switch.</p>
 </section>
@@ -286,11 +296,6 @@ beneath showing tabbed content.</p>
 </section>
       <h4><a class="xref" href="Material.Blazor.MBTextField.html">MBTextField</a></h4>
       <section><p>A Material Theme text field.</p>
-</section>
-      <h4><a class="xref" href="Material.Blazor.MBToastAnchor.html">MBToastAnchor</a></h4>
-      <section><p>An anchor component that displays toast notification that you display via
-<a class="xref" href="Material.Blazor.IMBToastService.html#Material_Blazor_IMBToastService_ShowToast_Material_Blazor_MBToastLevel_System_String_System_String_System_Nullable_Material_Blazor_MBToastCloseMethod__System_String_System_String_Material_Blazor_IMBIconFoundry_System_Nullable_System_Boolean__System_Nullable_System_UInt32__System_Boolean_">ShowToast(MBToastLevel, String, String, Nullable&lt;MBToastCloseMethod&gt;, String, String, IMBIconFoundry, Nullable&lt;Boolean&gt;, Nullable&lt;UInt32&gt;, Boolean)</a>.
-Place this component at the top of either App.razor or MainLayout.razor.</p>
 </section>
       <h4><a class="xref" href="Material.Blazor.MBToastServiceConfiguration.html">MBToastServiceConfiguration</a></h4>
       <section><p>Configuration for <a class="xref" href="Material.Blazor.IMBToastService.html">IMBToastService</a>.</p>
@@ -334,20 +339,43 @@ is called without a <a class="xref" href="Material.Blazor.MBAnimatedNavigation.h
 });</code></pre>
 </example>
 </section>
+      <h4><a class="xref" href="Material.Blazor.IMBDialog.html">IMBDialog</a></h4>
+      <section><p>An interface implemented by <a class="xref" href="Material.Blazor.MBDialog.html">MBDialog</a> to allow child components to
+register themselves for Material Theme js instantiation.</p>
+</section>
       <h4><a class="xref" href="Material.Blazor.IMBIcon.html">IMBIcon</a></h4>
       <section><p>Interface providing markup elements for an icon in a given foundry.</p>
 </section>
       <h4><a class="xref" href="Material.Blazor.IMBIconFoundry.html">IMBIconFoundry</a></h4>
       <section><p>An interface for supplying icon foundry information to components.</p>
 </section>
+      <h4><a class="xref" href="Material.Blazor.IMBSnackbarService.html">IMBSnackbarService</a></h4>
+      <section><p>Interface for the Material.Blazor snackbar service, developed from the code base of Blazored Snackbar by Chris Sainty.
+Works in conjunction with a <see cref="!:MBSnackbarAnchor"></see> that must be placed in either App.razor or
+MainLayout.razor to avoid an exception being thrown when you first attempt to show a snackbar notification.</p>
+<p>
+Throws a <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a> if
+<a class="xref" href="Material.Blazor.IMBSnackbarService.html#Material_Blazor_IMBSnackbarService_ShowSnackbar_System_String_System_Action_System_String_System_Boolean_System_Boolean_System_Boolean_System_Nullable_System_Int32__System_Boolean_">ShowSnackbar(String, Action, String, Boolean, Boolean, Boolean, Nullable&lt;Int32&gt;, Boolean)</a>
+is called without an <see cref="!:MBSnackbarAnchor"></see> component used in the app.
+</p>
+<example>
+<p>You can optionally add configuration when you add this to the service collection:</p>
+<pre><code>services.AddMBSnackbarService(new MBSnackbarServiceConfiguration()
+{
+    Postion = MBSnackbarPosition.TopRight,
+    CloseMethod = MBSnackbarCloseMethod.Timeout,
+    ... etc
+});</code></pre>
+</example>
+</section>
       <h4><a class="xref" href="Material.Blazor.IMBToastService.html">IMBToastService</a></h4>
       <section><p>Interface for the Material.Blazor toast service, developed from the code base of Blazored Toast by Chris Sainty.
-Works in conjunction with a <a class="xref" href="Material.Blazor.MBToastAnchor.html">MBToastAnchor</a> that must be placed in either App.razor or
+Works in conjunction with a <see cref="!:MBToastAnchor"></see> that must be placed in either App.razor or
 MainLayout.razor to avoid an exception being thrown when you first attempt to show a toast notification.</p>
 <p>
 Throws a <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a> if
 <a class="xref" href="Material.Blazor.IMBToastService.html#Material_Blazor_IMBToastService_ShowToast_Material_Blazor_MBToastLevel_System_String_System_String_System_Nullable_Material_Blazor_MBToastCloseMethod__System_String_System_String_Material_Blazor_IMBIconFoundry_System_Nullable_System_Boolean__System_Nullable_System_UInt32__System_Boolean_">ShowToast(MBToastLevel, String, String, Nullable&lt;MBToastCloseMethod&gt;, String, String, IMBIconFoundry, Nullable&lt;Boolean&gt;, Nullable&lt;UInt32&gt;, Boolean)</a>
-is called without an <a class="xref" href="Material.Blazor.MBToastAnchor.html">MBToastAnchor</a> component used in the app.
+is called without an <see cref="!:MBToastAnchor"></see> component used in the app.
 </p>
 <example>
 <p>You can optionally add configuration when you add this to the service collection:</p>
@@ -359,8 +387,20 @@ is called without an <a class="xref" href="Material.Blazor.MBToastAnchor.html">M
 });</code></pre>
 </example>
 </section>
+      <h4><a class="xref" href="Material.Blazor.IMBTooltipService.html">IMBTooltipService</a></h4>
+      <section><p>Interface for the Material.Blazor tooltip service, developed from the code base of Blazored Toast by Chris Sainty.
+Works in conjunction with a <see cref="!:MBAnchor"></see> that must be placed in either App.razor or
+MainLayout.razor to avoid an exception being thrown when you first attempt to show a tooltip notification.</p>
+<p>
+Throws a <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a> if
+<a class="xref" href="Material.Blazor.IMBTooltipService.html#Material_Blazor_IMBTooltipService_AddTooltip_System_Guid_RenderFragment_">AddTooltip(Guid, RenderFragment)</a>
+is called without an <see cref="!:MBAnchor"></see> component used in the app.
+</p>
+</section>
     <h3 id="enums">Enums
   </h3>
+      <h4><a class="xref" href="Material.Blazor.Direction.html">Direction</a></h4>
+      <section></section>
       <h4><a class="xref" href="Material.Blazor.MB_Grid_ColumnType.html">MB_Grid_ColumnType</a></h4>
       <section></section>
       <h4><a class="xref" href="Material.Blazor.MB_Grid_Measurement.html">MB_Grid_Measurement</a></h4>
