@@ -110,6 +110,14 @@ your user navigates from one page to another.</p>
       <section><p>An autocomplete built using an <a class="xref" href="Material.Blazor.MBTextField.html">MBTextField</a> with the anchor and drop
 down list implementation from a Material Theme select.</p>
 </section>
+      <h4><a class="xref" href="Material.Blazor.MBBladeComponent-1.html">MBBladeComponent&lt;TParam&gt;</a></h4>
+      <section><p>A component added to a blade via <see cref="!:MBBladeSet.AddBlade(string, MBBladeComponent&lt;TParam>, TParam, string, string)"></see>
+must implement this interface.</p>
+</section>
+      <h4><a class="xref" href="Material.Blazor.MBBladeComponentParameters.html">MBBladeComponentParameters</a></h4>
+      <section><p>Parameters passed to a new blade via <see cref="!:MBBladeSet.AddBlade(string, MBBladeComponent, MBBladeComponentParameters, string, string)"></see> must take
+one parameter of a class implementing this interface. That class then holds all the parameters required for the component.</p>
+</section>
       <h4><a class="xref" href="Material.Blazor.MBBladeSet.html">MBBladeSet</a></h4>
       <section><p>A blade display component. Adds blades to the right hand side of the viewport (or bock where this component is located), with
 blades displayed left to right in ascending order of when they were requested (newest blades to the right).</p>

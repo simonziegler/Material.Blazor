@@ -1558,11 +1558,35 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Material.Blazor.MBBladeComponent-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Material.Blazor.MBBladeComponent-1.html",
+          "hash": "8hz89wO83NIjXyaRmYeB4Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Material.Blazor.MBBladeComponentParameters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Material.Blazor.MBBladeComponentParameters.html",
+          "hash": "PU1+BicyEdXpoWYQHjRklA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Material.Blazor.MBBladeSet.yml",
       "output": {
         ".html": {
           "relative_path": "api/Material.Blazor.MBBladeSet.html",
-          "hash": "KekRNUlkeh8oMquwDtCS/w=="
+          "hash": "+3H5VjiPNKZMPc+d0bcLKw=="
         }
       },
       "is_incremental": false,
@@ -2630,7 +2654,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Material.Blazor.html",
-          "hash": "Sl5qOZ2tskt3ifsQxua05w=="
+          "hash": "7SNZ1Chw3yQ7PN0NMG6FZw=="
         }
       },
       "is_incremental": false,
@@ -2642,7 +2666,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "+H9wbeF/QU/KeRRsokc+DQ=="
+          "hash": "hSKHF6GJnG1GiniBi1S3+g=="
         }
       },
       "is_incremental": false,
@@ -3099,7 +3123,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 121,
+          "total_file_count": 123,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

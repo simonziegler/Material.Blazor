@@ -2599,38 +2599,111 @@ references:
   isSpec: "True"
   fullName: Material.Blazor.MBAutocompleteTextField.ValidationMessageFor
   nameWithType: MBAutocompleteTextField.ValidationMessageFor
+- uid: Material.Blazor.MBBladeComponent`1
+  name: MBBladeComponent<TParam>
+  href: api/Material.Blazor.MBBladeComponent-1.html
+  commentId: T:Material.Blazor.MBBladeComponent`1
+  name.vb: MBBladeComponent(Of TParam)
+  fullName: Material.Blazor.MBBladeComponent<TParam>
+  fullName.vb: Material.Blazor.MBBladeComponent(Of TParam)
+  nameWithType: MBBladeComponent<TParam>
+  nameWithType.vb: MBBladeComponent(Of TParam)
+- uid: Material.Blazor.MBBladeComponent`1.BladeReference
+  name: BladeReference
+  href: api/Material.Blazor.MBBladeComponent-1.html#Material_Blazor_MBBladeComponent_1_BladeReference
+  commentId: P:Material.Blazor.MBBladeComponent`1.BladeReference
+  fullName: Material.Blazor.MBBladeComponent<TParam>.BladeReference
+  fullName.vb: Material.Blazor.MBBladeComponent(Of TParam).BladeReference
+  nameWithType: MBBladeComponent<TParam>.BladeReference
+  nameWithType.vb: MBBladeComponent(Of TParam).BladeReference
+- uid: Material.Blazor.MBBladeComponent`1.BladeReference*
+  name: BladeReference
+  href: api/Material.Blazor.MBBladeComponent-1.html#Material_Blazor_MBBladeComponent_1_BladeReference_
+  commentId: Overload:Material.Blazor.MBBladeComponent`1.BladeReference
+  isSpec: "True"
+  fullName: Material.Blazor.MBBladeComponent<TParam>.BladeReference
+  fullName.vb: Material.Blazor.MBBladeComponent(Of TParam).BladeReference
+  nameWithType: MBBladeComponent<TParam>.BladeReference
+  nameWithType.vb: MBBladeComponent(Of TParam).BladeReference
+- uid: Material.Blazor.MBBladeComponent`1.BladeSet
+  name: BladeSet
+  href: api/Material.Blazor.MBBladeComponent-1.html#Material_Blazor_MBBladeComponent_1_BladeSet
+  commentId: P:Material.Blazor.MBBladeComponent`1.BladeSet
+  fullName: Material.Blazor.MBBladeComponent<TParam>.BladeSet
+  fullName.vb: Material.Blazor.MBBladeComponent(Of TParam).BladeSet
+  nameWithType: MBBladeComponent<TParam>.BladeSet
+  nameWithType.vb: MBBladeComponent(Of TParam).BladeSet
+- uid: Material.Blazor.MBBladeComponent`1.BladeSet*
+  name: BladeSet
+  href: api/Material.Blazor.MBBladeComponent-1.html#Material_Blazor_MBBladeComponent_1_BladeSet_
+  commentId: Overload:Material.Blazor.MBBladeComponent`1.BladeSet
+  isSpec: "True"
+  fullName: Material.Blazor.MBBladeComponent<TParam>.BladeSet
+  fullName.vb: Material.Blazor.MBBladeComponent(Of TParam).BladeSet
+  nameWithType: MBBladeComponent<TParam>.BladeSet
+  nameWithType.vb: MBBladeComponent(Of TParam).BladeSet
+- uid: Material.Blazor.MBBladeComponent`1.CloseBladeAsync
+  name: CloseBladeAsync()
+  href: api/Material.Blazor.MBBladeComponent-1.html#Material_Blazor_MBBladeComponent_1_CloseBladeAsync
+  commentId: M:Material.Blazor.MBBladeComponent`1.CloseBladeAsync
+  fullName: Material.Blazor.MBBladeComponent<TParam>.CloseBladeAsync()
+  fullName.vb: Material.Blazor.MBBladeComponent(Of TParam).CloseBladeAsync()
+  nameWithType: MBBladeComponent<TParam>.CloseBladeAsync()
+  nameWithType.vb: MBBladeComponent(Of TParam).CloseBladeAsync()
+- uid: Material.Blazor.MBBladeComponent`1.CloseBladeAsync*
+  name: CloseBladeAsync
+  href: api/Material.Blazor.MBBladeComponent-1.html#Material_Blazor_MBBladeComponent_1_CloseBladeAsync_
+  commentId: Overload:Material.Blazor.MBBladeComponent`1.CloseBladeAsync
+  isSpec: "True"
+  fullName: Material.Blazor.MBBladeComponent<TParam>.CloseBladeAsync
+  fullName.vb: Material.Blazor.MBBladeComponent(Of TParam).CloseBladeAsync
+  nameWithType: MBBladeComponent<TParam>.CloseBladeAsync
+  nameWithType.vb: MBBladeComponent(Of TParam).CloseBladeAsync
+- uid: Material.Blazor.MBBladeComponent`1.Parameters
+  name: Parameters
+  href: api/Material.Blazor.MBBladeComponent-1.html#Material_Blazor_MBBladeComponent_1_Parameters
+  commentId: P:Material.Blazor.MBBladeComponent`1.Parameters
+  fullName: Material.Blazor.MBBladeComponent<TParam>.Parameters
+  fullName.vb: Material.Blazor.MBBladeComponent(Of TParam).Parameters
+  nameWithType: MBBladeComponent<TParam>.Parameters
+  nameWithType.vb: MBBladeComponent(Of TParam).Parameters
+- uid: Material.Blazor.MBBladeComponent`1.Parameters*
+  name: Parameters
+  href: api/Material.Blazor.MBBladeComponent-1.html#Material_Blazor_MBBladeComponent_1_Parameters_
+  commentId: Overload:Material.Blazor.MBBladeComponent`1.Parameters
+  isSpec: "True"
+  fullName: Material.Blazor.MBBladeComponent<TParam>.Parameters
+  fullName.vb: Material.Blazor.MBBladeComponent(Of TParam).Parameters
+  nameWithType: MBBladeComponent<TParam>.Parameters
+  nameWithType.vb: MBBladeComponent(Of TParam).Parameters
+- uid: Material.Blazor.MBBladeComponentParameters
+  name: MBBladeComponentParameters
+  href: api/Material.Blazor.MBBladeComponentParameters.html
+  commentId: T:Material.Blazor.MBBladeComponentParameters
+  fullName: Material.Blazor.MBBladeComponentParameters
+  nameWithType: MBBladeComponentParameters
 - uid: Material.Blazor.MBBladeSet
   name: MBBladeSet
   href: api/Material.Blazor.MBBladeSet.html
   commentId: T:Material.Blazor.MBBladeSet
   fullName: Material.Blazor.MBBladeSet
   nameWithType: MBBladeSet
-- uid: Material.Blazor.MBBladeSet.AddBlade(System.String,System.String,System.String)
-  name: AddBlade(String, String, String)
-  href: api/Material.Blazor.MBBladeSet.html#Material_Blazor_MBBladeSet_AddBlade_System_String_System_String_System_String_
-  commentId: M:Material.Blazor.MBBladeSet.AddBlade(System.String,System.String,System.String)
-  fullName: Material.Blazor.MBBladeSet.AddBlade(System.String, System.String, System.String)
-  nameWithType: MBBladeSet.AddBlade(String, String, String)
-- uid: Material.Blazor.MBBladeSet.AddBlade*
-  name: AddBlade
-  href: api/Material.Blazor.MBBladeSet.html#Material_Blazor_MBBladeSet_AddBlade_
-  commentId: Overload:Material.Blazor.MBBladeSet.AddBlade
+- uid: Material.Blazor.MBBladeSet.AddBladeAsync*
+  name: AddBladeAsync
+  href: api/Material.Blazor.MBBladeSet.html#Material_Blazor_MBBladeSet_AddBladeAsync_
+  commentId: Overload:Material.Blazor.MBBladeSet.AddBladeAsync
   isSpec: "True"
-  fullName: Material.Blazor.MBBladeSet.AddBlade
-  nameWithType: MBBladeSet.AddBlade
-- uid: Material.Blazor.MBBladeSet.BladeContent
-  name: BladeContent
-  href: api/Material.Blazor.MBBladeSet.html#Material_Blazor_MBBladeSet_BladeContent
-  commentId: P:Material.Blazor.MBBladeSet.BladeContent
-  fullName: Material.Blazor.MBBladeSet.BladeContent
-  nameWithType: MBBladeSet.BladeContent
-- uid: Material.Blazor.MBBladeSet.BladeContent*
-  name: BladeContent
-  href: api/Material.Blazor.MBBladeSet.html#Material_Blazor_MBBladeSet_BladeContent_
-  commentId: Overload:Material.Blazor.MBBladeSet.BladeContent
-  isSpec: "True"
-  fullName: Material.Blazor.MBBladeSet.BladeContent
-  nameWithType: MBBladeSet.BladeContent
+  fullName: Material.Blazor.MBBladeSet.AddBladeAsync
+  nameWithType: MBBladeSet.AddBladeAsync
+- uid: Material.Blazor.MBBladeSet.AddBladeAsync``2(System.String,``1,System.String,System.String,System.Action{System.String})
+  name: AddBladeAsync<TComponent, TParameters>(String, TParameters, String, String, Action<String>)
+  href: api/Material.Blazor.MBBladeSet.html#Material_Blazor_MBBladeSet_AddBladeAsync__2_System_String___1_System_String_System_String_System_Action_System_String__
+  commentId: M:Material.Blazor.MBBladeSet.AddBladeAsync``2(System.String,``1,System.String,System.String,System.Action{System.String})
+  name.vb: AddBladeAsync(Of TComponent, TParameters)(String, TParameters, String, String, Action(Of String))
+  fullName: Material.Blazor.MBBladeSet.AddBladeAsync<TComponent, TParameters>(System.String, TParameters, System.String, System.String, System.Action<System.String>)
+  fullName.vb: Material.Blazor.MBBladeSet.AddBladeAsync(Of TComponent, TParameters)(System.String, TParameters, System.String, System.String, System.Action(Of System.String))
+  nameWithType: MBBladeSet.AddBladeAsync<TComponent, TParameters>(String, TParameters, String, String, Action<String>)
+  nameWithType.vb: MBBladeSet.AddBladeAsync(Of TComponent, TParameters)(String, TParameters, String, String, Action(Of String))
 - uid: Material.Blazor.MBBladeSet.BladeReferences
   name: BladeReferences
   href: api/Material.Blazor.MBBladeSet.html#Material_Blazor_MBBladeSet_BladeReferences
@@ -2741,19 +2814,19 @@ references:
   isSpec: "True"
   fullName: Material.Blazor.MBBladeSet.PageContent
   nameWithType: MBBladeSet.PageContent
-- uid: Material.Blazor.MBBladeSet.RemoveBlade(System.String)
-  name: RemoveBlade(String)
-  href: api/Material.Blazor.MBBladeSet.html#Material_Blazor_MBBladeSet_RemoveBlade_System_String_
-  commentId: M:Material.Blazor.MBBladeSet.RemoveBlade(System.String)
-  fullName: Material.Blazor.MBBladeSet.RemoveBlade(System.String)
-  nameWithType: MBBladeSet.RemoveBlade(String)
-- uid: Material.Blazor.MBBladeSet.RemoveBlade*
-  name: RemoveBlade
-  href: api/Material.Blazor.MBBladeSet.html#Material_Blazor_MBBladeSet_RemoveBlade_
-  commentId: Overload:Material.Blazor.MBBladeSet.RemoveBlade
+- uid: Material.Blazor.MBBladeSet.RemoveBladeAsync(System.String)
+  name: RemoveBladeAsync(String)
+  href: api/Material.Blazor.MBBladeSet.html#Material_Blazor_MBBladeSet_RemoveBladeAsync_System_String_
+  commentId: M:Material.Blazor.MBBladeSet.RemoveBladeAsync(System.String)
+  fullName: Material.Blazor.MBBladeSet.RemoveBladeAsync(System.String)
+  nameWithType: MBBladeSet.RemoveBladeAsync(String)
+- uid: Material.Blazor.MBBladeSet.RemoveBladeAsync*
+  name: RemoveBladeAsync
+  href: api/Material.Blazor.MBBladeSet.html#Material_Blazor_MBBladeSet_RemoveBladeAsync_
+  commentId: Overload:Material.Blazor.MBBladeSet.RemoveBladeAsync
   isSpec: "True"
-  fullName: Material.Blazor.MBBladeSet.RemoveBlade
-  nameWithType: MBBladeSet.RemoveBlade
+  fullName: Material.Blazor.MBBladeSet.RemoveBladeAsync
+  nameWithType: MBBladeSet.RemoveBladeAsync
 - uid: Material.Blazor.MBButton
   name: MBButton
   href: api/Material.Blazor.MBButton.html
