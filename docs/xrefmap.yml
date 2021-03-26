@@ -67,6 +67,9 @@ references:
 - uid: A.Utilities
   name: Utilities
   href: articles/Utilities.html
+- uid: A.Workflows
+  name: Workflows
+  href: articles/Workflows.html
 - uid: C.MBAnchor
   name: MBAnchor
   href: Material.Blazor/Components/Anchor/MBAnchor.html
@@ -254,6 +257,172 @@ references:
   commentId: F:Material.Blazor.Direction.Descending
   fullName: Material.Blazor.Direction.Descending
   nameWithType: Direction.Descending
+- uid: Material.Blazor.HashCode
+  name: HashCode
+  href: api/Material.Blazor.HashCode.html
+  commentId: T:Material.Blazor.HashCode
+  fullName: Material.Blazor.HashCode
+  nameWithType: HashCode
+- uid: Material.Blazor.HashCode.#ctor(System.Int32)
+  name: HashCode(Int32)
+  href: api/Material.Blazor.HashCode.html#Material_Blazor_HashCode__ctor_System_Int32_
+  commentId: M:Material.Blazor.HashCode.#ctor(System.Int32)
+  fullName: Material.Blazor.HashCode.HashCode(System.Int32)
+  nameWithType: HashCode.HashCode(Int32)
+- uid: Material.Blazor.HashCode.#ctor*
+  name: HashCode
+  href: api/Material.Blazor.HashCode.html#Material_Blazor_HashCode__ctor_
+  commentId: Overload:Material.Blazor.HashCode.#ctor
+  isSpec: "True"
+  fullName: Material.Blazor.HashCode.HashCode
+  nameWithType: HashCode.HashCode
+- uid: Material.Blazor.HashCode.And*
+  name: And
+  href: api/Material.Blazor.HashCode.html#Material_Blazor_HashCode_And_
+  commentId: Overload:Material.Blazor.HashCode.And
+  isSpec: "True"
+  fullName: Material.Blazor.HashCode.And
+  nameWithType: HashCode.And
+- uid: Material.Blazor.HashCode.And``1(``0)
+  name: And<T>(T)
+  href: api/Material.Blazor.HashCode.html#Material_Blazor_HashCode_And__1___0_
+  commentId: M:Material.Blazor.HashCode.And``1(``0)
+  name.vb: And(Of T)(T)
+  fullName: Material.Blazor.HashCode.And<T>(T)
+  fullName.vb: Material.Blazor.HashCode.And(Of T)(T)
+  nameWithType: HashCode.And<T>(T)
+  nameWithType.vb: HashCode.And(Of T)(T)
+- uid: Material.Blazor.HashCode.AndEach*
+  name: AndEach
+  href: api/Material.Blazor.HashCode.html#Material_Blazor_HashCode_AndEach_
+  commentId: Overload:Material.Blazor.HashCode.AndEach
+  isSpec: "True"
+  fullName: Material.Blazor.HashCode.AndEach
+  nameWithType: HashCode.AndEach
+- uid: Material.Blazor.HashCode.AndEach``1(System.Collections.Generic.IEnumerable{``0})
+  name: AndEach<T>(IEnumerable<T>)
+  href: api/Material.Blazor.HashCode.html#Material_Blazor_HashCode_AndEach__1_System_Collections_Generic_IEnumerable___0__
+  commentId: M:Material.Blazor.HashCode.AndEach``1(System.Collections.Generic.IEnumerable{``0})
+  name.vb: AndEach(Of T)(IEnumerable(Of T))
+  fullName: Material.Blazor.HashCode.AndEach<T>(System.Collections.Generic.IEnumerable<T>)
+  fullName.vb: Material.Blazor.HashCode.AndEach(Of T)(System.Collections.Generic.IEnumerable(Of T))
+  nameWithType: HashCode.AndEach<T>(IEnumerable<T>)
+  nameWithType.vb: HashCode.AndEach(Of T)(IEnumerable(Of T))
+- uid: Material.Blazor.HashCode.CombineHashCodes(System.Int32,System.Int32)
+  name: CombineHashCodes(Int32, Int32)
+  href: api/Material.Blazor.HashCode.html#Material_Blazor_HashCode_CombineHashCodes_System_Int32_System_Int32_
+  commentId: M:Material.Blazor.HashCode.CombineHashCodes(System.Int32,System.Int32)
+  fullName: Material.Blazor.HashCode.CombineHashCodes(System.Int32, System.Int32)
+  nameWithType: HashCode.CombineHashCodes(Int32, Int32)
+- uid: Material.Blazor.HashCode.CombineHashCodes*
+  name: CombineHashCodes
+  href: api/Material.Blazor.HashCode.html#Material_Blazor_HashCode_CombineHashCodes_
+  commentId: Overload:Material.Blazor.HashCode.CombineHashCodes
+  isSpec: "True"
+  fullName: Material.Blazor.HashCode.CombineHashCodes
+  nameWithType: HashCode.CombineHashCodes
+- uid: Material.Blazor.HashCode.Equals(Material.Blazor.HashCode)
+  name: Equals(HashCode)
+  href: api/Material.Blazor.HashCode.html#Material_Blazor_HashCode_Equals_Material_Blazor_HashCode_
+  commentId: M:Material.Blazor.HashCode.Equals(Material.Blazor.HashCode)
+  fullName: Material.Blazor.HashCode.Equals(Material.Blazor.HashCode)
+  nameWithType: HashCode.Equals(HashCode)
+- uid: Material.Blazor.HashCode.Equals(System.Object)
+  name: Equals(Object)
+  href: api/Material.Blazor.HashCode.html#Material_Blazor_HashCode_Equals_System_Object_
+  commentId: M:Material.Blazor.HashCode.Equals(System.Object)
+  fullName: Material.Blazor.HashCode.Equals(System.Object)
+  nameWithType: HashCode.Equals(Object)
+- uid: Material.Blazor.HashCode.Equals*
+  name: Equals
+  href: api/Material.Blazor.HashCode.html#Material_Blazor_HashCode_Equals_
+  commentId: Overload:Material.Blazor.HashCode.Equals
+  isSpec: "True"
+  fullName: Material.Blazor.HashCode.Equals
+  nameWithType: HashCode.Equals
+- uid: Material.Blazor.HashCode.Of*
+  name: Of
+  href: api/Material.Blazor.HashCode.html#Material_Blazor_HashCode_Of_
+  commentId: Overload:Material.Blazor.HashCode.Of
+  isSpec: "True"
+  fullName: Material.Blazor.HashCode.Of
+  nameWithType: HashCode.Of
+- uid: Material.Blazor.HashCode.Of``1(``0)
+  name: Of<T>(T)
+  href: api/Material.Blazor.HashCode.html#Material_Blazor_HashCode_Of__1___0_
+  commentId: M:Material.Blazor.HashCode.Of``1(``0)
+  name.vb: Of(Of T)(T)
+  fullName: Material.Blazor.HashCode.Of<T>(T)
+  fullName.vb: Material.Blazor.HashCode.Of(Of T)(T)
+  nameWithType: HashCode.Of<T>(T)
+  nameWithType.vb: HashCode.Of(Of T)(T)
+- uid: Material.Blazor.HashCode.OfEach*
+  name: OfEach
+  href: api/Material.Blazor.HashCode.html#Material_Blazor_HashCode_OfEach_
+  commentId: Overload:Material.Blazor.HashCode.OfEach
+  isSpec: "True"
+  fullName: Material.Blazor.HashCode.OfEach
+  nameWithType: HashCode.OfEach
+- uid: Material.Blazor.HashCode.OfEach``1(System.Collections.Generic.IEnumerable{``0})
+  name: OfEach<T>(IEnumerable<T>)
+  href: api/Material.Blazor.HashCode.html#Material_Blazor_HashCode_OfEach__1_System_Collections_Generic_IEnumerable___0__
+  commentId: M:Material.Blazor.HashCode.OfEach``1(System.Collections.Generic.IEnumerable{``0})
+  name.vb: OfEach(Of T)(IEnumerable(Of T))
+  fullName: Material.Blazor.HashCode.OfEach<T>(System.Collections.Generic.IEnumerable<T>)
+  fullName.vb: Material.Blazor.HashCode.OfEach(Of T)(System.Collections.Generic.IEnumerable(Of T))
+  nameWithType: HashCode.OfEach<T>(IEnumerable<T>)
+  nameWithType.vb: HashCode.OfEach(Of T)(IEnumerable(Of T))
+- uid: Material.Blazor.HashCode.op_Equality(Material.Blazor.HashCode,Material.Blazor.HashCode)
+  name: Equality(HashCode, HashCode)
+  href: api/Material.Blazor.HashCode.html#Material_Blazor_HashCode_op_Equality_Material_Blazor_HashCode_Material_Blazor_HashCode_
+  commentId: M:Material.Blazor.HashCode.op_Equality(Material.Blazor.HashCode,Material.Blazor.HashCode)
+  fullName: Material.Blazor.HashCode.Equality(Material.Blazor.HashCode, Material.Blazor.HashCode)
+  nameWithType: HashCode.Equality(HashCode, HashCode)
+- uid: Material.Blazor.HashCode.op_Equality*
+  name: Equality
+  href: api/Material.Blazor.HashCode.html#Material_Blazor_HashCode_op_Equality_
+  commentId: Overload:Material.Blazor.HashCode.op_Equality
+  isSpec: "True"
+  fullName: Material.Blazor.HashCode.Equality
+  nameWithType: HashCode.Equality
+- uid: Material.Blazor.HashCode.op_Implicit(Material.Blazor.HashCode)~System.Int32
+  name: Implicit(HashCode to Int32)
+  href: api/Material.Blazor.HashCode.html#Material_Blazor_HashCode_op_Implicit_Material_Blazor_HashCode__System_Int32
+  commentId: M:Material.Blazor.HashCode.op_Implicit(Material.Blazor.HashCode)~System.Int32
+  name.vb: Widening(HashCode to Int32)
+  fullName: Material.Blazor.HashCode.Implicit(Material.Blazor.HashCode to System.Int32)
+  fullName.vb: Material.Blazor.HashCode.Widening(Material.Blazor.HashCode to System.Int32)
+  nameWithType: HashCode.Implicit(HashCode to Int32)
+  nameWithType.vb: HashCode.Widening(HashCode to Int32)
+- uid: Material.Blazor.HashCode.op_Implicit*
+  name: Implicit
+  href: api/Material.Blazor.HashCode.html#Material_Blazor_HashCode_op_Implicit_
+  commentId: Overload:Material.Blazor.HashCode.op_Implicit
+  isSpec: "True"
+  name.vb: Widening
+  fullName: Material.Blazor.HashCode.Implicit
+  fullName.vb: Material.Blazor.HashCode.Widening
+  nameWithType: HashCode.Implicit
+  nameWithType.vb: HashCode.Widening
+- uid: Material.Blazor.HashCode.op_Inequality(Material.Blazor.HashCode,Material.Blazor.HashCode)
+  name: Inequality(HashCode, HashCode)
+  href: api/Material.Blazor.HashCode.html#Material_Blazor_HashCode_op_Inequality_Material_Blazor_HashCode_Material_Blazor_HashCode_
+  commentId: M:Material.Blazor.HashCode.op_Inequality(Material.Blazor.HashCode,Material.Blazor.HashCode)
+  fullName: Material.Blazor.HashCode.Inequality(Material.Blazor.HashCode, Material.Blazor.HashCode)
+  nameWithType: HashCode.Inequality(HashCode, HashCode)
+- uid: Material.Blazor.HashCode.op_Inequality*
+  name: Inequality
+  href: api/Material.Blazor.HashCode.html#Material_Blazor_HashCode_op_Inequality_
+  commentId: Overload:Material.Blazor.HashCode.op_Inequality
+  isSpec: "True"
+  fullName: Material.Blazor.HashCode.Inequality
+  nameWithType: HashCode.Inequality
+- uid: Material.Blazor.HashCode.value
+  name: value
+  href: api/Material.Blazor.HashCode.html#Material_Blazor_HashCode_value
+  commentId: F:Material.Blazor.HashCode.value
+  fullName: Material.Blazor.HashCode.value
+  nameWithType: HashCode.value
 - uid: Material.Blazor.IMBAnimatedNavigationManager
   name: IMBAnimatedNavigationManager
   href: api/Material.Blazor.IMBAnimatedNavigationManager.html
@@ -573,17 +742,17 @@ references:
   commentId: T:Material.Blazor.IMBTooltipService
   fullName: Material.Blazor.IMBTooltipService
   nameWithType: IMBTooltipService
-- uid: Material.Blazor.IMBTooltipService.AddTooltip(System.Guid,Microsoft.AspNetCore.Components.MarkupString)
+- uid: Material.Blazor.IMBTooltipService.AddTooltip(System.Guid,MarkupString)
   name: AddTooltip(Guid, MarkupString)
-  href: api/Material.Blazor.IMBTooltipService.html#Material_Blazor_IMBTooltipService_AddTooltip_System_Guid_Microsoft_AspNetCore_Components_MarkupString_
-  commentId: M:Material.Blazor.IMBTooltipService.AddTooltip(System.Guid,Microsoft.AspNetCore.Components.MarkupString)
-  fullName: Material.Blazor.IMBTooltipService.AddTooltip(System.Guid, Microsoft.AspNetCore.Components.MarkupString)
+  href: api/Material.Blazor.IMBTooltipService.html#Material_Blazor_IMBTooltipService_AddTooltip_System_Guid_MarkupString_
+  commentId: M:Material.Blazor.IMBTooltipService.AddTooltip(System.Guid,MarkupString)
+  fullName: Material.Blazor.IMBTooltipService.AddTooltip(System.Guid, MarkupString)
   nameWithType: IMBTooltipService.AddTooltip(Guid, MarkupString)
-- uid: Material.Blazor.IMBTooltipService.AddTooltip(System.Guid,Microsoft.AspNetCore.Components.RenderFragment)
+- uid: Material.Blazor.IMBTooltipService.AddTooltip(System.Guid,RenderFragment)
   name: AddTooltip(Guid, RenderFragment)
-  href: api/Material.Blazor.IMBTooltipService.html#Material_Blazor_IMBTooltipService_AddTooltip_System_Guid_Microsoft_AspNetCore_Components_RenderFragment_
-  commentId: M:Material.Blazor.IMBTooltipService.AddTooltip(System.Guid,Microsoft.AspNetCore.Components.RenderFragment)
-  fullName: Material.Blazor.IMBTooltipService.AddTooltip(System.Guid, Microsoft.AspNetCore.Components.RenderFragment)
+  href: api/Material.Blazor.IMBTooltipService.html#Material_Blazor_IMBTooltipService_AddTooltip_System_Guid_RenderFragment_
+  commentId: M:Material.Blazor.IMBTooltipService.AddTooltip(System.Guid,RenderFragment)
+  fullName: Material.Blazor.IMBTooltipService.AddTooltip(System.Guid, RenderFragment)
   nameWithType: IMBTooltipService.AddTooltip(Guid, RenderFragment)
 - uid: Material.Blazor.IMBTooltipService.AddTooltip*
   name: AddTooltip
@@ -779,22 +948,22 @@ references:
   isSpec: "True"
   fullName: Material.Blazor.Internal.ComponentFoundation.DisposeAsync
   nameWithType: ComponentFoundation.DisposeAsync
-- uid: Material.Blazor.Internal.ComponentFoundation.LogMBCritical(Microsoft.Extensions.Logging.EventId,System.Exception,System.String,System.Object[])
+- uid: Material.Blazor.Internal.ComponentFoundation.LogMBCritical(EventId,System.Exception,System.String,System.Object[])
   name: LogMBCritical(EventId, Exception, String, Object[])
-  href: api/Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_LogMBCritical_Microsoft_Extensions_Logging_EventId_System_Exception_System_String_System_Object___
-  commentId: M:Material.Blazor.Internal.ComponentFoundation.LogMBCritical(Microsoft.Extensions.Logging.EventId,System.Exception,System.String,System.Object[])
+  href: api/Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_LogMBCritical_EventId_System_Exception_System_String_System_Object___
+  commentId: M:Material.Blazor.Internal.ComponentFoundation.LogMBCritical(EventId,System.Exception,System.String,System.Object[])
   name.vb: LogMBCritical(EventId, Exception, String, Object())
-  fullName: Material.Blazor.Internal.ComponentFoundation.LogMBCritical(Microsoft.Extensions.Logging.EventId, System.Exception, System.String, System.Object[])
-  fullName.vb: Material.Blazor.Internal.ComponentFoundation.LogMBCritical(Microsoft.Extensions.Logging.EventId, System.Exception, System.String, System.Object())
+  fullName: Material.Blazor.Internal.ComponentFoundation.LogMBCritical(EventId, System.Exception, System.String, System.Object[])
+  fullName.vb: Material.Blazor.Internal.ComponentFoundation.LogMBCritical(EventId, System.Exception, System.String, System.Object())
   nameWithType: ComponentFoundation.LogMBCritical(EventId, Exception, String, Object[])
   nameWithType.vb: ComponentFoundation.LogMBCritical(EventId, Exception, String, Object())
-- uid: Material.Blazor.Internal.ComponentFoundation.LogMBCritical(Microsoft.Extensions.Logging.EventId,System.String,System.Object[])
+- uid: Material.Blazor.Internal.ComponentFoundation.LogMBCritical(EventId,System.String,System.Object[])
   name: LogMBCritical(EventId, String, Object[])
-  href: api/Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_LogMBCritical_Microsoft_Extensions_Logging_EventId_System_String_System_Object___
-  commentId: M:Material.Blazor.Internal.ComponentFoundation.LogMBCritical(Microsoft.Extensions.Logging.EventId,System.String,System.Object[])
+  href: api/Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_LogMBCritical_EventId_System_String_System_Object___
+  commentId: M:Material.Blazor.Internal.ComponentFoundation.LogMBCritical(EventId,System.String,System.Object[])
   name.vb: LogMBCritical(EventId, String, Object())
-  fullName: Material.Blazor.Internal.ComponentFoundation.LogMBCritical(Microsoft.Extensions.Logging.EventId, System.String, System.Object[])
-  fullName.vb: Material.Blazor.Internal.ComponentFoundation.LogMBCritical(Microsoft.Extensions.Logging.EventId, System.String, System.Object())
+  fullName: Material.Blazor.Internal.ComponentFoundation.LogMBCritical(EventId, System.String, System.Object[])
+  fullName.vb: Material.Blazor.Internal.ComponentFoundation.LogMBCritical(EventId, System.String, System.Object())
   nameWithType: ComponentFoundation.LogMBCritical(EventId, String, Object[])
   nameWithType.vb: ComponentFoundation.LogMBCritical(EventId, String, Object())
 - uid: Material.Blazor.Internal.ComponentFoundation.LogMBCritical(System.Exception,System.String,System.Object[])
@@ -822,22 +991,22 @@ references:
   isSpec: "True"
   fullName: Material.Blazor.Internal.ComponentFoundation.LogMBCritical
   nameWithType: ComponentFoundation.LogMBCritical
-- uid: Material.Blazor.Internal.ComponentFoundation.LogMBDebug(Microsoft.Extensions.Logging.EventId,System.Exception,System.String,System.Object[])
+- uid: Material.Blazor.Internal.ComponentFoundation.LogMBDebug(EventId,System.Exception,System.String,System.Object[])
   name: LogMBDebug(EventId, Exception, String, Object[])
-  href: api/Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_LogMBDebug_Microsoft_Extensions_Logging_EventId_System_Exception_System_String_System_Object___
-  commentId: M:Material.Blazor.Internal.ComponentFoundation.LogMBDebug(Microsoft.Extensions.Logging.EventId,System.Exception,System.String,System.Object[])
+  href: api/Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_LogMBDebug_EventId_System_Exception_System_String_System_Object___
+  commentId: M:Material.Blazor.Internal.ComponentFoundation.LogMBDebug(EventId,System.Exception,System.String,System.Object[])
   name.vb: LogMBDebug(EventId, Exception, String, Object())
-  fullName: Material.Blazor.Internal.ComponentFoundation.LogMBDebug(Microsoft.Extensions.Logging.EventId, System.Exception, System.String, System.Object[])
-  fullName.vb: Material.Blazor.Internal.ComponentFoundation.LogMBDebug(Microsoft.Extensions.Logging.EventId, System.Exception, System.String, System.Object())
+  fullName: Material.Blazor.Internal.ComponentFoundation.LogMBDebug(EventId, System.Exception, System.String, System.Object[])
+  fullName.vb: Material.Blazor.Internal.ComponentFoundation.LogMBDebug(EventId, System.Exception, System.String, System.Object())
   nameWithType: ComponentFoundation.LogMBDebug(EventId, Exception, String, Object[])
   nameWithType.vb: ComponentFoundation.LogMBDebug(EventId, Exception, String, Object())
-- uid: Material.Blazor.Internal.ComponentFoundation.LogMBDebug(Microsoft.Extensions.Logging.EventId,System.String,System.Object[])
+- uid: Material.Blazor.Internal.ComponentFoundation.LogMBDebug(EventId,System.String,System.Object[])
   name: LogMBDebug(EventId, String, Object[])
-  href: api/Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_LogMBDebug_Microsoft_Extensions_Logging_EventId_System_String_System_Object___
-  commentId: M:Material.Blazor.Internal.ComponentFoundation.LogMBDebug(Microsoft.Extensions.Logging.EventId,System.String,System.Object[])
+  href: api/Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_LogMBDebug_EventId_System_String_System_Object___
+  commentId: M:Material.Blazor.Internal.ComponentFoundation.LogMBDebug(EventId,System.String,System.Object[])
   name.vb: LogMBDebug(EventId, String, Object())
-  fullName: Material.Blazor.Internal.ComponentFoundation.LogMBDebug(Microsoft.Extensions.Logging.EventId, System.String, System.Object[])
-  fullName.vb: Material.Blazor.Internal.ComponentFoundation.LogMBDebug(Microsoft.Extensions.Logging.EventId, System.String, System.Object())
+  fullName: Material.Blazor.Internal.ComponentFoundation.LogMBDebug(EventId, System.String, System.Object[])
+  fullName.vb: Material.Blazor.Internal.ComponentFoundation.LogMBDebug(EventId, System.String, System.Object())
   nameWithType: ComponentFoundation.LogMBDebug(EventId, String, Object[])
   nameWithType.vb: ComponentFoundation.LogMBDebug(EventId, String, Object())
 - uid: Material.Blazor.Internal.ComponentFoundation.LogMBDebug(System.Exception,System.String,System.Object[])
@@ -865,22 +1034,22 @@ references:
   isSpec: "True"
   fullName: Material.Blazor.Internal.ComponentFoundation.LogMBDebug
   nameWithType: ComponentFoundation.LogMBDebug
-- uid: Material.Blazor.Internal.ComponentFoundation.LogMBDebugVerbose(Microsoft.Extensions.Logging.EventId,System.Exception,System.String,System.Object[])
+- uid: Material.Blazor.Internal.ComponentFoundation.LogMBDebugVerbose(EventId,System.Exception,System.String,System.Object[])
   name: LogMBDebugVerbose(EventId, Exception, String, Object[])
-  href: api/Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_LogMBDebugVerbose_Microsoft_Extensions_Logging_EventId_System_Exception_System_String_System_Object___
-  commentId: M:Material.Blazor.Internal.ComponentFoundation.LogMBDebugVerbose(Microsoft.Extensions.Logging.EventId,System.Exception,System.String,System.Object[])
+  href: api/Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_LogMBDebugVerbose_EventId_System_Exception_System_String_System_Object___
+  commentId: M:Material.Blazor.Internal.ComponentFoundation.LogMBDebugVerbose(EventId,System.Exception,System.String,System.Object[])
   name.vb: LogMBDebugVerbose(EventId, Exception, String, Object())
-  fullName: Material.Blazor.Internal.ComponentFoundation.LogMBDebugVerbose(Microsoft.Extensions.Logging.EventId, System.Exception, System.String, System.Object[])
-  fullName.vb: Material.Blazor.Internal.ComponentFoundation.LogMBDebugVerbose(Microsoft.Extensions.Logging.EventId, System.Exception, System.String, System.Object())
+  fullName: Material.Blazor.Internal.ComponentFoundation.LogMBDebugVerbose(EventId, System.Exception, System.String, System.Object[])
+  fullName.vb: Material.Blazor.Internal.ComponentFoundation.LogMBDebugVerbose(EventId, System.Exception, System.String, System.Object())
   nameWithType: ComponentFoundation.LogMBDebugVerbose(EventId, Exception, String, Object[])
   nameWithType.vb: ComponentFoundation.LogMBDebugVerbose(EventId, Exception, String, Object())
-- uid: Material.Blazor.Internal.ComponentFoundation.LogMBDebugVerbose(Microsoft.Extensions.Logging.EventId,System.String,System.Object[])
+- uid: Material.Blazor.Internal.ComponentFoundation.LogMBDebugVerbose(EventId,System.String,System.Object[])
   name: LogMBDebugVerbose(EventId, String, Object[])
-  href: api/Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_LogMBDebugVerbose_Microsoft_Extensions_Logging_EventId_System_String_System_Object___
-  commentId: M:Material.Blazor.Internal.ComponentFoundation.LogMBDebugVerbose(Microsoft.Extensions.Logging.EventId,System.String,System.Object[])
+  href: api/Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_LogMBDebugVerbose_EventId_System_String_System_Object___
+  commentId: M:Material.Blazor.Internal.ComponentFoundation.LogMBDebugVerbose(EventId,System.String,System.Object[])
   name.vb: LogMBDebugVerbose(EventId, String, Object())
-  fullName: Material.Blazor.Internal.ComponentFoundation.LogMBDebugVerbose(Microsoft.Extensions.Logging.EventId, System.String, System.Object[])
-  fullName.vb: Material.Blazor.Internal.ComponentFoundation.LogMBDebugVerbose(Microsoft.Extensions.Logging.EventId, System.String, System.Object())
+  fullName: Material.Blazor.Internal.ComponentFoundation.LogMBDebugVerbose(EventId, System.String, System.Object[])
+  fullName.vb: Material.Blazor.Internal.ComponentFoundation.LogMBDebugVerbose(EventId, System.String, System.Object())
   nameWithType: ComponentFoundation.LogMBDebugVerbose(EventId, String, Object[])
   nameWithType.vb: ComponentFoundation.LogMBDebugVerbose(EventId, String, Object())
 - uid: Material.Blazor.Internal.ComponentFoundation.LogMBDebugVerbose(System.Exception,System.String,System.Object[])
@@ -908,22 +1077,22 @@ references:
   isSpec: "True"
   fullName: Material.Blazor.Internal.ComponentFoundation.LogMBDebugVerbose
   nameWithType: ComponentFoundation.LogMBDebugVerbose
-- uid: Material.Blazor.Internal.ComponentFoundation.LogMBError(Microsoft.Extensions.Logging.EventId,System.Exception,System.String,System.Object[])
+- uid: Material.Blazor.Internal.ComponentFoundation.LogMBError(EventId,System.Exception,System.String,System.Object[])
   name: LogMBError(EventId, Exception, String, Object[])
-  href: api/Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_LogMBError_Microsoft_Extensions_Logging_EventId_System_Exception_System_String_System_Object___
-  commentId: M:Material.Blazor.Internal.ComponentFoundation.LogMBError(Microsoft.Extensions.Logging.EventId,System.Exception,System.String,System.Object[])
+  href: api/Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_LogMBError_EventId_System_Exception_System_String_System_Object___
+  commentId: M:Material.Blazor.Internal.ComponentFoundation.LogMBError(EventId,System.Exception,System.String,System.Object[])
   name.vb: LogMBError(EventId, Exception, String, Object())
-  fullName: Material.Blazor.Internal.ComponentFoundation.LogMBError(Microsoft.Extensions.Logging.EventId, System.Exception, System.String, System.Object[])
-  fullName.vb: Material.Blazor.Internal.ComponentFoundation.LogMBError(Microsoft.Extensions.Logging.EventId, System.Exception, System.String, System.Object())
+  fullName: Material.Blazor.Internal.ComponentFoundation.LogMBError(EventId, System.Exception, System.String, System.Object[])
+  fullName.vb: Material.Blazor.Internal.ComponentFoundation.LogMBError(EventId, System.Exception, System.String, System.Object())
   nameWithType: ComponentFoundation.LogMBError(EventId, Exception, String, Object[])
   nameWithType.vb: ComponentFoundation.LogMBError(EventId, Exception, String, Object())
-- uid: Material.Blazor.Internal.ComponentFoundation.LogMBError(Microsoft.Extensions.Logging.EventId,System.String,System.Object[])
+- uid: Material.Blazor.Internal.ComponentFoundation.LogMBError(EventId,System.String,System.Object[])
   name: LogMBError(EventId, String, Object[])
-  href: api/Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_LogMBError_Microsoft_Extensions_Logging_EventId_System_String_System_Object___
-  commentId: M:Material.Blazor.Internal.ComponentFoundation.LogMBError(Microsoft.Extensions.Logging.EventId,System.String,System.Object[])
+  href: api/Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_LogMBError_EventId_System_String_System_Object___
+  commentId: M:Material.Blazor.Internal.ComponentFoundation.LogMBError(EventId,System.String,System.Object[])
   name.vb: LogMBError(EventId, String, Object())
-  fullName: Material.Blazor.Internal.ComponentFoundation.LogMBError(Microsoft.Extensions.Logging.EventId, System.String, System.Object[])
-  fullName.vb: Material.Blazor.Internal.ComponentFoundation.LogMBError(Microsoft.Extensions.Logging.EventId, System.String, System.Object())
+  fullName: Material.Blazor.Internal.ComponentFoundation.LogMBError(EventId, System.String, System.Object[])
+  fullName.vb: Material.Blazor.Internal.ComponentFoundation.LogMBError(EventId, System.String, System.Object())
   nameWithType: ComponentFoundation.LogMBError(EventId, String, Object[])
   nameWithType.vb: ComponentFoundation.LogMBError(EventId, String, Object())
 - uid: Material.Blazor.Internal.ComponentFoundation.LogMBError(System.Exception,System.String,System.Object[])
@@ -951,22 +1120,22 @@ references:
   isSpec: "True"
   fullName: Material.Blazor.Internal.ComponentFoundation.LogMBError
   nameWithType: ComponentFoundation.LogMBError
-- uid: Material.Blazor.Internal.ComponentFoundation.LogMBInformation(Microsoft.Extensions.Logging.EventId,System.Exception,System.String,System.Object[])
+- uid: Material.Blazor.Internal.ComponentFoundation.LogMBInformation(EventId,System.Exception,System.String,System.Object[])
   name: LogMBInformation(EventId, Exception, String, Object[])
-  href: api/Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_LogMBInformation_Microsoft_Extensions_Logging_EventId_System_Exception_System_String_System_Object___
-  commentId: M:Material.Blazor.Internal.ComponentFoundation.LogMBInformation(Microsoft.Extensions.Logging.EventId,System.Exception,System.String,System.Object[])
+  href: api/Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_LogMBInformation_EventId_System_Exception_System_String_System_Object___
+  commentId: M:Material.Blazor.Internal.ComponentFoundation.LogMBInformation(EventId,System.Exception,System.String,System.Object[])
   name.vb: LogMBInformation(EventId, Exception, String, Object())
-  fullName: Material.Blazor.Internal.ComponentFoundation.LogMBInformation(Microsoft.Extensions.Logging.EventId, System.Exception, System.String, System.Object[])
-  fullName.vb: Material.Blazor.Internal.ComponentFoundation.LogMBInformation(Microsoft.Extensions.Logging.EventId, System.Exception, System.String, System.Object())
+  fullName: Material.Blazor.Internal.ComponentFoundation.LogMBInformation(EventId, System.Exception, System.String, System.Object[])
+  fullName.vb: Material.Blazor.Internal.ComponentFoundation.LogMBInformation(EventId, System.Exception, System.String, System.Object())
   nameWithType: ComponentFoundation.LogMBInformation(EventId, Exception, String, Object[])
   nameWithType.vb: ComponentFoundation.LogMBInformation(EventId, Exception, String, Object())
-- uid: Material.Blazor.Internal.ComponentFoundation.LogMBInformation(Microsoft.Extensions.Logging.EventId,System.String,System.Object[])
+- uid: Material.Blazor.Internal.ComponentFoundation.LogMBInformation(EventId,System.String,System.Object[])
   name: LogMBInformation(EventId, String, Object[])
-  href: api/Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_LogMBInformation_Microsoft_Extensions_Logging_EventId_System_String_System_Object___
-  commentId: M:Material.Blazor.Internal.ComponentFoundation.LogMBInformation(Microsoft.Extensions.Logging.EventId,System.String,System.Object[])
+  href: api/Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_LogMBInformation_EventId_System_String_System_Object___
+  commentId: M:Material.Blazor.Internal.ComponentFoundation.LogMBInformation(EventId,System.String,System.Object[])
   name.vb: LogMBInformation(EventId, String, Object())
-  fullName: Material.Blazor.Internal.ComponentFoundation.LogMBInformation(Microsoft.Extensions.Logging.EventId, System.String, System.Object[])
-  fullName.vb: Material.Blazor.Internal.ComponentFoundation.LogMBInformation(Microsoft.Extensions.Logging.EventId, System.String, System.Object())
+  fullName: Material.Blazor.Internal.ComponentFoundation.LogMBInformation(EventId, System.String, System.Object[])
+  fullName.vb: Material.Blazor.Internal.ComponentFoundation.LogMBInformation(EventId, System.String, System.Object())
   nameWithType: ComponentFoundation.LogMBInformation(EventId, String, Object[])
   nameWithType.vb: ComponentFoundation.LogMBInformation(EventId, String, Object())
 - uid: Material.Blazor.Internal.ComponentFoundation.LogMBInformation(System.Exception,System.String,System.Object[])
@@ -994,22 +1163,22 @@ references:
   isSpec: "True"
   fullName: Material.Blazor.Internal.ComponentFoundation.LogMBInformation
   nameWithType: ComponentFoundation.LogMBInformation
-- uid: Material.Blazor.Internal.ComponentFoundation.LogMBTrace(Microsoft.Extensions.Logging.EventId,System.Exception,System.String,System.Object[])
+- uid: Material.Blazor.Internal.ComponentFoundation.LogMBTrace(EventId,System.Exception,System.String,System.Object[])
   name: LogMBTrace(EventId, Exception, String, Object[])
-  href: api/Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_LogMBTrace_Microsoft_Extensions_Logging_EventId_System_Exception_System_String_System_Object___
-  commentId: M:Material.Blazor.Internal.ComponentFoundation.LogMBTrace(Microsoft.Extensions.Logging.EventId,System.Exception,System.String,System.Object[])
+  href: api/Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_LogMBTrace_EventId_System_Exception_System_String_System_Object___
+  commentId: M:Material.Blazor.Internal.ComponentFoundation.LogMBTrace(EventId,System.Exception,System.String,System.Object[])
   name.vb: LogMBTrace(EventId, Exception, String, Object())
-  fullName: Material.Blazor.Internal.ComponentFoundation.LogMBTrace(Microsoft.Extensions.Logging.EventId, System.Exception, System.String, System.Object[])
-  fullName.vb: Material.Blazor.Internal.ComponentFoundation.LogMBTrace(Microsoft.Extensions.Logging.EventId, System.Exception, System.String, System.Object())
+  fullName: Material.Blazor.Internal.ComponentFoundation.LogMBTrace(EventId, System.Exception, System.String, System.Object[])
+  fullName.vb: Material.Blazor.Internal.ComponentFoundation.LogMBTrace(EventId, System.Exception, System.String, System.Object())
   nameWithType: ComponentFoundation.LogMBTrace(EventId, Exception, String, Object[])
   nameWithType.vb: ComponentFoundation.LogMBTrace(EventId, Exception, String, Object())
-- uid: Material.Blazor.Internal.ComponentFoundation.LogMBTrace(Microsoft.Extensions.Logging.EventId,System.String,System.Object[])
+- uid: Material.Blazor.Internal.ComponentFoundation.LogMBTrace(EventId,System.String,System.Object[])
   name: LogMBTrace(EventId, String, Object[])
-  href: api/Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_LogMBTrace_Microsoft_Extensions_Logging_EventId_System_String_System_Object___
-  commentId: M:Material.Blazor.Internal.ComponentFoundation.LogMBTrace(Microsoft.Extensions.Logging.EventId,System.String,System.Object[])
+  href: api/Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_LogMBTrace_EventId_System_String_System_Object___
+  commentId: M:Material.Blazor.Internal.ComponentFoundation.LogMBTrace(EventId,System.String,System.Object[])
   name.vb: LogMBTrace(EventId, String, Object())
-  fullName: Material.Blazor.Internal.ComponentFoundation.LogMBTrace(Microsoft.Extensions.Logging.EventId, System.String, System.Object[])
-  fullName.vb: Material.Blazor.Internal.ComponentFoundation.LogMBTrace(Microsoft.Extensions.Logging.EventId, System.String, System.Object())
+  fullName: Material.Blazor.Internal.ComponentFoundation.LogMBTrace(EventId, System.String, System.Object[])
+  fullName.vb: Material.Blazor.Internal.ComponentFoundation.LogMBTrace(EventId, System.String, System.Object())
   nameWithType: ComponentFoundation.LogMBTrace(EventId, String, Object[])
   nameWithType.vb: ComponentFoundation.LogMBTrace(EventId, String, Object())
 - uid: Material.Blazor.Internal.ComponentFoundation.LogMBTrace(System.Exception,System.String,System.Object[])
@@ -1037,22 +1206,22 @@ references:
   isSpec: "True"
   fullName: Material.Blazor.Internal.ComponentFoundation.LogMBTrace
   nameWithType: ComponentFoundation.LogMBTrace
-- uid: Material.Blazor.Internal.ComponentFoundation.LogMBWarning(Microsoft.Extensions.Logging.EventId,System.Exception,System.String,System.Object[])
+- uid: Material.Blazor.Internal.ComponentFoundation.LogMBWarning(EventId,System.Exception,System.String,System.Object[])
   name: LogMBWarning(EventId, Exception, String, Object[])
-  href: api/Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_LogMBWarning_Microsoft_Extensions_Logging_EventId_System_Exception_System_String_System_Object___
-  commentId: M:Material.Blazor.Internal.ComponentFoundation.LogMBWarning(Microsoft.Extensions.Logging.EventId,System.Exception,System.String,System.Object[])
+  href: api/Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_LogMBWarning_EventId_System_Exception_System_String_System_Object___
+  commentId: M:Material.Blazor.Internal.ComponentFoundation.LogMBWarning(EventId,System.Exception,System.String,System.Object[])
   name.vb: LogMBWarning(EventId, Exception, String, Object())
-  fullName: Material.Blazor.Internal.ComponentFoundation.LogMBWarning(Microsoft.Extensions.Logging.EventId, System.Exception, System.String, System.Object[])
-  fullName.vb: Material.Blazor.Internal.ComponentFoundation.LogMBWarning(Microsoft.Extensions.Logging.EventId, System.Exception, System.String, System.Object())
+  fullName: Material.Blazor.Internal.ComponentFoundation.LogMBWarning(EventId, System.Exception, System.String, System.Object[])
+  fullName.vb: Material.Blazor.Internal.ComponentFoundation.LogMBWarning(EventId, System.Exception, System.String, System.Object())
   nameWithType: ComponentFoundation.LogMBWarning(EventId, Exception, String, Object[])
   nameWithType.vb: ComponentFoundation.LogMBWarning(EventId, Exception, String, Object())
-- uid: Material.Blazor.Internal.ComponentFoundation.LogMBWarning(Microsoft.Extensions.Logging.EventId,System.String,System.Object[])
+- uid: Material.Blazor.Internal.ComponentFoundation.LogMBWarning(EventId,System.String,System.Object[])
   name: LogMBWarning(EventId, String, Object[])
-  href: api/Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_LogMBWarning_Microsoft_Extensions_Logging_EventId_System_String_System_Object___
-  commentId: M:Material.Blazor.Internal.ComponentFoundation.LogMBWarning(Microsoft.Extensions.Logging.EventId,System.String,System.Object[])
+  href: api/Material.Blazor.Internal.ComponentFoundation.html#Material_Blazor_Internal_ComponentFoundation_LogMBWarning_EventId_System_String_System_Object___
+  commentId: M:Material.Blazor.Internal.ComponentFoundation.LogMBWarning(EventId,System.String,System.Object[])
   name.vb: LogMBWarning(EventId, String, Object())
-  fullName: Material.Blazor.Internal.ComponentFoundation.LogMBWarning(Microsoft.Extensions.Logging.EventId, System.String, System.Object[])
-  fullName.vb: Material.Blazor.Internal.ComponentFoundation.LogMBWarning(Microsoft.Extensions.Logging.EventId, System.String, System.Object())
+  fullName: Material.Blazor.Internal.ComponentFoundation.LogMBWarning(EventId, System.String, System.Object[])
+  fullName.vb: Material.Blazor.Internal.ComponentFoundation.LogMBWarning(EventId, System.String, System.Object())
   nameWithType: ComponentFoundation.LogMBWarning(EventId, String, Object[])
   nameWithType.vb: ComponentFoundation.LogMBWarning(EventId, String, Object())
 - uid: Material.Blazor.Internal.ComponentFoundation.LogMBWarning(System.Exception,System.String,System.Object[])
@@ -1158,44 +1327,44 @@ references:
   isSpec: "True"
   fullName: Material.Blazor.Internal.ComponentFoundation.UnmatchedAttributes
   nameWithType: ComponentFoundation.UnmatchedAttributes
-- uid: Material.Blazor.Internal.IBatchingJsRuntime
-  name: IBatchingJsRuntime
-  href: api/Material.Blazor.Internal.IBatchingJsRuntime.html
-  commentId: T:Material.Blazor.Internal.IBatchingJsRuntime
-  fullName: Material.Blazor.Internal.IBatchingJsRuntime
-  nameWithType: IBatchingJsRuntime
-- uid: Material.Blazor.Internal.IBatchingJsRuntime.InvokeAsync*
+- uid: Material.Blazor.Internal.IBatchingJSRuntime
+  name: IBatchingJSRuntime
+  href: api/Material.Blazor.Internal.IBatchingJSRuntime.html
+  commentId: T:Material.Blazor.Internal.IBatchingJSRuntime
+  fullName: Material.Blazor.Internal.IBatchingJSRuntime
+  nameWithType: IBatchingJSRuntime
+- uid: Material.Blazor.Internal.IBatchingJSRuntime.InvokeAsync*
   name: InvokeAsync
-  href: api/Material.Blazor.Internal.IBatchingJsRuntime.html#Material_Blazor_Internal_IBatchingJsRuntime_InvokeAsync_
-  commentId: Overload:Material.Blazor.Internal.IBatchingJsRuntime.InvokeAsync
+  href: api/Material.Blazor.Internal.IBatchingJSRuntime.html#Material_Blazor_Internal_IBatchingJSRuntime_InvokeAsync_
+  commentId: Overload:Material.Blazor.Internal.IBatchingJSRuntime.InvokeAsync
   isSpec: "True"
-  fullName: Material.Blazor.Internal.IBatchingJsRuntime.InvokeAsync
-  nameWithType: IBatchingJsRuntime.InvokeAsync
-- uid: Material.Blazor.Internal.IBatchingJsRuntime.InvokeAsync``1(System.String,System.Object[])
+  fullName: Material.Blazor.Internal.IBatchingJSRuntime.InvokeAsync
+  nameWithType: IBatchingJSRuntime.InvokeAsync
+- uid: Material.Blazor.Internal.IBatchingJSRuntime.InvokeAsync``1(System.String,System.Object[])
   name: InvokeAsync<T>(String, Object[])
-  href: api/Material.Blazor.Internal.IBatchingJsRuntime.html#Material_Blazor_Internal_IBatchingJsRuntime_InvokeAsync__1_System_String_System_Object___
-  commentId: M:Material.Blazor.Internal.IBatchingJsRuntime.InvokeAsync``1(System.String,System.Object[])
+  href: api/Material.Blazor.Internal.IBatchingJSRuntime.html#Material_Blazor_Internal_IBatchingJSRuntime_InvokeAsync__1_System_String_System_Object___
+  commentId: M:Material.Blazor.Internal.IBatchingJSRuntime.InvokeAsync``1(System.String,System.Object[])
   name.vb: InvokeAsync(Of T)(String, Object())
-  fullName: Material.Blazor.Internal.IBatchingJsRuntime.InvokeAsync<T>(System.String, System.Object[])
-  fullName.vb: Material.Blazor.Internal.IBatchingJsRuntime.InvokeAsync(Of T)(System.String, System.Object())
-  nameWithType: IBatchingJsRuntime.InvokeAsync<T>(String, Object[])
-  nameWithType.vb: IBatchingJsRuntime.InvokeAsync(Of T)(String, Object())
-- uid: Material.Blazor.Internal.IBatchingJsRuntime.InvokeVoidAsync(System.String,System.Object[])
+  fullName: Material.Blazor.Internal.IBatchingJSRuntime.InvokeAsync<T>(System.String, System.Object[])
+  fullName.vb: Material.Blazor.Internal.IBatchingJSRuntime.InvokeAsync(Of T)(System.String, System.Object())
+  nameWithType: IBatchingJSRuntime.InvokeAsync<T>(String, Object[])
+  nameWithType.vb: IBatchingJSRuntime.InvokeAsync(Of T)(String, Object())
+- uid: Material.Blazor.Internal.IBatchingJSRuntime.InvokeVoidAsync(System.String,System.Object[])
   name: InvokeVoidAsync(String, Object[])
-  href: api/Material.Blazor.Internal.IBatchingJsRuntime.html#Material_Blazor_Internal_IBatchingJsRuntime_InvokeVoidAsync_System_String_System_Object___
-  commentId: M:Material.Blazor.Internal.IBatchingJsRuntime.InvokeVoidAsync(System.String,System.Object[])
+  href: api/Material.Blazor.Internal.IBatchingJSRuntime.html#Material_Blazor_Internal_IBatchingJSRuntime_InvokeVoidAsync_System_String_System_Object___
+  commentId: M:Material.Blazor.Internal.IBatchingJSRuntime.InvokeVoidAsync(System.String,System.Object[])
   name.vb: InvokeVoidAsync(String, Object())
-  fullName: Material.Blazor.Internal.IBatchingJsRuntime.InvokeVoidAsync(System.String, System.Object[])
-  fullName.vb: Material.Blazor.Internal.IBatchingJsRuntime.InvokeVoidAsync(System.String, System.Object())
-  nameWithType: IBatchingJsRuntime.InvokeVoidAsync(String, Object[])
-  nameWithType.vb: IBatchingJsRuntime.InvokeVoidAsync(String, Object())
-- uid: Material.Blazor.Internal.IBatchingJsRuntime.InvokeVoidAsync*
+  fullName: Material.Blazor.Internal.IBatchingJSRuntime.InvokeVoidAsync(System.String, System.Object[])
+  fullName.vb: Material.Blazor.Internal.IBatchingJSRuntime.InvokeVoidAsync(System.String, System.Object())
+  nameWithType: IBatchingJSRuntime.InvokeVoidAsync(String, Object[])
+  nameWithType.vb: IBatchingJSRuntime.InvokeVoidAsync(String, Object())
+- uid: Material.Blazor.Internal.IBatchingJSRuntime.InvokeVoidAsync*
   name: InvokeVoidAsync
-  href: api/Material.Blazor.Internal.IBatchingJsRuntime.html#Material_Blazor_Internal_IBatchingJsRuntime_InvokeVoidAsync_
-  commentId: Overload:Material.Blazor.Internal.IBatchingJsRuntime.InvokeVoidAsync
+  href: api/Material.Blazor.Internal.IBatchingJSRuntime.html#Material_Blazor_Internal_IBatchingJSRuntime_InvokeVoidAsync_
+  commentId: Overload:Material.Blazor.Internal.IBatchingJSRuntime.InvokeVoidAsync
   isSpec: "True"
-  fullName: Material.Blazor.Internal.IBatchingJsRuntime.InvokeVoidAsync
-  nameWithType: IBatchingJsRuntime.InvokeVoidAsync
+  fullName: Material.Blazor.Internal.IBatchingJSRuntime.InvokeVoidAsync
+  nameWithType: IBatchingJSRuntime.InvokeVoidAsync
 - uid: Material.Blazor.Internal.InputComponent`1
   name: InputComponent<T>
   href: api/Material.Blazor.Internal.InputComponent-1.html
@@ -1391,12 +1560,12 @@ references:
   fullName.vb: Material.Blazor.Internal.InputComponent(Of T).SetComponentValue
   nameWithType: InputComponent<T>.SetComponentValue
   nameWithType.vb: InputComponent(Of T).SetComponentValue
-- uid: Material.Blazor.Internal.InputComponent`1.SetParametersAsync(Microsoft.AspNetCore.Components.ParameterView)
+- uid: Material.Blazor.Internal.InputComponent`1.SetParametersAsync(ParameterView)
   name: SetParametersAsync(ParameterView)
-  href: api/Material.Blazor.Internal.InputComponent-1.html#Material_Blazor_Internal_InputComponent_1_SetParametersAsync_Microsoft_AspNetCore_Components_ParameterView_
-  commentId: M:Material.Blazor.Internal.InputComponent`1.SetParametersAsync(Microsoft.AspNetCore.Components.ParameterView)
-  fullName: Material.Blazor.Internal.InputComponent<T>.SetParametersAsync(Microsoft.AspNetCore.Components.ParameterView)
-  fullName.vb: Material.Blazor.Internal.InputComponent(Of T).SetParametersAsync(Microsoft.AspNetCore.Components.ParameterView)
+  href: api/Material.Blazor.Internal.InputComponent-1.html#Material_Blazor_Internal_InputComponent_1_SetParametersAsync_ParameterView_
+  commentId: M:Material.Blazor.Internal.InputComponent`1.SetParametersAsync(ParameterView)
+  fullName: Material.Blazor.Internal.InputComponent<T>.SetParametersAsync(ParameterView)
+  fullName.vb: Material.Blazor.Internal.InputComponent(Of T).SetParametersAsync(ParameterView)
   nameWithType: InputComponent<T>.SetParametersAsync(ParameterView)
   nameWithType.vb: InputComponent(Of T).SetParametersAsync(ParameterView)
 - uid: Material.Blazor.Internal.InputComponent`1.SetParametersAsync*
@@ -2659,6 +2828,23 @@ references:
   fullName.vb: Material.Blazor.MBBladeComponent(Of TParam).CloseBladeAsync
   nameWithType: MBBladeComponent<TParam>.CloseBladeAsync
   nameWithType.vb: MBBladeComponent(Of TParam).CloseBladeAsync
+- uid: Material.Blazor.MBBladeComponent`1.IsOpen
+  name: IsOpen
+  href: api/Material.Blazor.MBBladeComponent-1.html#Material_Blazor_MBBladeComponent_1_IsOpen
+  commentId: P:Material.Blazor.MBBladeComponent`1.IsOpen
+  fullName: Material.Blazor.MBBladeComponent<TParam>.IsOpen
+  fullName.vb: Material.Blazor.MBBladeComponent(Of TParam).IsOpen
+  nameWithType: MBBladeComponent<TParam>.IsOpen
+  nameWithType.vb: MBBladeComponent(Of TParam).IsOpen
+- uid: Material.Blazor.MBBladeComponent`1.IsOpen*
+  name: IsOpen
+  href: api/Material.Blazor.MBBladeComponent-1.html#Material_Blazor_MBBladeComponent_1_IsOpen_
+  commentId: Overload:Material.Blazor.MBBladeComponent`1.IsOpen
+  isSpec: "True"
+  fullName: Material.Blazor.MBBladeComponent<TParam>.IsOpen
+  fullName.vb: Material.Blazor.MBBladeComponent(Of TParam).IsOpen
+  nameWithType: MBBladeComponent<TParam>.IsOpen
+  nameWithType.vb: MBBladeComponent(Of TParam).IsOpen
 - uid: Material.Blazor.MBBladeComponent`1.Parameters
   name: Parameters
   href: api/Material.Blazor.MBBladeComponent-1.html#Material_Blazor_MBBladeComponent_1_Parameters
@@ -3025,6 +3211,19 @@ references:
   isSpec: "True"
   fullName: Material.Blazor.MBCard.CardStyle
   nameWithType: MBCard.CardStyle
+- uid: Material.Blazor.MBCard.NonSemanticContent
+  name: NonSemanticContent
+  href: api/Material.Blazor.MBCard.html#Material_Blazor_MBCard_NonSemanticContent
+  commentId: P:Material.Blazor.MBCard.NonSemanticContent
+  fullName: Material.Blazor.MBCard.NonSemanticContent
+  nameWithType: MBCard.NonSemanticContent
+- uid: Material.Blazor.MBCard.NonSemanticContent*
+  name: NonSemanticContent
+  href: api/Material.Blazor.MBCard.html#Material_Blazor_MBCard_NonSemanticContent_
+  commentId: Overload:Material.Blazor.MBCard.NonSemanticContent
+  isSpec: "True"
+  fullName: Material.Blazor.MBCard.NonSemanticContent
+  nameWithType: MBCard.NonSemanticContent
 - uid: Material.Blazor.MBCard.OnInitializedAsync
   name: OnInitializedAsync()
   href: api/Material.Blazor.MBCard.html#Material_Blazor_MBCard_OnInitializedAsync
@@ -3064,6 +3263,58 @@ references:
   isSpec: "True"
   fullName: Material.Blazor.MBCard.PrimaryAction
   nameWithType: MBCard.PrimaryAction
+- uid: Material.Blazor.MBCard.PrimaryActionAriaControls
+  name: PrimaryActionAriaControls
+  href: api/Material.Blazor.MBCard.html#Material_Blazor_MBCard_PrimaryActionAriaControls
+  commentId: P:Material.Blazor.MBCard.PrimaryActionAriaControls
+  fullName: Material.Blazor.MBCard.PrimaryActionAriaControls
+  nameWithType: MBCard.PrimaryActionAriaControls
+- uid: Material.Blazor.MBCard.PrimaryActionAriaControls*
+  name: PrimaryActionAriaControls
+  href: api/Material.Blazor.MBCard.html#Material_Blazor_MBCard_PrimaryActionAriaControls_
+  commentId: Overload:Material.Blazor.MBCard.PrimaryActionAriaControls
+  isSpec: "True"
+  fullName: Material.Blazor.MBCard.PrimaryActionAriaControls
+  nameWithType: MBCard.PrimaryActionAriaControls
+- uid: Material.Blazor.MBCard.PrimaryActionAriaSelected
+  name: PrimaryActionAriaSelected
+  href: api/Material.Blazor.MBCard.html#Material_Blazor_MBCard_PrimaryActionAriaSelected
+  commentId: P:Material.Blazor.MBCard.PrimaryActionAriaSelected
+  fullName: Material.Blazor.MBCard.PrimaryActionAriaSelected
+  nameWithType: MBCard.PrimaryActionAriaSelected
+- uid: Material.Blazor.MBCard.PrimaryActionAriaSelected*
+  name: PrimaryActionAriaSelected
+  href: api/Material.Blazor.MBCard.html#Material_Blazor_MBCard_PrimaryActionAriaSelected_
+  commentId: Overload:Material.Blazor.MBCard.PrimaryActionAriaSelected
+  isSpec: "True"
+  fullName: Material.Blazor.MBCard.PrimaryActionAriaSelected
+  nameWithType: MBCard.PrimaryActionAriaSelected
+- uid: Material.Blazor.MBCard.PrimaryActionRole
+  name: PrimaryActionRole
+  href: api/Material.Blazor.MBCard.html#Material_Blazor_MBCard_PrimaryActionRole
+  commentId: P:Material.Blazor.MBCard.PrimaryActionRole
+  fullName: Material.Blazor.MBCard.PrimaryActionRole
+  nameWithType: MBCard.PrimaryActionRole
+- uid: Material.Blazor.MBCard.PrimaryActionRole*
+  name: PrimaryActionRole
+  href: api/Material.Blazor.MBCard.html#Material_Blazor_MBCard_PrimaryActionRole_
+  commentId: Overload:Material.Blazor.MBCard.PrimaryActionRole
+  isSpec: "True"
+  fullName: Material.Blazor.MBCard.PrimaryActionRole
+  nameWithType: MBCard.PrimaryActionRole
+- uid: Material.Blazor.MBCard.PrimaryActionTabIndex
+  name: PrimaryActionTabIndex
+  href: api/Material.Blazor.MBCard.html#Material_Blazor_MBCard_PrimaryActionTabIndex
+  commentId: P:Material.Blazor.MBCard.PrimaryActionTabIndex
+  fullName: Material.Blazor.MBCard.PrimaryActionTabIndex
+  nameWithType: MBCard.PrimaryActionTabIndex
+- uid: Material.Blazor.MBCard.PrimaryActionTabIndex*
+  name: PrimaryActionTabIndex
+  href: api/Material.Blazor.MBCard.html#Material_Blazor_MBCard_PrimaryActionTabIndex_
+  commentId: Overload:Material.Blazor.MBCard.PrimaryActionTabIndex
+  isSpec: "True"
+  fullName: Material.Blazor.MBCard.PrimaryActionTabIndex
+  nameWithType: MBCard.PrimaryActionTabIndex
 - uid: Material.Blazor.MBCardStyle
   name: MBCardStyle
   href: api/Material.Blazor.MBCardStyle.html
@@ -4771,6 +5022,19 @@ references:
   fullName: Material.Blazor.MBDialog.Material.Blazor.IMBDialog.RegisterLayoutAction
   nameWithType: MBDialog.IMBDialog.RegisterLayoutAction
   nameWithType.vb: MBDialog.Material.Blazor.IMBDialog.RegisterLayoutAction
+- uid: Material.Blazor.MBDialog.NotifyClosed(System.String)
+  name: NotifyClosed(String)
+  href: api/Material.Blazor.MBDialog.html#Material_Blazor_MBDialog_NotifyClosed_System_String_
+  commentId: M:Material.Blazor.MBDialog.NotifyClosed(System.String)
+  fullName: Material.Blazor.MBDialog.NotifyClosed(System.String)
+  nameWithType: MBDialog.NotifyClosed(String)
+- uid: Material.Blazor.MBDialog.NotifyClosed*
+  name: NotifyClosed
+  href: api/Material.Blazor.MBDialog.html#Material_Blazor_MBDialog_NotifyClosed_
+  commentId: Overload:Material.Blazor.MBDialog.NotifyClosed
+  isSpec: "True"
+  fullName: Material.Blazor.MBDialog.NotifyClosed
+  nameWithType: MBDialog.NotifyClosed
 - uid: Material.Blazor.MBDialog.NotifyOpenedAsync
   name: NotifyOpenedAsync()
   href: api/Material.Blazor.MBDialog.html#Material_Blazor_MBDialog_NotifyOpenedAsync
@@ -5167,12 +5431,12 @@ references:
   fullName.vb: Material.Blazor.MBGrid(Of TRowData)
   nameWithType: MBGrid<TRowData>
   nameWithType.vb: MBGrid(Of TRowData)
-- uid: Material.Blazor.MBGrid`1.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+- uid: Material.Blazor.MBGrid`1.BuildRenderTree(RenderTreeBuilder)
   name: BuildRenderTree(RenderTreeBuilder)
-  href: api/Material.Blazor.MBGrid-1.html#Material_Blazor_MBGrid_1_BuildRenderTree_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_
-  commentId: M:Material.Blazor.MBGrid`1.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
-  fullName: Material.Blazor.MBGrid<TRowData>.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
-  fullName.vb: Material.Blazor.MBGrid(Of TRowData).BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  href: api/Material.Blazor.MBGrid-1.html#Material_Blazor_MBGrid_1_BuildRenderTree_RenderTreeBuilder_
+  commentId: M:Material.Blazor.MBGrid`1.BuildRenderTree(RenderTreeBuilder)
+  fullName: Material.Blazor.MBGrid<TRowData>.BuildRenderTree(RenderTreeBuilder)
+  fullName.vb: Material.Blazor.MBGrid(Of TRowData).BuildRenderTree(RenderTreeBuilder)
   nameWithType: MBGrid<TRowData>.BuildRenderTree(RenderTreeBuilder)
   nameWithType.vb: MBGrid(Of TRowData).BuildRenderTree(RenderTreeBuilder)
 - uid: Material.Blazor.MBGrid`1.BuildRenderTree*
@@ -5286,6 +5550,23 @@ references:
   fullName.vb: Material.Blazor.MBGrid(Of TRowData).KeyExpression
   nameWithType: MBGrid<TRowData>.KeyExpression
   nameWithType.vb: MBGrid(Of TRowData).KeyExpression
+- uid: Material.Blazor.MBGrid`1.LogIdentification
+  name: LogIdentification
+  href: api/Material.Blazor.MBGrid-1.html#Material_Blazor_MBGrid_1_LogIdentification
+  commentId: P:Material.Blazor.MBGrid`1.LogIdentification
+  fullName: Material.Blazor.MBGrid<TRowData>.LogIdentification
+  fullName.vb: Material.Blazor.MBGrid(Of TRowData).LogIdentification
+  nameWithType: MBGrid<TRowData>.LogIdentification
+  nameWithType.vb: MBGrid(Of TRowData).LogIdentification
+- uid: Material.Blazor.MBGrid`1.LogIdentification*
+  name: LogIdentification
+  href: api/Material.Blazor.MBGrid-1.html#Material_Blazor_MBGrid_1_LogIdentification_
+  commentId: Overload:Material.Blazor.MBGrid`1.LogIdentification
+  isSpec: "True"
+  fullName: Material.Blazor.MBGrid<TRowData>.LogIdentification
+  fullName.vb: Material.Blazor.MBGrid(Of TRowData).LogIdentification
+  nameWithType: MBGrid<TRowData>.LogIdentification
+  nameWithType.vb: MBGrid(Of TRowData).LogIdentification
 - uid: Material.Blazor.MBGrid`1.Measurement
   name: Measurement
   href: api/Material.Blazor.MBGrid-1.html#Material_Blazor_MBGrid_1_Measurement
@@ -5388,23 +5669,23 @@ references:
   fullName.vb: Material.Blazor.MBGrid(Of TRowData).OnParametersSetAsync
   nameWithType: MBGrid<TRowData>.OnParametersSetAsync
   nameWithType.vb: MBGrid(Of TRowData).OnParametersSetAsync
-- uid: Material.Blazor.MBGrid`1.SetShouldRenderValue(System.Boolean)
-  name: SetShouldRenderValue(Boolean)
-  href: api/Material.Blazor.MBGrid-1.html#Material_Blazor_MBGrid_1_SetShouldRenderValue_System_Boolean_
-  commentId: M:Material.Blazor.MBGrid`1.SetShouldRenderValue(System.Boolean)
-  fullName: Material.Blazor.MBGrid<TRowData>.SetShouldRenderValue(System.Boolean)
-  fullName.vb: Material.Blazor.MBGrid(Of TRowData).SetShouldRenderValue(System.Boolean)
-  nameWithType: MBGrid<TRowData>.SetShouldRenderValue(Boolean)
-  nameWithType.vb: MBGrid(Of TRowData).SetShouldRenderValue(Boolean)
-- uid: Material.Blazor.MBGrid`1.SetShouldRenderValue*
-  name: SetShouldRenderValue
-  href: api/Material.Blazor.MBGrid-1.html#Material_Blazor_MBGrid_1_SetShouldRenderValue_
-  commentId: Overload:Material.Blazor.MBGrid`1.SetShouldRenderValue
+- uid: Material.Blazor.MBGrid`1.SetParametersAsync(ParameterView)
+  name: SetParametersAsync(ParameterView)
+  href: api/Material.Blazor.MBGrid-1.html#Material_Blazor_MBGrid_1_SetParametersAsync_ParameterView_
+  commentId: M:Material.Blazor.MBGrid`1.SetParametersAsync(ParameterView)
+  fullName: Material.Blazor.MBGrid<TRowData>.SetParametersAsync(ParameterView)
+  fullName.vb: Material.Blazor.MBGrid(Of TRowData).SetParametersAsync(ParameterView)
+  nameWithType: MBGrid<TRowData>.SetParametersAsync(ParameterView)
+  nameWithType.vb: MBGrid(Of TRowData).SetParametersAsync(ParameterView)
+- uid: Material.Blazor.MBGrid`1.SetParametersAsync*
+  name: SetParametersAsync
+  href: api/Material.Blazor.MBGrid-1.html#Material_Blazor_MBGrid_1_SetParametersAsync_
+  commentId: Overload:Material.Blazor.MBGrid`1.SetParametersAsync
   isSpec: "True"
-  fullName: Material.Blazor.MBGrid<TRowData>.SetShouldRenderValue
-  fullName.vb: Material.Blazor.MBGrid(Of TRowData).SetShouldRenderValue
-  nameWithType: MBGrid<TRowData>.SetShouldRenderValue
-  nameWithType.vb: MBGrid(Of TRowData).SetShouldRenderValue
+  fullName: Material.Blazor.MBGrid<TRowData>.SetParametersAsync
+  fullName.vb: Material.Blazor.MBGrid(Of TRowData).SetParametersAsync
+  nameWithType: MBGrid<TRowData>.SetParametersAsync
+  nameWithType.vb: MBGrid(Of TRowData).SetParametersAsync
 - uid: Material.Blazor.MBGrid`1.ShouldRender
   name: ShouldRender()
   href: api/Material.Blazor.MBGrid-1.html#Material_Blazor_MBGrid_1_ShouldRender
@@ -11132,11 +11413,11 @@ references:
   commentId: T:Material.Blazor.ServiceCollectionExtensions
   fullName: Material.Blazor.ServiceCollectionExtensions
   nameWithType: ServiceCollectionExtensions
-- uid: Material.Blazor.ServiceCollectionExtensions.AddMBServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,Material.Blazor.MBSnackbarServiceConfiguration,Material.Blazor.MBToastServiceConfiguration,Material.Blazor.MBAnimatedNavigationManagerServiceConfiguration)
+- uid: Material.Blazor.ServiceCollectionExtensions.AddMBServices(IServiceCollection,Material.Blazor.MBSnackbarServiceConfiguration,Material.Blazor.MBToastServiceConfiguration,Material.Blazor.MBAnimatedNavigationManagerServiceConfiguration)
   name: AddMBServices(IServiceCollection, MBSnackbarServiceConfiguration, MBToastServiceConfiguration, MBAnimatedNavigationManagerServiceConfiguration)
-  href: api/Material.Blazor.ServiceCollectionExtensions.html#Material_Blazor_ServiceCollectionExtensions_AddMBServices_Microsoft_Extensions_DependencyInjection_IServiceCollection_Material_Blazor_MBSnackbarServiceConfiguration_Material_Blazor_MBToastServiceConfiguration_Material_Blazor_MBAnimatedNavigationManagerServiceConfiguration_
-  commentId: M:Material.Blazor.ServiceCollectionExtensions.AddMBServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,Material.Blazor.MBSnackbarServiceConfiguration,Material.Blazor.MBToastServiceConfiguration,Material.Blazor.MBAnimatedNavigationManagerServiceConfiguration)
-  fullName: Material.Blazor.ServiceCollectionExtensions.AddMBServices(Microsoft.Extensions.DependencyInjection.IServiceCollection, Material.Blazor.MBSnackbarServiceConfiguration, Material.Blazor.MBToastServiceConfiguration, Material.Blazor.MBAnimatedNavigationManagerServiceConfiguration)
+  href: api/Material.Blazor.ServiceCollectionExtensions.html#Material_Blazor_ServiceCollectionExtensions_AddMBServices_IServiceCollection_Material_Blazor_MBSnackbarServiceConfiguration_Material_Blazor_MBToastServiceConfiguration_Material_Blazor_MBAnimatedNavigationManagerServiceConfiguration_
+  commentId: M:Material.Blazor.ServiceCollectionExtensions.AddMBServices(IServiceCollection,Material.Blazor.MBSnackbarServiceConfiguration,Material.Blazor.MBToastServiceConfiguration,Material.Blazor.MBAnimatedNavigationManagerServiceConfiguration)
+  fullName: Material.Blazor.ServiceCollectionExtensions.AddMBServices(IServiceCollection, Material.Blazor.MBSnackbarServiceConfiguration, Material.Blazor.MBToastServiceConfiguration, Material.Blazor.MBAnimatedNavigationManagerServiceConfiguration)
   nameWithType: ServiceCollectionExtensions.AddMBServices(IServiceCollection, MBSnackbarServiceConfiguration, MBToastServiceConfiguration, MBAnimatedNavigationManagerServiceConfiguration)
 - uid: Material.Blazor.ServiceCollectionExtensions.AddMBServices*
   name: AddMBServices
