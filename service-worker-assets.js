@@ -265,15 +265,15 @@
       "url": "_framework\/System.IO.Pipelines.dll"
     },
     {
-      "hash": "sha256-vVXPKvXzq50v2NgHqXXTTpgAJGHB1M8KuHpHDityaZY=",
+      "hash": "sha256-OjswMCpm6JRtZX2qS8EThhfre9Bhqfi2oHC5ybloors=",
       "url": "_framework\/Material.Blazor.dll"
     },
     {
-      "hash": "sha256-KTFhl\/9g2zce56FFCWS8mkQBL2DZvX6Zdz3KuVdGAAI=",
+      "hash": "sha256-emh4sajBnCDoewaly6SnuJ5jjL20351I9N9n6cy\/Sn8=",
       "url": "_framework\/Material.Blazor.Website.dll"
     },
     {
-      "hash": "sha256-NXxLxSW7hBSYgwmgajaJ6nJQLXP3v+At5BMw7VCl\/do=",
+      "hash": "sha256-yI\/TKma0ekT9VP665VyEgzeG4eLXQuH8JO7WUwuHavw=",
       "url": "_framework\/Material.Blazor.Website.WebAssembly.dll"
     },
     {
@@ -281,7 +281,7 @@
       "url": "_framework\/System.Collections.Concurrent.dll"
     },
     {
-      "hash": "sha256-6KeMU0R7gogM+eqtTJ8ZkRpSOmM1tnXcxIXZcoSxv2U=",
+      "hash": "sha256-vAKH4I\/an\/P7AqLGu664k5KPsBA3OG3jGtAAbvI2bkY=",
       "url": "_framework\/System.Collections.Immutable.dll"
     },
     {
@@ -377,7 +377,7 @@
       "url": "_framework\/System.Private.CoreLib.dll"
     },
     {
-      "hash": "sha256-FAP0B9F39BqWxq\/VzJ5ymfWqCHn0M2b4vwYIVij6oc8=",
+      "hash": "sha256-kAfYM2rkZGG0rL6YQmWX2P3CVudLcw9kTY9uh88Q8U0=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -385,5 +385,5 @@
       "url": "_framework\/blazor.webassembly.js"
     }
   ],
-  "version": "ao\/FOwTj"
+  "version": "Z6ziGczm"
 };
