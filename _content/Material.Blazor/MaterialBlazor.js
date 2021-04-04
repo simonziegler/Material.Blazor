@@ -19339,10 +19339,9 @@ PERFORMANCE OF THIS SOFTWARE.
         }
         function MBSelect_init(elem, dotNetObject) {
             elem._select = MDCSelect.attachTo(elem);
-            elem._select.foundation.handleMenuItemAction = function(index) {
-                elem._select.foundation.setSelectedIndex(index);
-                dotNetObject.invokeMethodAsync("NotifySelected", index);
-            };
+            elem._select.listen("MDCSelect:change", (function() {
+                dotNetObject.invokeMethodAsync("NotifySelected", elem._select.selectedIndex);
+            }));
         }
         function MBSelect_setDisabled(elem, value) {
             elem._select.disabled = value;
