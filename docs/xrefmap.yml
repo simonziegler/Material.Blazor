@@ -3391,6 +3391,19 @@ references:
   isSpec: "True"
   fullName: Material.Blazor.MBCascadingDefaults.DataTableDensity
   nameWithType: MBCascadingDefaults.DataTableDensity
+- uid: Material.Blazor.MBCascadingDefaults.DateFormat
+  name: DateFormat
+  href: api/Material.Blazor.MBCascadingDefaults.html#Material_Blazor_MBCascadingDefaults_DateFormat
+  commentId: P:Material.Blazor.MBCascadingDefaults.DateFormat
+  fullName: Material.Blazor.MBCascadingDefaults.DateFormat
+  nameWithType: MBCascadingDefaults.DateFormat
+- uid: Material.Blazor.MBCascadingDefaults.DateFormat*
+  name: DateFormat
+  href: api/Material.Blazor.MBCascadingDefaults.html#Material_Blazor_MBCascadingDefaults_DateFormat_
+  commentId: Overload:Material.Blazor.MBCascadingDefaults.DateFormat
+  isSpec: "True"
+  fullName: Material.Blazor.MBCascadingDefaults.DateFormat
+  nameWithType: MBCascadingDefaults.DateFormat
 - uid: Material.Blazor.MBCascadingDefaults.DateSelectionCriteria
   name: DateSelectionCriteria
   href: api/Material.Blazor.MBCascadingDefaults.html#Material_Blazor_MBCascadingDefaults_DateSelectionCriteria
