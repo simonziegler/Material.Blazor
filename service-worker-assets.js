@@ -185,7 +185,7 @@
       "url": "_content\/Material.Blazor\/Material.min.css"
     },
     {
-      "hash": "sha256-LQGcE+e1x8wW1hut8lSLtsIFQ4z5UjxczBxg1FH4CFM=",
+      "hash": "sha256-VUcGk4HzX4OhMuHxYbfBEfP1OkZJNJU87tqXnNYXaew=",
       "url": "_content\/Material.Blazor\/MaterialBlazor.css"
     },
     {
@@ -193,7 +193,7 @@
       "url": "_content\/Material.Blazor\/MaterialBlazor.js"
     },
     {
-      "hash": "sha256-qcCuDn8RclR\/GwD1eNK5TiAY4gqiHE2i08dW6SRWhHM=",
+      "hash": "sha256-7jrYQDabKN+2qMQLQdi4Wx9i5jHsPqK61wA5Fssr4Ig=",
       "url": "_content\/Material.Blazor\/MaterialBlazor.min.css"
     },
     {
@@ -269,15 +269,15 @@
       "url": "_framework\/System.IO.Pipelines.dll"
     },
     {
-      "hash": "sha256-doGjk3b0UP89F3gRGYZLpT9F8l1ToepiDQhTdJTjvJc=",
+      "hash": "sha256-53o19njqFdiQLKOVZTR98Zt+YifEp4\/6mcmTBNd8zCM=",
       "url": "_framework\/Material.Blazor.dll"
     },
     {
-      "hash": "sha256-iKckaE\/LJVJLEBa2mTs5pyHBb+KEVdlTwf9Og89HQ\/k=",
+      "hash": "sha256-pk2lZg6Hd8qC1WoLtThRU\/5K1YXTD+9JwE6tufVk5KU=",
       "url": "_framework\/Material.Blazor.Website.dll"
     },
     {
-      "hash": "sha256-47jIOAoUannNUlzGAoCIV8nhg+Vmf7UOGvhofF0CdzI=",
+      "hash": "sha256-oLRkCDuiCtgLw86vJycVr+En\/HhvA0KGRjBZG8PXbJo=",
       "url": "_framework\/Material.Blazor.Website.WebAssembly.dll"
     },
     {
@@ -329,7 +329,7 @@
       "url": "_framework\/System.Linq.Expressions.dll"
     },
     {
-      "hash": "sha256-a\/Enzhlhlu4xGRG9VPqVHYjixUVZfo6VEKLfg2t8zIQ=",
+      "hash": "sha256-jJslypHTVxqqjUcBH26vv\/5nUiZxAcWWBpxjl9pj6WM=",
       "url": "_framework\/System.Linq.dll"
     },
     {
@@ -381,7 +381,7 @@
       "url": "_framework\/System.Private.CoreLib.dll"
     },
     {
-      "hash": "sha256-\/5t4tDlA2W0MIZjuvc+\/yd7b9+uIiB9fqUyvZyKim2s=",
+      "hash": "sha256-NOyCEZurwqI7RLi5mYLgz9k89WchUBFaWwMl1NukqTw=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -389,5 +389,5 @@
       "url": "_framework\/blazor.webassembly.js"
     }
   ],
-  "version": "2RfdPKlq"
+  "version": "MvtZDqML"
 };
