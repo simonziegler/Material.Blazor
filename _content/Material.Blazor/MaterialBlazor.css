@@ -4434,11 +4434,10 @@ $dp-menu-year-menu-height: $dp-menu-height + $dp-year-pad-rows * ($dp-button-siz
   flex-flow: row nowrap;
   margin: 4px 0;
   padding: 0 6px 0 0;
-  box-sizing: padding-box;
+  box-sizing: border-box;
   height: 66px;
   max-height: 66px;
-  /*    width: $toast-width;
-  */
+  min-width: 280px;
   border-radius: var(--mb-toast-border-radius);
 }
 
