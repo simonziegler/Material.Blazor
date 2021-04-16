@@ -185,7 +185,7 @@
       "url": "_content\/Material.Blazor\/Material.min.css"
     },
     {
-      "hash": "sha256-P8shYwQP+LD9CHXF0QToMh+w4d7jjWwAy3LlHshLP44=",
+      "hash": "sha256-LQGcE+e1x8wW1hut8lSLtsIFQ4z5UjxczBxg1FH4CFM=",
       "url": "_content\/Material.Blazor\/MaterialBlazor.css"
     },
     {
@@ -193,7 +193,7 @@
       "url": "_content\/Material.Blazor\/MaterialBlazor.js"
     },
     {
-      "hash": "sha256-oAhSU2mFUusNLVfbWbp2WX7GHZWhGU8tOm+PYkKUznw=",
+      "hash": "sha256-qcCuDn8RclR\/GwD1eNK5TiAY4gqiHE2i08dW6SRWhHM=",
       "url": "_content\/Material.Blazor\/MaterialBlazor.min.css"
     },
     {
@@ -269,15 +269,15 @@
       "url": "_framework\/System.IO.Pipelines.dll"
     },
     {
-      "hash": "sha256-oF3aQGbYuw18xyS5n2UIE72EMSht8jos\/ostY9H+itI=",
+      "hash": "sha256-doGjk3b0UP89F3gRGYZLpT9F8l1ToepiDQhTdJTjvJc=",
       "url": "_framework\/Material.Blazor.dll"
     },
     {
-      "hash": "sha256-ajiJm1Nm4M42nmMog7qXpu22qcGbH3\/wEHbEa0Grn5o=",
+      "hash": "sha256-iKckaE\/LJVJLEBa2mTs5pyHBb+KEVdlTwf9Og89HQ\/k=",
       "url": "_framework\/Material.Blazor.Website.dll"
     },
     {
-      "hash": "sha256-NOjhBF6V7bP9kTKKaYMqy71qu88cncuLTjJE6wAbNF4=",
+      "hash": "sha256-47jIOAoUannNUlzGAoCIV8nhg+Vmf7UOGvhofF0CdzI=",
       "url": "_framework\/Material.Blazor.Website.WebAssembly.dll"
     },
     {
@@ -329,7 +329,7 @@
       "url": "_framework\/System.Linq.Expressions.dll"
     },
     {
-      "hash": "sha256-jJslypHTVxqqjUcBH26vv\/5nUiZxAcWWBpxjl9pj6WM=",
+      "hash": "sha256-a\/Enzhlhlu4xGRG9VPqVHYjixUVZfo6VEKLfg2t8zIQ=",
       "url": "_framework\/System.Linq.dll"
     },
     {
@@ -381,7 +381,7 @@
       "url": "_framework\/System.Private.CoreLib.dll"
     },
     {
-      "hash": "sha256-BPTQqMiFEbwdFI4ZpURe6UVKMlAdwB6omI3W6wrKsZY=",
+      "hash": "sha256-\/5t4tDlA2W0MIZjuvc+\/yd7b9+uIiB9fqUyvZyKim2s=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -389,5 +389,5 @@
       "url": "_framework\/blazor.webassembly.js"
     }
   ],
-  "version": "lamxYaqk"
+  "version": "2RfdPKlq"
 };
