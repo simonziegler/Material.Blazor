@@ -185,19 +185,19 @@
       "url": "_content\/Material.Blazor\/Material.min.css"
     },
     {
-      "hash": "sha256-LQGcE+e1x8wW1hut8lSLtsIFQ4z5UjxczBxg1FH4CFM=",
+      "hash": "sha256-VUcGk4HzX4OhMuHxYbfBEfP1OkZJNJU87tqXnNYXaew=",
       "url": "_content\/Material.Blazor\/MaterialBlazor.css"
     },
     {
-      "hash": "sha256-8aMRRzRA6i9kr3EqXtxpmrhZ+T0AgNzRvnvUgcVjbsk=",
+      "hash": "sha256-BVB7XhXAzu2i6uoQ\/7XIW3GKKF4avbBFFMi6JTlPIkE=",
       "url": "_content\/Material.Blazor\/MaterialBlazor.js"
     },
     {
-      "hash": "sha256-qcCuDn8RclR\/GwD1eNK5TiAY4gqiHE2i08dW6SRWhHM=",
+      "hash": "sha256-7jrYQDabKN+2qMQLQdi4Wx9i5jHsPqK61wA5Fssr4Ig=",
       "url": "_content\/Material.Blazor\/MaterialBlazor.min.css"
     },
     {
-      "hash": "sha256-iiSXKe27ABGhDWqpRuhDz47rzhDrVvYfMCuEJJUNyYw=",
+      "hash": "sha256-VVXkmB1XIHA1bTH0vz2rW6\/\/86PCwe1dKm2R1Y7KjCk=",
       "url": "_content\/Material.Blazor\/MaterialBlazor.min.js"
     },
     {
@@ -269,15 +269,15 @@
       "url": "_framework\/System.IO.Pipelines.dll"
     },
     {
-      "hash": "sha256-\/03zh1eFVzKlgUpUm27xqvsjqI7asjJu3QSGY4umKx0=",
+      "hash": "sha256-XIU3fNxHbVSs3hhDWW+UjA1SB0+v++Wo01HaFFAFM6c=",
       "url": "_framework\/Material.Blazor.dll"
     },
     {
-      "hash": "sha256-iHe\/BfHQLheOrgv2g8Y0pgP9v63dSaEzr+z\/t7YpdS0=",
+      "hash": "sha256-tFiLXEWDV2K5Ajup4pr8M8L2IwKKLfB4faVCrwwLNRM=",
       "url": "_framework\/Material.Blazor.Website.dll"
     },
     {
-      "hash": "sha256-59IgYZFptMXXU2Mu9anCy6CymrI0JDUkyYUr8lIbBiI=",
+      "hash": "sha256-OKibmXzUPLl1vP2PFYs91Q6hE7odp+6YiYtn8sbVBeg=",
       "url": "_framework\/Material.Blazor.Website.WebAssembly.dll"
     },
     {
@@ -329,7 +329,7 @@
       "url": "_framework\/System.Linq.Expressions.dll"
     },
     {
-      "hash": "sha256-a\/Enzhlhlu4xGRG9VPqVHYjixUVZfo6VEKLfg2t8zIQ=",
+      "hash": "sha256-QALjrrxsUqxT9GA7U72uOGfwrAfdF7h\/0mddk4kcYpM=",
       "url": "_framework\/System.Linq.dll"
     },
     {
@@ -381,7 +381,7 @@
       "url": "_framework\/System.Private.CoreLib.dll"
     },
     {
-      "hash": "sha256-pwgCe3mpXzqUXAIt+3pzwIGLNCil4c9rzPhVDexmgWc=",
+      "hash": "sha256-IWaztkT5m09wrXN+Gj263e90FjGLoKLLeDSvlP2N8lo=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -389,5 +389,5 @@
       "url": "_framework\/blazor.webassembly.js"
     }
   ],
-  "version": "9wyQ3kg+"
+  "version": "DiqbooBS"
 };
